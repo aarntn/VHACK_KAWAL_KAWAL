@@ -1,0 +1,75 @@
+{
+  "canonical_keys": [
+    "amount_raw",
+    "amount_log",
+    "event_time_raw",
+    "hour_of_day",
+    "day_of_week",
+    "device_signal_present",
+    "location_signal_present",
+    "uid_tx_count_7d",
+    "uid_avg_amount_7d",
+    "uid_amount_std_7d",
+    "uid_time_since_last_tx"
+  ],
+  "sources": {
+    "creditcard": {
+      "runtime_serving_enabled": false,
+      "deprecation_note": "Legacy mapping retained for offline training/backfill only; not allowed for runtime serving.",
+      "amount_column": "Amount",
+      "event_time_column": "Time",
+      "required_columns": [
+        "Amount",
+        "Time"
+      ],
+      "device_columns": [],
+      "location_columns": [],
+      "passthrough_exclude": [
+        "Amount",
+        "Time"
+      ]
+    },
+    "ieee_cis": {
+      "runtime_serving_enabled": true,
+      "amount_column": "TransactionAmt",
+      "event_time_column": "TransactionDT",
+      "required_columns": [
+        "TransactionAmt",
+        "TransactionDT"
+      ],
+      "device_columns": [
+        "DeviceType",
+        "DeviceInfo"
+      ],
+      "location_columns": [
+        "addr1",
+        "addr2",
+        "P_emaildomain",
+        "R_emaildomain"
+      ],
+      "passthrough_exclude": [
+        "TransactionAmt",
+        "TransactionDT",
+        "DeviceType",
+        "DeviceInfo",
+        "addr1",
+        "addr2",
+        "P_emaildomain",
+        "R_emaildomain"
+      ]
+    }
+  },
+  "defaults": {
+    "amount_raw": 0.0,
+    "amount_log": 0.0,
+    "event_time_raw": 0.0,
+    "hour_of_day": 0,
+    "day_of_week": 0,
+    "device_signal_present": 0,
+    "location_signal_present": 0,
+    "uid_tx_count_7d": 0.0,
+    "uid_avg_amount_7d": 0.0,
+    "uid_amount_std_7d": 0.0,
+    "uid_time_since_last_tx": 86400.0
+  }
+}

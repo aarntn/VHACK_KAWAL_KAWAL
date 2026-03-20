@@ -1,0 +1,266 @@
+{
+  "dataset_source": "creditcard",
+  "label_policy": "transaction",
+  "label_policy_diagnostics": {
+    "label_policy": "transaction",
+    "rows_changed": 0,
+    "positive_before": 492,
+    "positive_after": 492
+  },
+  "split_mode": "time",
+  "test_size": 0.2,
+  "seed": 42,
+  "threshold": 0.5,
+  "optuna_trials": 20,
+  "window_configs": [
+    "4:1:1",
+    "3:1:1"
+  ],
+  "month_group_count": 8,
+  "window_count": 11,
+  "xgboost_tuned_best_params": {
+    "n_estimators": 203,
+    "max_depth": 5,
+    "learning_rate": 0.19786653761883574,
+    "subsample": 0.767236696460003,
+    "colsample_bytree": 0.8852081543256695,
+    "min_child_weight": 6.024720111293831,
+    "reg_lambda": 1.9399489103589067,
+    "reg_alpha": 0.02095886706730862
+  },
+  "notes": [
+    "lightgbm not installed; skipping",
+    "catboost not installed; skipping"
+  ],
+  "candidate_count": 3,
+  "best_candidate": {
+    "candidate": "xgboost_tuned",
+    "dataset_source": "creditcard",
+    "split_mode": "time",
+    "precision": 0.9482758620689655,
+    "recall": 0.7333333333333333,
+    "f1": 0.8270676691729323,
+    "false_positive_rate": 5.2736126004183736e-05,
+    "pr_auc": 0.7950096517693864,
+    "roc_auc": 0.9903134283755515,
+    "tn": 56884,
+    "fp": 3,
+    "fn": 20,
+    "tp": 55
+  },
+  "ensemble_best_candidate": {
+    "candidate": "xgboost",
+    "dataset_source": "creditcard",
+    "split_mode": "time_oof",
+    "precision": 0.9071428571428571,
+    "recall": 0.7582089552238805,
+    "f1": 0.8260162601626017,
+    "false_positive_rate": 0.00011428069095863918,
+    "pr_auc": 0.7830421463521628,
+    "roc_auc": 0.9771846735291938,
+    "tn": 227484,
+    "fp": 26,
+    "fn": 81,
+    "tp": 254,
+    "_source_report": "D:\\Vhack\\project\\outputs\\monitoring\\creditcard_ensemble_benchmark_report.json",
+    "_source_type": "ensemble_benchmark"
+  },
+  "overall_best_candidate": {
+    "candidate": "xgboost_tuned",
+    "dataset_source": "creditcard",
+    "split_mode": "time",
+    "precision": 0.9482758620689655,
+    "recall": 0.7333333333333333,
+    "f1": 0.8270676691729323,
+    "false_positive_rate": 5.2736126004183736e-05,
+    "pr_auc": 0.7950096517693864,
+    "roc_auc": 0.9903134283755515,
+    "tn": 56884,
+    "fp": 3,
+    "fn": 20,
+    "tp": 55,
+    "_source_report": NaN,
+    "_source_type": NaN,
+    "candidate_origin": "single_model"
+  },
+  "robustness_by_candidate": {
+    "logistic_regression": {
+      "window_count": 11,
+      "validation_modes": [
+        "month_group_fold",
+        "temporal_holdout"
+      ],
+      "metrics": {
+        "precision": {
+          "mean": 0.06456765901603037,
+          "std": 0.07426852068471851,
+          "worst": 0.0
+        },
+        "recall": {
+          "mean": 0.835920070970463,
+          "std": 0.2693880542408333,
+          "worst": 0.0
+        },
+        "false_positive_rate": {
+          "mean": 0.1963340486515114,
+          "std": 0.3535357108328049,
+          "worst": 0.0
+        },
+        "pr_auc": {
+          "mean": 0.7089570578026605,
+          "std": 0.08748595219905433,
+          "worst": 0.5881434842851521
+        },
+        "f1": {
+          "mean": 0.11126368882037072,
+          "std": 0.11479738602262124,
+          "worst": 0.0
+        }
+      }
+    },
+    "xgboost_default": {
+      "window_count": 11,
+      "validation_modes": [
+        "month_group_fold",
+        "temporal_holdout"
+      ],
+      "metrics": {
+        "precision": {
+          "mean": 0.8891872890760545,
+          "std": 0.10120865217140806,
+          "worst": 0.7297297297297297
+        },
+        "recall": {
+          "mean": 0.7358661402054458,
+          "std": 0.04836268244524949,
+          "worst": 0.6578947368421053
+        },
+        "false_positive_rate": {
+          "mean": 0.00016117779958558162,
+          "std": 0.00017932608087191485,
+          "worst": 0.0
+        },
+        "pr_auc": {
+          "mean": 0.7970104133846818,
+          "std": 0.04735490209960605,
+          "worst": 0.7097190921212402
+        },
+        "f1": {
+          "mean": 0.7997702547784087,
+          "std": 0.031988769650731136,
+          "worst": 0.746268656716418
+        }
+      }
+    },
+    "xgboost_tuned": {
+      "window_count": 11,
+      "validation_modes": [
+        "month_group_fold",
+        "temporal_holdout"
+      ],
+      "metrics": {
+        "precision": {
+          "mean": 0.8802213836318967,
+          "std": 0.10609932429196446,
+          "worst": 0.7222222222222222
+        },
+        "recall": {
+          "mean": 0.725829685432149,
+          "std": 0.05336995116730026,
+          "worst": 0.6578947368421053
+        },
+        "false_positive_rate": {
+          "mean": 0.00017396763788952527,
+          "std": 0.0001870908199107544,
+          "worst": 0.0
+        },
+        "pr_auc": {
+          "mean": 0.7846872460841848,
+          "std": 0.051724311097001145,
+          "worst": 0.7044036557844956
+        },
+        "f1": {
+          "mean": 0.7891803156655564,
+          "std": 0.032193475289994895,
+          "worst": 0.7323943661971831
+        }
+      }
+    },
+    "ensemble::xgboost": {
+      "window_count": 0,
+      "validation_modes": [
+        "time_oof"
+      ],
+      "metrics": {
+        "precision": {
+          "mean": 0.9071428571428571,
+          "std": 0.0,
+          "worst": 0.9071428571428571
+        },
+        "recall": {
+          "mean": 0.7582089552238805,
+          "std": 0.0,
+          "worst": 0.7582089552238805
+        },
+        "false_positive_rate": {
+          "mean": 0.00011428069095863918,
+          "std": 0.0,
+          "worst": 0.00011428069095863918
+        },
+        "pr_auc": {
+          "mean": 0.7830421463521628,
+          "std": 0.0,
+          "worst": 0.7830421463521628
+        },
+        "f1": {
+          "mean": 0.8260162601626017,
+          "std": 0.0,
+          "worst": 0.8260162601626017
+        }
+      },
+      "source": "ensemble_benchmark"
+    }
+  },
+  "best_candidate_robustness": {
+    "window_count": 11,
+    "validation_modes": [
+      "month_group_fold",
+      "temporal_holdout"
+    ],
+    "metrics": {
+      "precision": {
+        "mean": 0.8802213836318967,
+        "std": 0.10609932429196446,
+        "worst": 0.7222222222222222
+      },
+      "recall": {
+        "mean": 0.725829685432149,
+        "std": 0.05336995116730026,
+        "worst": 0.6578947368421053
+      },
+      "false_positive_rate": {
+        "mean": 0.00017396763788952527,
+        "std": 0.0001870908199107544,
+        "worst": 0.0
+      },
+      "pr_auc": {
+        "mean": 0.7846872460841848,
+        "std": 0.051724311097001145,
+        "worst": 0.7044036557844956
+      },
+      "f1": {
+        "mean": 0.7891803156655564,
+        "std": 0.032193475289994895,
+        "worst": 0.7323943661971831
+      }
+    }
+  },
+  "robustness_gate": {
+    "required": true,
+    "passed": true,
+    "reason": "ok"
+  },
+  "results_csv": "D:\\Vhack\\project\\outputs\\monitoring\\creditcard_model_candidate_benchmark.csv",
+  "validation_windows_csv": "D:\\Vhack\\project\\outputs\\monitoring\\creditcard_validation_windows.csv",
+  "ensemble_report_json": "D:\\Vhack\\project\\outputs\\monitoring\\creditcard_ensemble_benchmark_report.json"
+}

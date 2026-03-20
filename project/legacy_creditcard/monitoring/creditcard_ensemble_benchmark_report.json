@@ -1,0 +1,67 @@
+{
+  "dataset_source": "creditcard",
+  "label_policy": "transaction",
+  "label_policy_diagnostics": {
+    "label_policy": "transaction",
+    "rows_changed": 0,
+    "positive_before": 492,
+    "positive_after": 492
+  },
+  "split_mode": "time_oof",
+  "n_splits": 5,
+  "seed": 42,
+  "threshold": 0.5,
+  "feature_count": 40,
+  "feature_hash": "7bc718db0c691a32104b6d0b36017e700be549aebf629fbc4a83e4985844313c",
+  "rows_total": 284807,
+  "rows_oof_evaluated": 227845,
+  "base_models_used": [
+    "xgboost"
+  ],
+  "weighted_blend_weights": {
+    "xgboost": 1.0
+  },
+  "split_windows": [
+    {
+      "fold": 1,
+      "train_count": 56962,
+      "val_count": 56962
+    },
+    {
+      "fold": 2,
+      "train_count": 113924,
+      "val_count": 56961
+    },
+    {
+      "fold": 3,
+      "train_count": 170885,
+      "val_count": 56961
+    },
+    {
+      "fold": 4,
+      "train_count": 227846,
+      "val_count": 56961
+    }
+  ],
+  "notes": [
+    "lightgbm not installed; skipping",
+    "catboost not installed; skipping"
+  ],
+  "candidate_count": 4,
+  "champion": {
+    "candidate": "xgboost",
+    "dataset_source": "creditcard",
+    "split_mode": "time_oof",
+    "precision": 0.9071428571428571,
+    "recall": 0.7582089552238805,
+    "f1": 0.8260162601626017,
+    "false_positive_rate": 0.00011428069095863918,
+    "pr_auc": 0.7830421463521628,
+    "roc_auc": 0.9771846735291938,
+    "tn": 227484,
+    "fp": 26,
+    "fn": 81,
+    "tp": 254
+  },
+  "results_csv": "D:\\Vhack\\project\\outputs\\monitoring\\creditcard_ensemble_benchmark.csv"
+}

@@ -1,0 +1,55 @@
+{
+  "defaults": {
+    "tx_count_1h": 0.0,
+    "tx_count_24h": 0.0,
+    "avg_amount_24h": 0.0,
+    "amount_over_user_avg": 1.0,
+    "time_since_last_tx": 86400.0,
+    "amount_std_24h": 0.0,
+    "uid_tx_count_7d": 0.0,
+    "uid_avg_amount_7d": 0.0,
+    "uid_amount_std_7d": 0.0,
+    "uid_time_since_last_tx": 86400.0
+  },
+  "include_amount_std_24h": true,
+  "windows": {
+    "count_1h_seconds": 3600,
+    "count_24h_seconds": 86400,
+    "avg_24h_seconds": 86400,
+    "std_24h_seconds": 86400,
+    "uid_7d_seconds": 604800
+  },
+  "sources": {
+    "ieee_cis": {
+      "runtime_serving_enabled": true,
+      "time_column": "TransactionDT",
+      "amount_column": "TransactionAmt",
+      "entity_candidates": [
+        "card1",
+        "card2",
+        "DeviceInfo",
+        "DeviceType",
+        "addr1",
+        "P_emaildomain"
+      ],
+      "uid_candidates": [
+        "card1",
+        "card2",
+        "DeviceType",
+        "DeviceInfo",
+        "addr1",
+        "P_emaildomain"
+      ],
+      "uid_time_bucket_seconds": 86400
+    },
+    "creditcard": {
+      "runtime_serving_enabled": false,
+      "deprecation_note": "Legacy mapping retained for offline training/backfill only; not allowed for runtime serving.",
+      "time_column": "Time",
+      "amount_column": "Amount",
+      "entity_candidates": [],
+      "uid_candidates": [],
+      "uid_time_bucket_seconds": 86400
+    }
+  }
+}

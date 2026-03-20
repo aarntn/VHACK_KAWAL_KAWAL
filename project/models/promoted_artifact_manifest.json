@@ -1,0 +1,13 @@
+{
+  "artifacts": {
+    "model_file": "final_xgboost_model_promoted_preproc.pkl",
+    "feature_file": "feature_columns_promoted_preproc.pkl",
+    "threshold_file": "decision_thresholds_promoted_preproc.pkl",
+    "preprocessing_bundle_file": "preprocessing_artifact_promoted.pkl"
+  },
+  "metadata": {
+    "model_metadata_family": "ieee",
+    "preprocessing_bundle_version": "1.0",
+    "expected_feature_schema_hash": "db1e71a426f92a3b787f5be1bf4788ffddd1f974e3c481b7919ac86c025c0292"
+  }
+}

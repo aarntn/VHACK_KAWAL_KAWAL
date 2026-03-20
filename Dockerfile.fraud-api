@@ -1,0 +1,26 @@
+FROM python:3.11-slim
+
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1
+
+WORKDIR /app
+
+RUN apt-get update && apt-get install -y --no-install-recommends curl && rm -rf /var/lib/apt/lists/*
+
+COPY requirements.txt /app/requirements.txt
+RUN pip install --no-cache-dir -r /app/requirements.txt gunicorn
+
+COPY project /app/project
+
+ENV PORT=8000 \
+    FRAUD_MODEL_FILE=/app/project/models/final_xgboost_model.pkl \
+    FRAUD_FEATURE_FILE=/app/project/models/feature_columns.pkl \
+    FRAUD_THRESHOLD_FILE=/app/project/models/decision_thresholds.pkl \
+    FRAUD_AUDIT_DIR=/app/project/outputs/audit \
+    FRAUD_AUDIT_FILE=fraud_audit_log.jsonl
+
+RUN mkdir -p /app/project/outputs/audit
+
+EXPOSE 8000
+
+CMD ["gunicorn", "-c", "project/deploy/gunicorn_conf.py", "project.app.hybrid_fraud_api:app"]

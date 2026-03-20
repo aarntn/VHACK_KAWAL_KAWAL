@@ -1,0 +1,38 @@
+{
+  "dataset_source": "creditcard",
+  "split_mode": "time",
+  "test_size": 0.2,
+  "seed": 42,
+  "threshold": 0.5,
+  "label_policy": "transaction",
+  "label_policy_diagnostics": {
+    "label_policy": "transaction",
+    "rows_changed": 0,
+    "positive_before": 492,
+    "positive_after": 492
+  },
+  "stability_windows": 3,
+  "strategies": [
+    "baseline",
+    "random_undersample",
+    "smote",
+    "adasyn",
+    "smote_then_undersample"
+  ],
+  "output_csv": "D:\\Vhack\\project\\outputs\\monitoring\\creditcard_imbalance_strategy_benchmark.csv",
+  "stability_metrics": [
+    "f1_mean",
+    "f1_std",
+    "f1_worst_window",
+    "pr_auc_mean",
+    "pr_auc_std",
+    "pr_auc_worst_window",
+    "recall_mean",
+    "recall_std",
+    "recall_worst_window",
+    "rank_pr_auc_mean",
+    "rank_recall_worst",
+    "robustness_score",
+    "rank_robustness_score"
+  ]
+}

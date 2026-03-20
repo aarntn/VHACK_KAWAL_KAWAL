@@ -1,0 +1,24 @@
+{
+  "dataset_source": "creditcard",
+  "split_mode": "time",
+  "test_size": 0.2,
+  "threshold_start": 0.1,
+  "threshold_stop": 0.9,
+  "threshold_step": 0.05,
+  "rows_train": 227845,
+  "rows_test": 56962,
+  "label_policy": "transaction",
+  "label_policy_diagnostics": {
+    "label_policy": "transaction",
+    "rows_changed": 0,
+    "positive_before": 492,
+    "positive_after": 492
+  },
+  "feature_whitelist_active": false,
+  "feature_whitelist_source": null,
+  "selected_feature_count": 40,
+  "feature_whitelist_hash": null,
+  "full_csv": "D:\\Vhack\\project\\outputs\\monitoring\\creditcard_preprocessing_threshold_comparison.csv",
+  "best_csv": "D:\\Vhack\\project\\outputs\\monitoring\\creditcard_preprocessing_threshold_best.csv",
+  "summary_markdown": "D:\\Vhack\\project\\outputs\\monitoring\\creditcard_preprocessing_threshold_summary.md"
+}

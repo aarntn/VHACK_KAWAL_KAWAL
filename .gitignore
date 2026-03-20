@@ -1,0 +1,36 @@
+# Python virtual environments - NEVER commit venv/
+/.venv/
+venv/
+env/
+ENV/
+.env
+
+# Python cache and compiled files
+__pycache__/
+*.py[cod]
+*.pyc
+*$py.class
+*.so
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Project-specific
+creditcardfraud/
+project/outputs/benchmark/
+node_modules/
+project/frontend/node_modules/
+
+# IEEE Fraud Detection Dataset - too large for GitHub
+sample_submission.csv
+test_identity.csv
+test_transaction.csv
+train_identity.csv
+train_transaction.csv
+
+# generated artifacts
+project/outputs/

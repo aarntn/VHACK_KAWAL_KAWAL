@@ -1,0 +1,15 @@
+{
+  "version": "1.0.0",
+  "hard_block_thresholds": {
+    "amount_vs_user_median_multiplier": 4.0
+  },
+  "step_up_auth_triggers": {
+    "ip_risk_score_gte": 0.75,
+    "device_risk_score_gte": 0.85,
+    "location_risk_score_gte": 0.8
+  },
+  "precedence": {
+    "order": ["hard_block", "step_up_auth", "model_score_decision"],
+    "conflict_resolution": "most_restrictive_wins"
+  }
+}

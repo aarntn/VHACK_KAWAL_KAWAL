@@ -1,0 +1,106 @@
+{
+  "everyday_purchase": {
+    "id": "everyday_purchase",
+    "ui": {
+      "icon": "ShoppingCart",
+      "amount": "12.40",
+      "tx_type": "MERCHANT",
+      "user_id": "user_1001",
+      "wallet_id": "user_1001",
+      "currency": "USD",
+      "merchant_name": "Demo Merchant",
+      "is_cross_border": false
+    },
+    "risk": {
+      "schema_version": "ieee_fraud_tx_v1",
+      "device_risk_score": 0.05,
+      "ip_risk_score": 0.06,
+      "location_risk_score": 0.05,
+      "device_id": "device_safe_01",
+      "device_shared_users_24h": 1,
+      "account_age_days": 365,
+      "sim_change_recent": false,
+      "channel": "APP",
+      "cash_flow_velocity_1h": 1,
+      "p2p_counterparties_24h": 0
+    }
+  },
+  "large_amount": {
+    "id": "large_amount",
+    "ui": {
+      "icon": "WalletCards",
+      "amount": "950.00",
+      "tx_type": "MERCHANT",
+      "user_id": "user_1001",
+      "wallet_id": "wallet_1001",
+      "currency": "USD",
+      "merchant_name": "Demo Merchant",
+      "is_cross_border": false
+    },
+    "risk": {
+      "schema_version": "ieee_fraud_tx_v1",
+      "device_risk_score": 0.35,
+      "ip_risk_score": 0.32,
+      "location_risk_score": 0.3,
+      "device_id": "device_safe_01",
+      "device_shared_users_24h": 3,
+      "account_age_days": 120,
+      "sim_change_recent": false,
+      "channel": "APP",
+      "cash_flow_velocity_1h": 4,
+      "p2p_counterparties_24h": 3
+    }
+  },
+  "cross_border": {
+    "id": "cross_border",
+    "ui": {
+      "icon": "Globe",
+      "amount": "750.00",
+      "tx_type": "CASH_OUT",
+      "user_id": "user_1001",
+      "wallet_id": "wallet_1001",
+      "currency": "USD",
+      "merchant_name": "Demo Merchant",
+      "is_cross_border": true
+    },
+    "risk": {
+      "schema_version": "ieee_fraud_tx_v1",
+      "device_risk_score": 0.91,
+      "ip_risk_score": 0.96,
+      "location_risk_score": 0.89,
+      "device_id": "new_device_999",
+      "device_shared_users_24h": 7,
+      "account_age_days": 2,
+      "sim_change_recent": true,
+      "channel": "WEB",
+      "cash_flow_velocity_1h": 11,
+      "p2p_counterparties_24h": 22
+    }
+  },
+  "custom": {
+    "id": "custom",
+    "ui": {
+      "icon": "Edit3",
+      "amount": "",
+      "tx_type": "MERCHANT",
+      "user_id": "",
+      "wallet_id": "",
+      "currency": "",
+      "merchant_name": "",
+      "is_cross_border": false
+    },
+    "risk": {
+      "schema_version": "ieee_fraud_tx_v1",
+      "device_risk_score": 0.24,
+      "ip_risk_score": 0.22,
+      "location_risk_score": 0.19,
+      "device_id": "device_custom_01",
+      "device_shared_users_24h": 2,
+      "account_age_days": 90,
+      "sim_change_recent": false,
+      "channel": "APP",
+      "cash_flow_velocity_1h": 3,
+      "p2p_counterparties_24h": 4
+    }
+  }
+}
