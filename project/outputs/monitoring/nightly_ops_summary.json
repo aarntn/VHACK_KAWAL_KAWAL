@@ -1,0 +1,172 @@
+{
+  "generated_at_utc": "2026-03-19T18:59:17.463816+00:00",
+  "status": "ok",
+  "dataset_artifact_validation": {
+    "started_at_utc": "2026-03-19T18:59:15.055539+00:00",
+    "dataset_source": "creditcard",
+    "model_path": "project/legacy_creditcard/models/final_xgboost_model.pkl",
+    "feature_path": "project/legacy_creditcard/models/feature_columns.pkl",
+    "thresholds_output": "project/legacy_creditcard/models/decision_thresholds.pkl",
+    "ok": true
+  },
+  "drift_monitor": {
+    "command": [
+      "/root/.pyenv/versions/3.10.19/bin/python",
+      "project/scripts/drift_monitor.py",
+      "--baseline-dataset",
+      "project/legacy_creditcard/monitoring/creditcard_validation_windows.csv",
+      "--audit-log",
+      "/workspace/Vhack/project/outputs/audit/fraud_audit_log.jsonl",
+      "--output-json",
+      "/workspace/Vhack/project/outputs/monitoring/drift_report.json",
+      "--output-csv",
+      "/workspace/Vhack/project/outputs/monitoring/drift_feature_psi.csv",
+      "--psi-warn",
+      "0.1",
+      "--psi-alert",
+      "0.25",
+      "--decision-drift-warn",
+      "0.1",
+      "--decision-drift-alert",
+      "0.2"
+    ],
+    "started_at_utc": "2026-03-19T18:59:15.056311+00:00",
+    "returncode": 0,
+    "stdout": "Drift monitoring complete\n{\n  \"baseline_row_count\": 33,\n  \"audit_baseline_row_count\": 1598,\n  \"current_row_count\": 1599,\n  \"feature_count_evaluated\": 7,\n  \"feature_alert_count\": 2,\n  \"feature_warn_count\": 1\n}\nSaved drift report JSON: /workspace/Vhack/project/outputs/monitoring/drift_report.json\nSaved feature PSI table: /workspace/Vhack/project/outputs/monitoring/drift_feature_psi.csv\n",
+    "stderr": "",
+    "ok": true
+  },
+  "drift_report_summary": {
+    "baseline_row_count": 33,
+    "audit_baseline_row_count": 1598,
+    "current_row_count": 1599,
+    "feature_count_evaluated": 7,
+    "feature_alert_count": 2,
+    "feature_warn_count": 1
+  },
+  "drift_recalibration_recommendation": {
+    "should_recalibrate": true,
+    "priority": "high",
+    "reasons": [
+      "Feature PSI alert for: base_model_score, final_risk_score",
+      "Decision distribution drift exceeded alert threshold"
+    ]
+  },
+  "calibration": null,
+  "threshold_promotion": null,
+  "artifact_validation": null,
+  "artifact_validation_report": null,
+  "benchmark": null,
+  "benchmark_sla": null,
+  "benchmark_error_summary": null,
+  "benchmark_sla_mode": "warn",
+  "latency_trend": null,
+  "latency_stage_analysis": null,
+  "latency_stage_matrix": null,
+  "cohort_kpi": null,
+  "decision_source_kpi": {
+    "audit_log": "/workspace/Vhack/project/outputs/audit/fraud_audit_log.jsonl",
+    "analyst_outcomes_log": "/workspace/Vhack/project/outputs/audit/analyst_outcomes.jsonl",
+    "rows": [
+      {
+        "decision_source": "score_band",
+        "audit_volume": 3185,
+        "flag_rate": 0.890424,
+        "analyst_reviews": 0,
+        "confirmed_fraud_conversion": 0.0,
+        "false_positive_rate": 0.0
+      },
+      {
+        "decision_source": "hard_rule_override",
+        "audit_volume": 0,
+        "flag_rate": 0.0,
+        "analyst_reviews": 0,
+        "confirmed_fraud_conversion": 0.0,
+        "false_positive_rate": 0.0
+      },
+      {
+        "decision_source": "low_history_policy",
+        "audit_volume": 0,
+        "flag_rate": 0.0,
+        "analyst_reviews": 0,
+        "confirmed_fraud_conversion": 0.0,
+        "false_positive_rate": 0.0
+      },
+      {
+        "decision_source": "step_up_policy",
+        "audit_volume": 12,
+        "flag_rate": 0.5,
+        "analyst_reviews": 0,
+        "confirmed_fraud_conversion": 0.0,
+        "false_positive_rate": 0.0
+      }
+    ]
+  },
+  "profile_replay": null,
+  "profile_health": null,
+  "profile_health_summary": null,
+  "profile_health_status": null,
+  "data_checks": null,
+  "threshold_policy_guardrails": null,
+  "retrain_trigger": {
+    "should_retrain": true,
+    "reasons": [
+      "feature_alert_count=2",
+      "decision_drift_status=alert"
+    ],
+    "details": {
+      "thresholds": {
+        "warn_streak": 3,
+        "sla_fail_streak": 3,
+        "endpoint_error_rate_streak": 3,
+        "endpoint_error_rate_threshold_pct": 5.0
+      },
+      "current_decision_drift_status": "alert",
+      "warn_drift_streak": {
+        "required": 3,
+        "current_streak": 0,
+        "evaluated_runs": 3
+      },
+      "benchmark_sla_fail_streak": {
+        "required": 3,
+        "current_streak": 0,
+        "evaluated_runs": 3,
+        "category": "runtime_sla_failure_only"
+      },
+      "integration_failure_streak": {
+        "current_streak": 0,
+        "evaluated_runs": 3,
+        "category": "pipeline_integration_bug"
+      },
+      "endpoint_error_rate_streaks": {
+        "required": 3,
+        "threshold_pct": 5.0,
+        "streaks": {},
+        "latest_error_rate_pct": {},
+        "triggered_endpoints": [],
+        "evaluated_runs": 3
+      }
+    }
+  },
+  "archive": {
+    "run_id": "20260319T185917Z",
+    "run_dir": "/workspace/Vhack/project/outputs/ops_runs/20260319T185917Z",
+    "copied": {
+      "drift_json": "/workspace/Vhack/project/outputs/ops_runs/20260319T185917Z/drift_report.json",
+      "drift_csv": "/workspace/Vhack/project/outputs/ops_runs/20260319T185917Z/drift_feature_psi.csv",
+      "ops_summary_json": "/workspace/Vhack/project/outputs/ops_runs/20260319T185917Z/nightly_ops_summary.json",
+      "artifact_validation_json": "/workspace/Vhack/project/outputs/ops_runs/20260319T185917Z/artifact_validation_report.json"
+    },
+    "missing": {},
+    "sha256": {
+      "drift_json": "1bd683928340eeafde728e5d02400a74d124faafaf139b472b75f0a025570f2c",
+      "drift_csv": "5ac78c662cd7ec353d885ce3e6ee111819403bfbc19ce60d72ffc13b4f1ae896",
+      "ops_summary_json": "ff5e2e6701aef1b9c0a788628f7e5a583be1fb5b9839ddded1ed936a2b7684b0",
+      "artifact_validation_json": "5433c8dac62db1d7095e3fc24951899b4bdbc23bb12b27c14f2768083d5ba863"
+    }
+  },
+  "alert": {
+    "sent": false,
+    "reason": "webhook_not_configured"
+  }
+}

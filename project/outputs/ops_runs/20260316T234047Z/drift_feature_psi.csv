@@ -1,0 +1,8 @@
+feature,psi,status
+context_adjustment,0.03314142,ok
+final_risk_score,0.03252084,ok
+context_scores.ip_risk_score,0.02472371,ok
+context_scores.device_risk_score,0.01638652,ok
+context_scores.location_risk_score,0.0158322,ok
+behavior_adjustment,0.01348306,ok
+base_model_score,0.0,ok

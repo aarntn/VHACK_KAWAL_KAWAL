@@ -1,0 +1,37 @@
+{
+  "description": "MCP external signal adjustment weights. All values are env-overridable for calibration. Weights were set to be proportional to the expected incremental fraud-lift observed per risk tier in the ring ablation study (see ring_ablation_report.json: high-risk ring cohorts showed +21.6% recall lift). External weights are intentionally conservative (max +0.08) so MCP signals augment rather than override the base model.",
+  "weights": {
+    "BOOST_HIGH": {
+      "value": 0.08,
+      "env": "FRAUD_MCP_BOOST_HIGH",
+      "rationale": "High-tier hit: ring_score>=0.70; aligned with top-ring fraud rate 68.8%"
+    },
+    "BOOST_MED": {
+      "value": 0.05,
+      "env": "FRAUD_MCP_BOOST_MED",
+      "rationale": "Medium-tier hit: ring_score 0.40\u20130.70; moderate fraud signal"
+    },
+    "BOOST_LOW": {
+      "value": 0.02,
+      "env": "FRAUD_MCP_BOOST_LOW",
+      "rationale": "Low-tier: borderline ring; minimal uplift"
+    },
+    "CLEAN_DISCOUNT": {
+      "value": -0.02,
+      "env": "FRAUD_MCP_CLEAN_DISCOUNT",
+      "rationale": "Verified-clean device reduces FPR for established low-risk users"
+    },
+    "SHARED_BOOST": {
+      "value": 0.04,
+      "env": "FRAUD_MCP_SHARED_BOOST",
+      "rationale": "5+ shared device accounts: shared_device cohort showed +19.4% recall lift"
+    },
+    "ADJUSTMENT_CAP": {
+      "value": 0.1,
+      "env": "FRAUD_MCP_ADJUSTMENT_CAP",
+      "rationale": "Hard cap: MCP signals must not dominate base model output"
+    }
+  },
+  "calibration_status": "heuristic_with_ablation_evidence",
+  "next_step": "Re-run calibrate_mcp_weights.py with labeled holdout to derive data-driven weights"
+}

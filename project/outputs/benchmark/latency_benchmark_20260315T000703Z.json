@@ -1,0 +1,139 @@
+{
+  "generated_at_utc": "2026-03-15T00:07:03.383298+00:00",
+  "hardware_profile": {
+    "platform": "Linux-6.12.47-x86_64-with-glibc2.39",
+    "python_version": "3.12.12",
+    "processor": "x86_64",
+    "logical_cpu_count": 3
+  },
+  "benchmark_config": {
+    "requests_per_endpoint": 20,
+    "concurrency": 5,
+    "request_timeout_s": 5.0,
+    "warmup_requests": 1
+  },
+  "endpoints": [
+    {
+      "endpoint_name": "score_transaction",
+      "url": "http://127.0.0.1:8000/score_transaction",
+      "started_at_utc": "2026-03-15T00:07:03.326679+00:00",
+      "duration_s": 0.028815862999181263,
+      "concurrency": 5,
+      "requests_total": 20,
+      "success_count": 0,
+      "error_count": 20,
+      "error_rate_pct": 100.0,
+      "throughput_rps": 694.06215599263,
+      "latency_ms": {
+        "min": 1.7573380027897656,
+        "mean": 4.3404617012129165,
+        "max": 8.81798900081776,
+        "p50": 3.8020085012249183,
+        "p95": 7.492638305120637,
+        "p99": 8.552918861678334
+      },
+      "status_histogram": {
+        "request_exception": 20
+      },
+      "sample_errors": [
+        "HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /score_transaction (Caused by NewConnectionError(\"HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 111] Connection refused\"))",
+        "HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /score_transaction (Caused by NewConnectionError(\"HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 111] Connection refused\"))",
+        "HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /score_transaction (Caused by NewConnectionError(\"HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 111] Connection refused\"))",
+        "HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /score_transaction (Caused by NewConnectionError(\"HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 111] Connection refused\"))",
+        "HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /score_transaction (Caused by NewConnectionError(\"HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 111] Connection refused\"))",
+        "HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /score_transaction (Caused by NewConnectionError(\"HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 111] Connection refused\"))",
+        "HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /score_transaction (Caused by NewConnectionError(\"HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 111] Connection refused\"))",
+        "HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /score_transaction (Caused by NewConnectionError(\"HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 111] Connection refused\"))",
+        "HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /score_transaction (Caused by NewConnectionError(\"HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 111] Connection refused\"))",
+        "HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /score_transaction (Caused by NewConnectionError(\"HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 111] Connection refused\"))"
+      ]
+    },
+    {
+      "endpoint_name": "wallet_authorize_payment",
+      "url": "http://127.0.0.1:8001/wallet/authorize_payment",
+      "started_at_utc": "2026-03-15T00:07:03.356706+00:00",
+      "duration_s": 0.02645294499961892,
+      "concurrency": 5,
+      "requests_total": 20,
+      "success_count": 0,
+      "error_count": 20,
+      "error_rate_pct": 100.0,
+      "throughput_rps": 756.059486015191,
+      "latency_ms": {
+        "min": 1.690406999841798,
+        "mean": 5.168272550508846,
+        "max": 9.154145001957659,
+        "p50": 4.775621000590036,
+        "p95": 8.384937602750142,
+        "p99": 9.000303522116154
+      },
+      "status_histogram": {
+        "request_exception": 20
+      },
+      "sample_errors": [
+        "HTTPConnectionPool(host='127.0.0.1', port=8001): Max retries exceeded with url: /wallet/authorize_payment (Caused by NewConnectionError(\"HTTPConnection(host='127.0.0.1', port=8001): Failed to establish a new connection: [Errno 111] Connection refused\"))",
+        "HTTPConnectionPool(host='127.0.0.1', port=8001): Max retries exceeded with url: /wallet/authorize_payment (Caused by NewConnectionError(\"HTTPConnection(host='127.0.0.1', port=8001): Failed to establish a new connection: [Errno 111] Connection refused\"))",
+        "HTTPConnectionPool(host='127.0.0.1', port=8001): Max retries exceeded with url: /wallet/authorize_payment (Caused by NewConnectionError(\"HTTPConnection(host='127.0.0.1', port=8001): Failed to establish a new connection: [Errno 111] Connection refused\"))",
+        "HTTPConnectionPool(host='127.0.0.1', port=8001): Max retries exceeded with url: /wallet/authorize_payment (Caused by NewConnectionError(\"HTTPConnection(host='127.0.0.1', port=8001): Failed to establish a new connection: [Errno 111] Connection refused\"))",
+        "HTTPConnectionPool(host='127.0.0.1', port=8001): Max retries exceeded with url: /wallet/authorize_payment (Caused by NewConnectionError(\"HTTPConnection(host='127.0.0.1', port=8001): Failed to establish a new connection: [Errno 111] Connection refused\"))",
+        "HTTPConnectionPool(host='127.0.0.1', port=8001): Max retries exceeded with url: /wallet/authorize_payment (Caused by NewConnectionError(\"HTTPConnection(host='127.0.0.1', port=8001): Failed to establish a new connection: [Errno 111] Connection refused\"))",
+        "HTTPConnectionPool(host='127.0.0.1', port=8001): Max retries exceeded with url: /wallet/authorize_payment (Caused by NewConnectionError(\"HTTPConnection(host='127.0.0.1', port=8001): Failed to establish a new connection: [Errno 111] Connection refused\"))",
+        "HTTPConnectionPool(host='127.0.0.1', port=8001): Max retries exceeded with url: /wallet/authorize_payment (Caused by NewConnectionError(\"HTTPConnection(host='127.0.0.1', port=8001): Failed to establish a new connection: [Errno 111] Connection refused\"))",
+        "HTTPConnectionPool(host='127.0.0.1', port=8001): Max retries exceeded with url: /wallet/authorize_payment (Caused by NewConnectionError(\"HTTPConnection(host='127.0.0.1', port=8001): Failed to establish a new connection: [Errno 111] Connection refused\"))",
+        "HTTPConnectionPool(host='127.0.0.1', port=8001): Max retries exceeded with url: /wallet/authorize_payment (Caused by NewConnectionError(\"HTTPConnection(host='127.0.0.1', port=8001): Failed to establish a new connection: [Errno 111] Connection refused\"))"
+      ]
+    }
+  ],
+  "sla_evaluation": {
+    "score_transaction": {
+      "target_sla": {
+        "p95_latency_ms_max": 250.0,
+        "p99_latency_ms_max": 500.0,
+        "error_rate_pct_max": 1.0
+      },
+      "checks": {
+        "p95_latency_ms": {
+          "actual": 7.492638305120637,
+          "target_max": 250.0,
+          "pass": true
+        },
+        "p99_latency_ms": {
+          "actual": 8.552918861678334,
+          "target_max": 500.0,
+          "pass": true
+        },
+        "error_rate_pct": {
+          "actual": 100.0,
+          "target_max": 1.0,
+          "pass": false
+        }
+      },
+      "real_time_viability": "FAIL"
+    },
+    "wallet_authorize_payment": {
+      "target_sla": {
+        "p95_latency_ms_max": 250.0,
+        "p99_latency_ms_max": 500.0,
+        "error_rate_pct_max": 1.0
+      },
+      "checks": {
+        "p95_latency_ms": {
+          "actual": 8.384937602750142,
+          "target_max": 250.0,
+          "pass": true
+        },
+        "p99_latency_ms": {
+          "actual": 9.000303522116154,
+          "target_max": 500.0,
+          "pass": true
+        },
+        "error_rate_pct": {
+          "actual": 100.0,
+          "target_max": 1.0,
+          "pass": false
+        }
+      },
+      "real_time_viability": "FAIL"
+    }
+  }
+}

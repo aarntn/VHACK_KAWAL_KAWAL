@@ -1,0 +1,21 @@
+{
+  "run_id": "20260318T060041Z",
+  "run_dir": "D:\\Vhack\\project\\outputs\\ops_runs\\20260318T060041Z",
+  "copied": {
+    "drift_json": "D:\\Vhack\\project\\outputs\\ops_runs\\20260318T060041Z\\drift_report.json",
+    "drift_csv": "D:\\Vhack\\project\\outputs\\ops_runs\\20260318T060041Z\\drift_feature_psi.csv",
+    "ops_summary_json": "D:\\Vhack\\project\\outputs\\ops_runs\\20260318T060041Z\\nightly_ops_summary.json",
+    "cohort_kpi_json": "D:\\Vhack\\project\\outputs\\ops_runs\\20260318T060041Z\\cohort_kpi_report.json",
+    "latency_trend_json": "D:\\Vhack\\project\\outputs\\ops_runs\\20260318T060041Z\\latency_trend_report.json",
+    "profile_health_json": "D:\\Vhack\\project\\outputs\\ops_runs\\20260318T060041Z\\behavior_profile_health.json"
+  },
+  "missing": {},
+  "sha256": {
+    "drift_json": "306229d7aaf6e3039171e07514f0a08f053c963159689e6e5eca24e133872fba",
+    "drift_csv": "e3c98cdf23500017b5b5e6dcac1aa02911885002fa80748212faf212fbfe002c",
+    "ops_summary_json": "5e56e2bff13a8547b34d22e14d3cd26c6b16c049ed451f0963b49fa3afcdad00",
+    "cohort_kpi_json": "088d4834cf55122e4d7ef41f40f42e3c3ea57139dd0597c97bd79916bbc2c805",
+    "latency_trend_json": "6d874719f1e5379cfd6374c997228bdd3f0d301f07c2c1bb6e0f6e65e3734520",
+    "profile_health_json": "b8c3cf88601a0e328726d63306fa21316bb30765658bcadd72565e46e29b3241"
+  }
+}

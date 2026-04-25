@@ -1,0 +1,6 @@
+cohort,sample_count,fraud_positive_count,nonfraud_count,metric_reliability,support_weighted_reliability,fraud_rate,precision,precision_ci_lower,precision_ci_upper,recall,recall_ci_lower,recall_ci_upper,false_positive_rate,false_positive_rate_ci_lower,false_positive_rate_ci_upper,flag_rate,block_rate
+all_users,25000,1038,23962,reliable,1.0,0.04152,0.145875,0.135809,0.156553,0.625241,0.595382,0.654176,0.158584,0.154014,0.163264,0.35072,0.17796
+new_users,1185,41,1144,reliable,1.0,0.034599,0.100719,0.070606,0.141717,0.682927,0.530155,0.804356,0.218531,0.195548,0.243399,0.428692,0.234599
+rural_merchants_proxy,4351,192,4159,reliable,1.0,0.044128,0.162371,0.138097,0.189972,0.65625,0.586593,0.719777,0.156288,0.145569,0.16764,0.329809,0.17835
+gig_workers_proxy,3000,120,2880,reliable,1.0,0.04,0.136895,0.111672,0.166746,0.683333,0.59552,0.759773,0.179514,0.165927,0.193955,0.262,0.199667
+low_history_proxy,5104,216,4888,reliable,1.0,0.04232,0.14876,0.127733,0.172565,0.666667,0.601371,0.726138,0.168576,0.158342,0.179331,0.318966,0.189655

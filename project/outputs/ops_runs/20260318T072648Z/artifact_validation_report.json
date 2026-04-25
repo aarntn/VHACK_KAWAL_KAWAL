@@ -1,0 +1,112 @@
+{
+  "generated_at_utc": "2026-03-18T07:19:46.501324+00:00",
+  "ok": false,
+  "expected_metadata_source": "none",
+  "failed_checks": [
+    "feature_schema_hash_match",
+    "preprocessing_bundle_version_match",
+    "model_class_match",
+    "expected_metadata_present",
+    "expected_metadata_fields_present"
+  ],
+  "checks": {
+    "serialization_format_supported": {
+      "required_formats": [
+        "pickle"
+      ],
+      "actual": "pickle",
+      "passed": true
+    },
+    "pickle_protocol_supported": {
+      "required_max": 5,
+      "actual": 4,
+      "passed": true
+    },
+    "python_minor_runtime_compatible": {
+      "required": "3.11",
+      "actual": "3.11",
+      "passed": true
+    },
+    "serialization_match": {
+      "expected": {},
+      "actual": {
+        "format": "pickle",
+        "pickle_protocol": 4,
+        "python_minor": "3.11"
+      },
+      "mismatches": {},
+      "passed": true
+    },
+    "library_versions_match": {
+      "expected": {},
+      "actual": {
+        "python": "3.11.0",
+        "xgboost": "2.1.3",
+        "scikit_learn": "1.5.2",
+        "numpy": "2.0.2",
+        "pandas": "2.2.3"
+      },
+      "mismatches": {},
+      "passed": true
+    },
+    "feature_schema_hash_match": {
+      "expected": null,
+      "actual": "db1e71a426f92a3b787f5be1bf4788ffddd1f974e3c481b7919ac86c025c0292",
+      "passed": false
+    },
+    "preprocessing_bundle_version_match": {
+      "expected": null,
+      "actual": "1.0",
+      "passed": false
+    },
+    "model_class_match": {
+      "expected": null,
+      "actual": "xgboost.sklearn.XGBClassifier",
+      "passed": false
+    },
+    "expected_metadata_present": {
+      "passed": false,
+      "reason": "missing_expected_metadata"
+    },
+    "expected_metadata_fields_present": {
+      "required": [
+        "library_versions",
+        "feature_schema_hash",
+        "preprocessing_bundle_version",
+        "serialization",
+        "model_class"
+      ],
+      "missing": [
+        "library_versions",
+        "feature_schema_hash",
+        "preprocessing_bundle_version",
+        "serialization",
+        "model_class"
+      ],
+      "passed": false
+    }
+  },
+  "runtime_metadata": {
+    "schema_version": "1.0",
+    "model_path": "D:\\Vhack\\project\\models\\final_xgboost_model_promoted_preproc.pkl",
+    "feature_path": "D:\\Vhack\\project\\models\\feature_columns_promoted_preproc.pkl",
+    "preprocessing_artifact_path": "D:\\Vhack\\project\\models\\preprocessing_artifact_promoted.pkl",
+    "feature_schema_hash": "db1e71a426f92a3b787f5be1bf4788ffddd1f974e3c481b7919ac86c025c0292",
+    "feature_count": 17,
+    "preprocessing_bundle_version": "1.0",
+    "serialization": {
+      "format": "pickle",
+      "pickle_protocol": 4,
+      "python_minor": "3.11"
+    },
+    "library_versions": {
+      "python": "3.11.0",
+      "xgboost": "2.1.3",
+      "scikit_learn": "1.5.2",
+      "numpy": "2.0.2",
+      "pandas": "2.2.3"
+    },
+    "model_class": "xgboost.sklearn.XGBClassifier"
+  },
+  "expected_metadata": null
+}

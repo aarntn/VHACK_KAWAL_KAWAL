@@ -1,0 +1,210 @@
+{
+  "generated_at_utc": "2026-03-18T04:53:25.741362+00:00",
+  "status": "ok",
+  "drift_monitor": {
+    "command": [
+      "C:\\Users\\ranie\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+      "project/scripts/drift_monitor.py",
+      "--baseline-dataset",
+      "D:\\Vhack\\project\\outputs\\monitoring\\ieee_ops_merged_dataset.csv",
+      "--audit-log",
+      "D:\\Vhack\\project\\outputs\\audit\\fraud_audit_log.jsonl",
+      "--output-json",
+      "D:\\Vhack\\project\\outputs\\monitoring\\drift_report.json",
+      "--output-csv",
+      "D:\\Vhack\\project\\outputs\\monitoring\\drift_feature_psi.csv",
+      "--psi-warn",
+      "0.1",
+      "--psi-alert",
+      "0.25",
+      "--decision-drift-warn",
+      "0.1",
+      "--decision-drift-alert",
+      "0.2"
+    ],
+    "started_at_utc": "2026-03-18T04:42:40.921648+00:00",
+    "returncode": 0,
+    "stdout": "Drift monitoring complete\n{\n  \"baseline_row_count\": 590540,\n  \"audit_baseline_row_count\": 1062,\n  \"current_row_count\": 1063,\n  \"feature_count_evaluated\": 7,\n  \"feature_alert_count\": 0,\n  \"feature_warn_count\": 6\n}\nSaved drift report JSON: D:\\Vhack\\project\\outputs\\monitoring\\drift_report.json\nSaved feature PSI table: D:\\Vhack\\project\\outputs\\monitoring\\drift_feature_psi.csv\n",
+    "stderr": "",
+    "ok": true
+  },
+  "drift_report_summary": {
+    "baseline_row_count": 590540,
+    "audit_baseline_row_count": 1062,
+    "current_row_count": 1063,
+    "feature_count_evaluated": 7,
+    "feature_alert_count": 0,
+    "feature_warn_count": 6
+  },
+  "drift_recalibration_recommendation": {
+    "should_recalibrate": false,
+    "priority": "medium",
+    "reasons": [
+      "Warning-level drift detected; monitor closely"
+    ]
+  },
+  "calibration": null,
+  "threshold_promotion": null,
+  "benchmark": {
+    "command": [
+      "C:\\Users\\ranie\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+      "project/scripts/benchmark_latency.py",
+      "--requests",
+      "200",
+      "--concurrency",
+      "20"
+    ],
+    "started_at_utc": "2026-03-18T04:45:31.940216+00:00",
+    "returncode": 0,
+    "stdout": "{\n  \"outputs\": {\n    \"json\": \"D:\\\\Vhack\\\\project\\\\outputs\\\\benchmark\\\\latency_benchmark_20260318T044633Z.json\",\n    \"csv\": \"D:\\\\Vhack\\\\project\\\\outputs\\\\benchmark\\\\latency_benchmark_20260318T044633Z.csv\"\n  },\n  \"sla_evaluation\": {\n    \"score_transaction\": {\n      \"target_sla\": {\n        \"p95_latency_ms_max\": 250.0,\n        \"p99_latency_ms_max\": 500.0,\n        \"error_rate_pct_max\": 1.0\n      },\n      \"checks\": {\n        \"p95_latency_ms\": {\n          \"actual\": 2060.7755450018885,\n          \"target_max\": 250.0,\n          \"pass\": false\n        },\n        \"p99_latency_ms\": {\n          \"actual\": 2062.9243830021733,\n          \"target_max\": 500.0,\n          \"pass\": false\n        },\n        \"error_rate_pct\": {\n          \"actual\": 100.0,\n          \"target_max\": 1.0,\n          \"pass\": false\n        }\n      },\n      \"real_time_viability\": \"FAIL\"\n    },\n    \"wallet_authorize_payment\": {\n      \"target_sla\": {\n        \"p95_latency_ms_max\": 250.0,\n        \"p99_latency_ms_max\": 500.0,\n        \"error_rate_pct_max\": 1.0\n      },\n      \"checks\": {\n        \"p95_latency_ms\": {\n          \"actual\": 2059.8588500019105,\n          \"target_max\": 250.0,\n          \"pass\": false\n        },\n        \"p99_latency_ms\": {\n          \"actual\": 2062.335611004237,\n          \"target_max\": 500.0,\n          \"pass\": false\n        },\n        \"error_rate_pct\": {\n          \"actual\": 100.0,\n          \"target_max\": 1.0,\n          \"pass\": false\n        }\n      },\n      \"real_time_viability\": \"FAIL\"\n    }\n  }\n}\n",
+    "stderr": "",
+    "ok": true
+  },
+  "latency_trend": {
+    "command": [
+      "C:\\Users\\ranie\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+      "project/scripts/benchmark_trend_report.py",
+      "--history-limit",
+      "20",
+      "--output-json",
+      "D:\\Vhack\\project\\outputs\\monitoring\\latency_trend_report.json",
+      "--output-csv",
+      "D:\\Vhack\\project\\outputs\\monitoring\\latency_trend_report.csv"
+    ],
+    "started_at_utc": "2026-03-18T04:46:33.789288+00:00",
+    "returncode": 0,
+    "stdout": "Latency trend report complete\n{\n  \"history_points\": 40,\n  \"endpoints\": 2\n}\nSaved trend JSON: D:\\Vhack\\project\\outputs\\monitoring\\latency_trend_report.json\nSaved trend CSV: D:\\Vhack\\project\\outputs\\monitoring\\latency_trend_report.csv\n",
+    "stderr": "",
+    "ok": true
+  },
+  "cohort_kpi": {
+    "command": [
+      "C:\\Users\\ranie\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+      "project/scripts/cohort_kpi_report.py",
+      "--dataset-path",
+      "D:\\Vhack\\project\\outputs\\monitoring\\ieee_ops_merged_dataset.csv",
+      "--model-path",
+      "project\\models\\final_xgboost_model_promoted_preproc.pkl",
+      "--feature-path",
+      "project\\models\\feature_columns_promoted_preproc.pkl",
+      "--thresholds-path",
+      "project\\models\\decision_thresholds_promoted_preproc.pkl",
+      "--preprocessing-artifact-path",
+      "project\\models\\preprocessing_artifact_promoted.pkl",
+      "--output-json",
+      "D:\\Vhack\\project\\outputs\\monitoring\\cohort_kpi_report.json",
+      "--output-csv",
+      "D:\\Vhack\\project\\outputs\\monitoring\\cohort_kpi_report.csv"
+    ],
+    "started_at_utc": "2026-03-18T04:49:00.035386+00:00",
+    "returncode": 0,
+    "stdout": "Cohort KPI report complete\n{\n  \"rows\": 5,\n  \"sample_size\": 25000,\n  \"low_support_warnings\": 0\n}\nSaved report JSON: D:\\Vhack\\project\\outputs\\monitoring\\cohort_kpi_report.json\nSaved report CSV: D:\\Vhack\\project\\outputs\\monitoring\\cohort_kpi_report.csv\n",
+    "stderr": "",
+    "ok": true
+  },
+  "profile_replay": {
+    "command": [
+      "C:\\Users\\ranie\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+      "project/scripts/replay_behavior_profiles.py",
+      "--dataset-source",
+      "ieee_cis",
+      "--dataset-path",
+      "D:\\Vhack\\project\\outputs\\monitoring\\ieee_ops_merged_dataset.csv",
+      "--sqlite-path",
+      "D:\\Vhack\\project\\outputs\\behavior_profiles.sqlite3",
+      "--output-json",
+      "D:\\Vhack\\project\\outputs\\monitoring\\profile_replay_summary.json",
+      "--user-count",
+      "200",
+      "--transactions-per-user",
+      "12",
+      "--ieee-transaction-path",
+      "ieee-fraud-detection\\train_transaction.csv",
+      "--ieee-identity-path",
+      "ieee-fraud-detection\\train_identity.csv"
+    ],
+    "started_at_utc": "2026-03-18T04:51:49.127790+00:00",
+    "returncode": 0,
+    "stdout": "Behavior profile replay complete\n{\n  \"generated_at_utc\": \"2026-03-18T04:53:25.416761+00:00\",\n  \"dataset_path\": \"D:\\\\Vhack\\\\project\\\\outputs\\\\monitoring\\\\ieee_ops_merged_dataset.csv\",\n  \"sqlite_path\": \"D:\\\\Vhack\\\\project\\\\outputs\\\\behavior_profiles.sqlite3\",\n  \"users_written\": 200,\n  \"transactions_replayed\": 2400,\n  \"transactions_per_user\": 12,\n  \"ttl_seconds\": 2592000,\n  \"history_limit\": 100\n}\n",
+    "stderr": "",
+    "ok": true
+  },
+  "profile_health": {
+    "command": [
+      "C:\\Users\\ranie\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+      "project/scripts/behavior_profile_health.py",
+      "--store-backend",
+      "sqlite",
+      "--sqlite-path",
+      "D:\\Vhack\\project\\outputs\\behavior_profiles.sqlite3",
+      "--output-json",
+      "D:\\Vhack\\project\\outputs\\monitoring\\behavior_profile_health.json",
+      "--min-history",
+      "5",
+      "--stale-seconds",
+      "604800"
+    ],
+    "started_at_utc": "2026-03-18T04:53:25.629055+00:00",
+    "returncode": 0,
+    "stdout": "Behavior profile health check complete\n{\n  \"total_profiles\": 200,\n  \"active_profiles\": 200,\n  \"expired_profiles\": 0,\n  \"low_history_ratio\": 0.0,\n  \"stale_ratio\": 0.0,\n  \"avg_history_count\": 100.0\n}\nSaved health report JSON: D:\\Vhack\\project\\outputs\\monitoring\\behavior_profile_health.json\n",
+    "stderr": "",
+    "ok": true
+  },
+  "profile_health_summary": {
+    "total_profiles": 200,
+    "active_profiles": 200,
+    "expired_profiles": 0,
+    "low_history_ratio": 0.0,
+    "stale_ratio": 0.0,
+    "avg_history_count": 100.0
+  },
+  "profile_health_status": "ok",
+  "data_checks": {
+    "started_at_utc": "2026-03-18T04:42:52.031823+00:00",
+    "ok": true,
+    "dataset_source": "ieee_cis",
+    "dataset_path": "ieee-fraud-detection\\train_transaction.csv|ieee-fraud-detection\\train_identity.csv",
+    "row_count": 590540,
+    "column_count": 444,
+    "invalid_label_count": 0,
+    "global_null_ratio": 0.440592
+  },
+  "threshold_policy_guardrails": {
+    "started_at_utc": "2026-03-18T04:45:31.940216+00:00",
+    "ok": true,
+    "thresholds_path": "project\\models\\decision_thresholds_promoted_preproc.pkl",
+    "approve_threshold": 0.33225984837222255,
+    "block_threshold": 0.550425697388346
+  },
+  "retrain_trigger": {
+    "should_retrain": false,
+    "reasons": [
+      "none"
+    ]
+  },
+  "archive": {
+    "run_id": "20260318T045325Z",
+    "run_dir": "D:\\Vhack\\project\\outputs\\ops_runs\\20260318T045325Z",
+    "copied": {
+      "drift_json": "D:\\Vhack\\project\\outputs\\ops_runs\\20260318T045325Z\\drift_report.json",
+      "drift_csv": "D:\\Vhack\\project\\outputs\\ops_runs\\20260318T045325Z\\drift_feature_psi.csv",
+      "ops_summary_json": "D:\\Vhack\\project\\outputs\\ops_runs\\20260318T045325Z\\nightly_ops_summary.json",
+      "cohort_kpi_json": "D:\\Vhack\\project\\outputs\\ops_runs\\20260318T045325Z\\cohort_kpi_report.json",
+      "latency_trend_json": "D:\\Vhack\\project\\outputs\\ops_runs\\20260318T045325Z\\latency_trend_report.json",
+      "profile_health_json": "D:\\Vhack\\project\\outputs\\ops_runs\\20260318T045325Z\\behavior_profile_health.json"
+    },
+    "missing": {},
+    "sha256": {
+      "drift_json": "00c21b5374c287750c29488462e086c5f805aac40537d756c7e037e875ba071d",
+      "drift_csv": "e3c98cdf23500017b5b5e6dcac1aa02911885002fa80748212faf212fbfe002c",
+      "ops_summary_json": "9a232b4086dfc555ff332ad4a5e782ac7531c0bcb1af7c6405f19e138546ddf3",
+      "cohort_kpi_json": "3cd1fe74142af7ffb43b35f79b1ae42ed3870b92172daf7eaccdfabb85e9dbdb",
+      "latency_trend_json": "392da0d0a44c412fa28bde721d3fe44ee5a6c8b5617ab7f704d13fbf571694f0",
+      "profile_health_json": "afbf9c6da12b23478528c42c62eebaf9af2eaf9b799ce5208a9e0b67df364db1"
+    }
+  },
+  "alert": {
+    "sent": false,
+    "reason": "webhook_not_configured"
+  }
+}

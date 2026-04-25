@@ -1,0 +1,8 @@
+feature,psi,status
+context_scores.ip_risk_score,0.24426116,warn
+context_scores.device_risk_score,0.23891064,warn
+context_scores.location_risk_score,0.2139964,warn
+behavior_adjustment,0.21166587,warn
+final_risk_score,0.18248956,warn
+context_adjustment,0.16135597,warn
+base_model_score,0.08148141,ok

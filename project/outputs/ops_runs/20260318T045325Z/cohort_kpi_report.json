@@ -1,0 +1,82 @@
+{
+  "generated_at_utc": "2026-03-18T04:49:20.962608+00:00",
+  "dataset_path": "D:\\Vhack\\project\\outputs\\monitoring\\ieee_ops_merged_dataset.csv",
+  "thresholds": {
+    "approve_threshold": 0.33225984837222255,
+    "block_threshold": 0.550425697388346,
+    "context_adjustment_max": 0.3,
+    "min_positive_support": 5
+  },
+  "sample_size": 25000,
+  "cohorts": [
+    {
+      "cohort": "all_users",
+      "sample_count": 25000,
+      "fraud_positive_count": 894,
+      "nonfraud_count": 24106,
+      "metric_reliability": "reliable",
+      "fraud_rate": 0.03576,
+      "precision": 0.125338,
+      "recall": 0.519016,
+      "false_positive_rate": 0.134323,
+      "flag_rate": 0.22904,
+      "block_rate": 0.14808
+    },
+    {
+      "cohort": "new_users",
+      "sample_count": 1252,
+      "fraud_positive_count": 40,
+      "nonfraud_count": 1212,
+      "metric_reliability": "reliable",
+      "fraud_rate": 0.031949,
+      "precision": 0.104265,
+      "recall": 0.55,
+      "false_positive_rate": 0.155941,
+      "flag_rate": 0.288339,
+      "block_rate": 0.16853
+    },
+    {
+      "cohort": "rural_merchants_proxy",
+      "sample_count": 4426,
+      "fraud_positive_count": 154,
+      "nonfraud_count": 4272,
+      "metric_reliability": "reliable",
+      "fraud_rate": 0.034794,
+      "precision": 0.126697,
+      "recall": 0.545455,
+      "false_positive_rate": 0.135534,
+      "flag_rate": 0.197018,
+      "block_rate": 0.149797
+    },
+    {
+      "cohort": "gig_workers_proxy",
+      "sample_count": 3039,
+      "fraud_positive_count": 114,
+      "nonfraud_count": 2925,
+      "metric_reliability": "reliable",
+      "fraud_rate": 0.037512,
+      "precision": 0.116883,
+      "recall": 0.552632,
+      "false_positive_rate": 0.162735,
+      "flag_rate": 0.192827,
+      "block_rate": 0.177361
+    },
+    {
+      "cohort": "low_history_proxy",
+      "sample_count": 5130,
+      "fraud_positive_count": 173,
+      "nonfraud_count": 4957,
+      "metric_reliability": "reliable",
+      "fraud_rate": 0.033723,
+      "precision": 0.118012,
+      "recall": 0.549133,
+      "false_positive_rate": 0.143232,
+      "flag_rate": 0.202339,
+      "block_rate": 0.15692
+    }
+  ],
+  "warnings": {
+    "low_support_cohorts": [],
+    "count": 0
+  }
+}

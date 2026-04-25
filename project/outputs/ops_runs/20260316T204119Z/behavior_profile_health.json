@@ -1,0 +1,22 @@
+{
+  "generated_at_utc": "2026-03-16T20:41:19.224422+00:00",
+  "store_backend": "sqlite",
+  "sqlite_path": "D:\\Vhack\\project\\outputs\\behavior_profiles.sqlite3",
+  "status": "ok",
+  "summary": {
+    "total_profiles": 200,
+    "active_profiles": 200,
+    "expired_profiles": 0,
+    "low_history_ratio": 0.0,
+    "stale_ratio": 0.0,
+    "avg_history_count": 36.0
+  },
+  "warnings": [],
+  "thresholds": {
+    "min_history": 5,
+    "stale_seconds": 604800,
+    "coverage_warn_min_active": 50,
+    "low_history_warn_ratio": 0.5,
+    "stale_warn_ratio": 0.4
+  }
+}

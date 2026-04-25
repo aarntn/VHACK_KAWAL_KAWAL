@@ -1,0 +1,81 @@
+version: "3.9"
+
+services:
+  # ── Redis: feature store + behavior profile persistence ───────────────────
+  redis:
+    image: redis:7-alpine
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    command: >
+      redis-server
+      --maxmemory 512mb
+      --maxmemory-policy allkeys-lru
+      --save ""
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+
+  fraud-api:
+    build:
+      context: .
+      dockerfile: Dockerfile.fraud-api
+    container_name: fraud-api
+    depends_on:
+      redis:
+        condition: service_healthy
+    environment:
+      HF_TOKEN: ${HF_TOKEN}
+      PORT: "8000"
+      GUNICORN_WORKERS: "4"
+      GUNICORN_TIMEOUT: "60"
+      REDIS_URL: redis://redis:6379
+      PROMOTED_ARTIFACT_MANIFEST_FILE: /app/project/models/promoted_artifact_manifest.json
+      FRAUD_MODEL_FILE: /app/project/models/final_xgboost_model.pkl
+      FRAUD_FEATURE_FILE: /app/project/models/feature_columns.pkl
+      FRAUD_THRESHOLD_FILE: /app/project/models/decision_thresholds.pkl
+      FRAUD_AUDIT_DIR: /app/project/outputs/audit
+      FRAUD_AUDIT_FILE: fraud_audit_log.jsonl
+    ports:
+      - "8000:8000"
+    volumes:
+      - fraud_audit_data:/app/project/outputs/audit
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health/ready"]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+      start_period: 20s
+
+  wallet-api:
+    build:
+      context: .
+      dockerfile: Dockerfile.wallet-api
+    container_name: wallet-api
+    depends_on:
+      fraud-api:
+        condition: service_healthy
+    environment:
+      PORT: "8001"
+      GUNICORN_WORKERS: "4"
+      GUNICORN_TIMEOUT: "60"
+      FRAUD_ENGINE_URL: http://fraud-api:8000/score_transaction
+      FRAUD_ENGINE_HEALTH_URL: http://fraud-api:8000/health
+      UPSTREAM_TIMEOUT_SECONDS: "2.0"
+      UPSTREAM_MAX_RETRIES: "2"
+      UPSTREAM_BACKOFF_MS: "40"
+      UPSTREAM_BACKOFF_MAX_MS: "400"
+      MAX_INFLIGHT_REQUESTS: "400"
+    ports:
+      - "8001:8001"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8001/health/ready"]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+      start_period: 20s
+
+volumes:
+  fraud_audit_data:

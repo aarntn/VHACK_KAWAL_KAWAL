@@ -1,0 +1,231 @@
+{
+  "summary": {
+    "base_model_roc_auc": 0.8057681609822778,
+    "objective": 0.366079634405209,
+    "precision": 0.12416080239424088,
+    "recall": 0.5942702284165698,
+    "f1": 0.205406128730095,
+    "fpr": 0.15200499757842056,
+    "dataset_source": "ieee_cis",
+    "dataset_path": "D:\\Vhack\\project\\outputs\\monitoring\\ieee_ops_merged_dataset.csv",
+    "ieee_transaction_path": "D:\\Vhack\\ieee-fraud-detection\\train_transaction.csv",
+    "ieee_identity_path": "D:\\Vhack\\ieee-fraud-detection\\train_identity.csv",
+    "amount_column": "TransactionAmt",
+    "trials": 500,
+    "fpr_penalty": 0.35,
+    "target_fpr": 0.005,
+    "target_precision": 0.85,
+    "seed": 42,
+    "regression_fallback_applied": false
+  },
+  "pre_calibration": {
+    "runtime": {
+      "approve_threshold": 0.33225984837222255,
+      "block_threshold": 0.550425697388346,
+      "context_adjustment_max": 0.2524310906761248
+    },
+    "metrics": {
+      "precision": 0.12416080239424088,
+      "recall": 0.5942702284165698,
+      "f1": 0.205406128730095,
+      "fpr": 0.15200499757842056,
+      "roc_auc": 0.805943863297718
+    },
+    "objective": 0.366079634405209
+  },
+  "post_calibration": {
+    "runtime": {
+      "approve_threshold": 0.33225984837222255,
+      "block_threshold": 0.550425697388346,
+      "context_adjustment_max": 0.2524310906761248
+    },
+    "metrics": {
+      "precision": 0.12416080239424088,
+      "recall": 0.5942702284165698,
+      "f1": 0.205406128730095,
+      "fpr": 0.15200499757842056,
+      "roc_auc": 0.805943863297718
+    },
+    "objective": 0.366079634405209
+  },
+  "decision_drift_pre_post": {
+    "pre_approve_rate": 0.5345886815457039,
+    "post_approve_rate": 0.5345886815457039,
+    "delta_approve_rate": 0.0,
+    "pre_flag_rate": 0.2979307074880618,
+    "post_flag_rate": 0.2979307074880618,
+    "delta_flag_rate": 0.0,
+    "pre_block_rate": 0.1674806109662343,
+    "post_block_rate": 0.1674806109662343,
+    "delta_block_rate": 0.0,
+    "total_absolute_rate_shift": 0.0
+  },
+  "entity_smoothing": {
+    "method": "none",
+    "min_history": 2,
+    "ema_alpha": 0.3,
+    "blend_alpha": 0.5,
+    "blend_cap": 0.25,
+    "entity_diagnostics": {
+      "dataset_source": "ieee_cis",
+      "tiers": [
+        {
+          "tier": "ieee_card_addr_email_device",
+          "configured_columns": [
+            "card1",
+            "card2",
+            "card3",
+            "card5",
+            "addr1",
+            "addr2",
+            "P_emaildomain",
+            "R_emaildomain",
+            "DeviceType",
+            "DeviceInfo"
+          ],
+          "available_columns": [
+            "card1",
+            "card2",
+            "card3",
+            "card5",
+            "addr1",
+            "addr2",
+            "P_emaildomain",
+            "R_emaildomain",
+            "DeviceType",
+            "DeviceInfo"
+          ],
+          "assigned_rows": 147635,
+          "remaining_rows": 0
+        },
+        {
+          "tier": "ieee_card_addr_email",
+          "configured_columns": [
+            "card1",
+            "card2",
+            "card3",
+            "card5",
+            "addr1",
+            "addr2",
+            "P_emaildomain",
+            "R_emaildomain"
+          ],
+          "available_columns": [
+            "card1",
+            "card2",
+            "card3",
+            "card5",
+            "addr1",
+            "addr2",
+            "P_emaildomain",
+            "R_emaildomain"
+          ],
+          "assigned_rows": 0,
+          "remaining_rows": 0
+        },
+        {
+          "tier": "ieee_card_only",
+          "configured_columns": [
+            "card1",
+            "card2",
+            "card3",
+            "card5"
+          ],
+          "available_columns": [
+            "card1",
+            "card2",
+            "card3",
+            "card5"
+          ],
+          "assigned_rows": 0,
+          "remaining_rows": 0
+        }
+      ],
+      "rows_total": 147635,
+      "unique_entities": 58184,
+      "fallback_rows": 0
+    },
+    "pre_calibration_smoothed_metrics": {
+      "precision": 0.12416080239424088,
+      "recall": 0.5942702284165698,
+      "f1": 0.205406128730095,
+      "fpr": 0.15200499757842056,
+      "roc_auc": 0.805943863297718
+    },
+    "post_calibration_smoothed_metrics": {
+      "precision": 0.12416080239424088,
+      "recall": 0.5942702284165698,
+      "f1": 0.205406128730095,
+      "fpr": 0.15200499757842056,
+      "roc_auc": 0.805943863297718
+    }
+  },
+  "non_regression_check": {
+    "objective_non_regressed": true,
+    "f1_non_regressed": true,
+    "recall_non_regressed": true
+  },
+  "policy_checks": {
+    "fpr_le_target": {
+      "metric": "fpr",
+      "operator": "<=",
+      "actual": 0.15200499757842056,
+      "target": 0.005,
+      "pass": false
+    },
+    "precision_ge_target": {
+      "metric": "precision",
+      "operator": ">=",
+      "actual": 0.12416080239424088,
+      "target": 0.85,
+      "pass": false
+    },
+    "overall_pass": false,
+    "threshold_order_valid": true
+  },
+  "runtime_recommendation": {
+    "approve_threshold": 0.33225984837222255,
+    "block_threshold": 0.550425697388346,
+    "context_adjustment_max": 0.2524310906761248,
+    "context_weights": {
+      "device_risk_weight": 0.05013077541978402,
+      "ip_risk_weight": 0.044993130728990985,
+      "location_risk_weight": 0.039709166972782414,
+      "amount_over_200": 0.01895893227726627,
+      "amount_over_1000": 0.03215558439864253,
+      "early_time_weight": 0.00945763182018496,
+      "shared_device_ge_3": 0.030548523076535657,
+      "shared_device_ge_5": 0.08423257248067634,
+      "sim_change_weight": 0.03802530829152642,
+      "new_account_lt_7d": 0.03150681055911868,
+      "new_account_lt_3d": 0.058150554789722954,
+      "cashout_over_300": 0.030104183185125893,
+      "agent_high_risk_weight": 0.02598339084773491,
+      "flow_velocity_ge_8": 0.04006151937929702,
+      "p2p_counterparties_ge_12": 0.03399592642041903,
+      "cross_border_weight": 0.02635500574190542
+    }
+  },
+  "artifact_metadata": {
+    "schema_version": "1.0",
+    "model_path": "D:\\Vhack\\project\\models\\final_xgboost_model_promoted_preproc.pkl",
+    "feature_path": "D:\\Vhack\\project\\models\\feature_columns_promoted_preproc.pkl",
+    "preprocessing_artifact_path": "D:\\Vhack\\project\\models\\preprocessing_artifact_promoted.pkl",
+    "feature_schema_hash": "db1e71a426f92a3b787f5be1bf4788ffddd1f974e3c481b7919ac86c025c0292",
+    "feature_count": 17,
+    "preprocessing_bundle_version": "1.0",
+    "serialization": {
+      "format": "pickle",
+      "pickle_protocol": 4,
+      "python_minor": "3.11"
+    },
+    "library_versions": {
+      "python": "3.11.0",
+      "xgboost": "2.1.3",
+      "scikit_learn": "1.5.2",
+      "numpy": "2.0.2",
+      "pandas": "2.2.3"
+    },
+    "model_class": "xgboost.sklearn.XGBClassifier"
+  }
+}

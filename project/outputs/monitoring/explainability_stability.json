@@ -1,0 +1,41 @@
+{
+  "generated_at_utc": "2026-04-23T10:02:24.292908+00:00",
+  "fixtures": "/Users/abqary1907/Documents/Code/Vhack/project/tests/fixtures/fraud_payloads.json",
+  "samples_per_case": 25,
+  "seed": 42,
+  "jitter": 0.05,
+  "summary": {
+    "cases_evaluated": 3,
+    "decision_consistency_mean": 1.0,
+    "reason_jaccard_mean": 0.9664335664335665
+  },
+  "cases": [
+    {
+      "case": "approve_case",
+      "status": "ok",
+      "baseline_decision": "FLAG",
+      "samples": 25,
+      "decision_consistency": 1.0,
+      "reason_jaccard_mean": 1.0,
+      "same_decision_samples": 25
+    },
+    {
+      "case": "flag_case",
+      "status": "ok",
+      "baseline_decision": "FLAG",
+      "samples": 25,
+      "decision_consistency": 1.0,
+      "reason_jaccard_mean": 0.9138461538461539,
+      "same_decision_samples": 25
+    },
+    {
+      "case": "block_case",
+      "status": "ok",
+      "baseline_decision": "FLAG",
+      "samples": 25,
+      "decision_consistency": 1.0,
+      "reason_jaccard_mean": 0.9854545454545455,
+      "same_decision_samples": 25
+    }
+  ]
+}

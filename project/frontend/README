@@ -1,0 +1,36 @@
+# Frontend (React + Vite + TypeScript)
+
+This frontend hosts the demo UX previously embedded in FastAPI inline HTML.
+
+## API contract note
+
+- Frontend requests use the **public schema** (`transaction_amount` + context fields).
+- Frontend does **not** send IEEE raw model fields (`TransactionDT`, `V1..V17`).
+- IEEE-style fields are reserved for internal benchmark/model-serving contracts.
+
+## Environment
+
+Create `.env` from `.env.example`:
+
+```bash
+cp .env.example .env
+```
+
+Variables:
+
+- `VITE_FRAUD_API_BASE_URL` (ex: `http://127.0.0.1:8000`)
+- `VITE_WALLET_API_BASE_URL` (ex: `http://127.0.0.1:8001`)
+
+## Development
+
+```bash
+npm install
+npm run dev
+```
+
+## Build
+
+```bash
+npm run build
+npm run preview
+```

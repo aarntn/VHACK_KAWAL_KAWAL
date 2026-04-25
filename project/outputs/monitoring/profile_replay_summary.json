@@ -1,0 +1,11 @@
+{
+  "generated_at_utc": "2026-04-19T16:57:12.205016+00:00",
+  "source": "synthetic",
+  "sqlite_path": "C:\\Users\\kikee_07xsqul\\Downloads\\VHACK\\Vhack\\project\\outputs\\behavior_profiles.sqlite3",
+  "users_written": 300,
+  "transactions_replayed": 5400,
+  "transactions_per_user": 18,
+  "ttl_seconds": 31536000,
+  "ttl_days": 365,
+  "seed": 42
+}

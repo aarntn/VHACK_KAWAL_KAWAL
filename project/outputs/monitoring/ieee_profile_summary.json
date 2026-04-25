@@ -1,0 +1,3794 @@
+{
+  "dataset": "ieee_cis",
+  "paths": {
+    "transaction_path": "D:\\Vhack\\ieee-fraud-detection\\train_transaction.csv",
+    "identity_path": "D:\\Vhack\\ieee-fraud-detection\\train_identity.csv",
+    "output_json": "D:\\Vhack\\project\\outputs\\monitoring\\ieee_profile_summary.json",
+    "output_csv": "D:\\Vhack\\project\\outputs\\monitoring\\ieee_column_profile.csv"
+  },
+  "join": {
+    "join_key": "TransactionID",
+    "join_type": "left",
+    "transaction_row_count": 590540,
+    "identity_row_count": 144233,
+    "merged_row_count": 590540
+  },
+  "target_distribution": {
+    "target_column": "isFraud",
+    "total_rows": 590540,
+    "labeled_rows": 590540,
+    "fraud_positive_count": 20663,
+    "fraud_negative_count": 569877,
+    "fraud_positive_rate": 0.03499
+  },
+  "dtype_summary": {
+    "float64": 399,
+    "object": 31,
+    "int64": 4
+  },
+  "high_risk_columns": [
+    {
+      "column": "dist2",
+      "dtype": "float64",
+      "missing_ratio": 0.936284,
+      "unique_non_null": 1751,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "R_emaildomain",
+      "dtype": "object",
+      "missing_ratio": 0.767516,
+      "unique_non_null": 60,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "D6",
+      "dtype": "float64",
+      "missing_ratio": 0.876068,
+      "unique_non_null": 829,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "D7",
+      "dtype": "float64",
+      "missing_ratio": 0.934099,
+      "unique_non_null": 597,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "D8",
+      "dtype": "float64",
+      "missing_ratio": 0.873123,
+      "unique_non_null": 12353,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "D9",
+      "dtype": "float64",
+      "missing_ratio": 0.873123,
+      "unique_non_null": 24,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "D12",
+      "dtype": "float64",
+      "missing_ratio": 0.89041,
+      "unique_non_null": 635,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "D13",
+      "dtype": "float64",
+      "missing_ratio": 0.895093,
+      "unique_non_null": 577,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "D14",
+      "dtype": "float64",
+      "missing_ratio": 0.894695,
+      "unique_non_null": 802,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V138",
+      "dtype": "float64",
+      "missing_ratio": 0.861237,
+      "unique_non_null": 23,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V139",
+      "dtype": "float64",
+      "missing_ratio": 0.861237,
+      "unique_non_null": 34,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V140",
+      "dtype": "float64",
+      "missing_ratio": 0.861237,
+      "unique_non_null": 34,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V141",
+      "dtype": "float64",
+      "missing_ratio": 0.861237,
+      "unique_non_null": 6,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V142",
+      "dtype": "float64",
+      "missing_ratio": 0.861237,
+      "unique_non_null": 10,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V143",
+      "dtype": "float64",
+      "missing_ratio": 0.861227,
+      "unique_non_null": 870,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V144",
+      "dtype": "float64",
+      "missing_ratio": 0.861227,
+      "unique_non_null": 63,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V145",
+      "dtype": "float64",
+      "missing_ratio": 0.861227,
+      "unique_non_null": 260,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V146",
+      "dtype": "float64",
+      "missing_ratio": 0.861237,
+      "unique_non_null": 25,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V147",
+      "dtype": "float64",
+      "missing_ratio": 0.861237,
+      "unique_non_null": 27,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V148",
+      "dtype": "float64",
+      "missing_ratio": 0.861237,
+      "unique_non_null": 21,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V149",
+      "dtype": "float64",
+      "missing_ratio": 0.861237,
+      "unique_non_null": 21,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V150",
+      "dtype": "float64",
+      "missing_ratio": 0.861227,
+      "unique_non_null": 1996,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V151",
+      "dtype": "float64",
+      "missing_ratio": 0.861227,
+      "unique_non_null": 56,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V152",
+      "dtype": "float64",
+      "missing_ratio": 0.861227,
+      "unique_non_null": 39,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V153",
+      "dtype": "float64",
+      "missing_ratio": 0.861237,
+      "unique_non_null": 19,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V154",
+      "dtype": "float64",
+      "missing_ratio": 0.861237,
+      "unique_non_null": 19,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V155",
+      "dtype": "float64",
+      "missing_ratio": 0.861237,
+      "unique_non_null": 25,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V156",
+      "dtype": "float64",
+      "missing_ratio": 0.861237,
+      "unique_non_null": 25,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V157",
+      "dtype": "float64",
+      "missing_ratio": 0.861237,
+      "unique_non_null": 25,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V158",
+      "dtype": "float64",
+      "missing_ratio": 0.861237,
+      "unique_non_null": 25,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V159",
+      "dtype": "float64",
+      "missing_ratio": 0.861227,
+      "unique_non_null": 6663,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V160",
+      "dtype": "float64",
+      "missing_ratio": 0.861227,
+      "unique_non_null": 9621,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V161",
+      "dtype": "float64",
+      "missing_ratio": 0.861237,
+      "unique_non_null": 79,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V162",
+      "dtype": "float64",
+      "missing_ratio": 0.861237,
+      "unique_non_null": 185,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V163",
+      "dtype": "float64",
+      "missing_ratio": 0.861237,
+      "unique_non_null": 106,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V164",
+      "dtype": "float64",
+      "missing_ratio": 0.861227,
+      "unique_non_null": 1978,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V165",
+      "dtype": "float64",
+      "missing_ratio": 0.861227,
+      "unique_non_null": 2547,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V166",
+      "dtype": "float64",
+      "missing_ratio": 0.861227,
+      "unique_non_null": 987,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V167",
+      "dtype": "float64",
+      "missing_ratio": 0.763554,
+      "unique_non_null": 873,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V168",
+      "dtype": "float64",
+      "missing_ratio": 0.763554,
+      "unique_non_null": 965,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V169",
+      "dtype": "float64",
+      "missing_ratio": 0.763235,
+      "unique_non_null": 20,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V170",
+      "dtype": "float64",
+      "missing_ratio": 0.763235,
+      "unique_non_null": 49,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V171",
+      "dtype": "float64",
+      "missing_ratio": 0.763235,
+      "unique_non_null": 62,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V172",
+      "dtype": "float64",
+      "missing_ratio": 0.763554,
+      "unique_non_null": 32,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V173",
+      "dtype": "float64",
+      "missing_ratio": 0.763554,
+      "unique_non_null": 8,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V174",
+      "dtype": "float64",
+      "missing_ratio": 0.763235,
+      "unique_non_null": 9,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V175",
+      "dtype": "float64",
+      "missing_ratio": 0.763235,
+      "unique_non_null": 15,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V176",
+      "dtype": "float64",
+      "missing_ratio": 0.763554,
+      "unique_non_null": 49,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V177",
+      "dtype": "float64",
+      "missing_ratio": 0.763554,
+      "unique_non_null": 862,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V178",
+      "dtype": "float64",
+      "missing_ratio": 0.763554,
+      "unique_non_null": 1236,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V179",
+      "dtype": "float64",
+      "missing_ratio": 0.763554,
+      "unique_non_null": 921,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V180",
+      "dtype": "float64",
+      "missing_ratio": 0.763235,
+      "unique_non_null": 84,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V181",
+      "dtype": "float64",
+      "missing_ratio": 0.763554,
+      "unique_non_null": 25,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V182",
+      "dtype": "float64",
+      "missing_ratio": 0.763554,
+      "unique_non_null": 84,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V183",
+      "dtype": "float64",
+      "missing_ratio": 0.763554,
+      "unique_non_null": 42,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V184",
+      "dtype": "float64",
+      "missing_ratio": 0.763235,
+      "unique_non_null": 17,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V185",
+      "dtype": "float64",
+      "missing_ratio": 0.763235,
+      "unique_non_null": 32,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V186",
+      "dtype": "float64",
+      "missing_ratio": 0.763554,
+      "unique_non_null": 39,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V187",
+      "dtype": "float64",
+      "missing_ratio": 0.763554,
+      "unique_non_null": 215,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V188",
+      "dtype": "float64",
+      "missing_ratio": 0.763235,
+      "unique_non_null": 31,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V189",
+      "dtype": "float64",
+      "missing_ratio": 0.763235,
+      "unique_non_null": 31,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V190",
+      "dtype": "float64",
+      "missing_ratio": 0.763554,
+      "unique_non_null": 43,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V191",
+      "dtype": "float64",
+      "missing_ratio": 0.763554,
+      "unique_non_null": 22,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V192",
+      "dtype": "float64",
+      "missing_ratio": 0.763554,
+      "unique_non_null": 45,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V193",
+      "dtype": "float64",
+      "missing_ratio": 0.763554,
+      "unique_non_null": 38,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V194",
+      "dtype": "float64",
+      "missing_ratio": 0.763235,
+      "unique_non_null": 8,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V195",
+      "dtype": "float64",
+      "missing_ratio": 0.763235,
+      "unique_non_null": 17,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V196",
+      "dtype": "float64",
+      "missing_ratio": 0.763554,
+      "unique_non_null": 39,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V197",
+      "dtype": "float64",
+      "missing_ratio": 0.763235,
+      "unique_non_null": 15,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V198",
+      "dtype": "float64",
+      "missing_ratio": 0.763235,
+      "unique_non_null": 22,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V199",
+      "dtype": "float64",
+      "missing_ratio": 0.763554,
+      "unique_non_null": 46,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V200",
+      "dtype": "float64",
+      "missing_ratio": 0.763235,
+      "unique_non_null": 46,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V201",
+      "dtype": "float64",
+      "missing_ratio": 0.763235,
+      "unique_non_null": 56,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V202",
+      "dtype": "float64",
+      "missing_ratio": 0.763554,
+      "unique_non_null": 10970,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V203",
+      "dtype": "float64",
+      "missing_ratio": 0.763554,
+      "unique_non_null": 14951,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V204",
+      "dtype": "float64",
+      "missing_ratio": 0.763554,
+      "unique_non_null": 12858,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V205",
+      "dtype": "float64",
+      "missing_ratio": 0.763554,
+      "unique_non_null": 2240,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V206",
+      "dtype": "float64",
+      "missing_ratio": 0.763554,
+      "unique_non_null": 1780,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V207",
+      "dtype": "float64",
+      "missing_ratio": 0.763554,
+      "unique_non_null": 3246,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V208",
+      "dtype": "float64",
+      "missing_ratio": 0.763235,
+      "unique_non_null": 2552,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V209",
+      "dtype": "float64",
+      "missing_ratio": 0.763235,
+      "unique_non_null": 3451,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V210",
+      "dtype": "float64",
+      "missing_ratio": 0.763235,
+      "unique_non_null": 2836,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V211",
+      "dtype": "float64",
+      "missing_ratio": 0.763554,
+      "unique_non_null": 7624,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V212",
+      "dtype": "float64",
+      "missing_ratio": 0.763554,
+      "unique_non_null": 8868,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V213",
+      "dtype": "float64",
+      "missing_ratio": 0.763554,
+      "unique_non_null": 8317,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V214",
+      "dtype": "float64",
+      "missing_ratio": 0.763554,
+      "unique_non_null": 2282,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V215",
+      "dtype": "float64",
+      "missing_ratio": 0.763554,
+      "unique_non_null": 2747,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V216",
+      "dtype": "float64",
+      "missing_ratio": 0.763554,
+      "unique_non_null": 2532,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V217",
+      "dtype": "float64",
+      "missing_ratio": 0.779134,
+      "unique_non_null": 304,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V218",
+      "dtype": "float64",
+      "missing_ratio": 0.779134,
+      "unique_non_null": 401,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V219",
+      "dtype": "float64",
+      "missing_ratio": 0.779134,
+      "unique_non_null": 379,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V220",
+      "dtype": "float64",
+      "missing_ratio": 0.760531,
+      "unique_non_null": 26,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V221",
+      "dtype": "float64",
+      "missing_ratio": 0.760531,
+      "unique_non_null": 77,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V222",
+      "dtype": "float64",
+      "missing_ratio": 0.760531,
+      "unique_non_null": 76,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V223",
+      "dtype": "float64",
+      "missing_ratio": 0.779134,
+      "unique_non_null": 17,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V224",
+      "dtype": "float64",
+      "missing_ratio": 0.779134,
+      "unique_non_null": 79,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V225",
+      "dtype": "float64",
+      "missing_ratio": 0.779134,
+      "unique_non_null": 35,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V226",
+      "dtype": "float64",
+      "missing_ratio": 0.779134,
+      "unique_non_null": 81,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V227",
+      "dtype": "float64",
+      "missing_ratio": 0.760531,
+      "unique_non_null": 50,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V228",
+      "dtype": "float64",
+      "missing_ratio": 0.779134,
+      "unique_non_null": 55,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V229",
+      "dtype": "float64",
+      "missing_ratio": 0.779134,
+      "unique_non_null": 91,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V230",
+      "dtype": "float64",
+      "missing_ratio": 0.779134,
+      "unique_non_null": 66,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V231",
+      "dtype": "float64",
+      "missing_ratio": 0.779134,
+      "unique_non_null": 294,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V232",
+      "dtype": "float64",
+      "missing_ratio": 0.779134,
+      "unique_non_null": 338,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V233",
+      "dtype": "float64",
+      "missing_ratio": 0.779134,
+      "unique_non_null": 333,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V234",
+      "dtype": "float64",
+      "missing_ratio": 0.760531,
+      "unique_non_null": 122,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V235",
+      "dtype": "float64",
+      "missing_ratio": 0.779134,
+      "unique_non_null": 24,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V236",
+      "dtype": "float64",
+      "missing_ratio": 0.779134,
+      "unique_non_null": 46,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V237",
+      "dtype": "float64",
+      "missing_ratio": 0.779134,
+      "unique_non_null": 40,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V238",
+      "dtype": "float64",
+      "missing_ratio": 0.760531,
+      "unique_non_null": 24,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V239",
+      "dtype": "float64",
+      "missing_ratio": 0.760531,
+      "unique_non_null": 24,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V240",
+      "dtype": "float64",
+      "missing_ratio": 0.779134,
+      "unique_non_null": 6,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V241",
+      "dtype": "float64",
+      "missing_ratio": 0.779134,
+      "unique_non_null": 5,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V242",
+      "dtype": "float64",
+      "missing_ratio": 0.779134,
+      "unique_non_null": 21,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V243",
+      "dtype": "float64",
+      "missing_ratio": 0.779134,
+      "unique_non_null": 43,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V244",
+      "dtype": "float64",
+      "missing_ratio": 0.779134,
+      "unique_non_null": 23,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V245",
+      "dtype": "float64",
+      "missing_ratio": 0.760531,
+      "unique_non_null": 58,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V246",
+      "dtype": "float64",
+      "missing_ratio": 0.779134,
+      "unique_non_null": 46,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V247",
+      "dtype": "float64",
+      "missing_ratio": 0.779134,
+      "unique_non_null": 19,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V248",
+      "dtype": "float64",
+      "missing_ratio": 0.779134,
+      "unique_non_null": 23,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V249",
+      "dtype": "float64",
+      "missing_ratio": 0.779134,
+      "unique_non_null": 23,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V250",
+      "dtype": "float64",
+      "missing_ratio": 0.760531,
+      "unique_non_null": 19,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V251",
+      "dtype": "float64",
+      "missing_ratio": 0.760531,
+      "unique_non_null": 19,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V252",
+      "dtype": "float64",
+      "missing_ratio": 0.779134,
+      "unique_non_null": 25,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V253",
+      "dtype": "float64",
+      "missing_ratio": 0.779134,
+      "unique_non_null": 66,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V254",
+      "dtype": "float64",
+      "missing_ratio": 0.779134,
+      "unique_non_null": 45,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V255",
+      "dtype": "float64",
+      "missing_ratio": 0.760531,
+      "unique_non_null": 46,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V256",
+      "dtype": "float64",
+      "missing_ratio": 0.760531,
+      "unique_non_null": 48,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V257",
+      "dtype": "float64",
+      "missing_ratio": 0.779134,
+      "unique_non_null": 49,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V258",
+      "dtype": "float64",
+      "missing_ratio": 0.779134,
+      "unique_non_null": 67,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V259",
+      "dtype": "float64",
+      "missing_ratio": 0.760531,
+      "unique_non_null": 68,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V260",
+      "dtype": "float64",
+      "missing_ratio": 0.779134,
+      "unique_non_null": 9,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V261",
+      "dtype": "float64",
+      "missing_ratio": 0.779134,
+      "unique_non_null": 41,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V262",
+      "dtype": "float64",
+      "missing_ratio": 0.779134,
+      "unique_non_null": 21,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V263",
+      "dtype": "float64",
+      "missing_ratio": 0.779134,
+      "unique_non_null": 10422,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V264",
+      "dtype": "float64",
+      "missing_ratio": 0.779134,
+      "unique_non_null": 13358,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V265",
+      "dtype": "float64",
+      "missing_ratio": 0.779134,
+      "unique_non_null": 11757,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V266",
+      "dtype": "float64",
+      "missing_ratio": 0.779134,
+      "unique_non_null": 2178,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V267",
+      "dtype": "float64",
+      "missing_ratio": 0.779134,
+      "unique_non_null": 3616,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V268",
+      "dtype": "float64",
+      "missing_ratio": 0.779134,
+      "unique_non_null": 2756,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V269",
+      "dtype": "float64",
+      "missing_ratio": 0.779134,
+      "unique_non_null": 151,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V270",
+      "dtype": "float64",
+      "missing_ratio": 0.760531,
+      "unique_non_null": 2340,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V271",
+      "dtype": "float64",
+      "missing_ratio": 0.760531,
+      "unique_non_null": 2787,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V272",
+      "dtype": "float64",
+      "missing_ratio": 0.760531,
+      "unique_non_null": 2507,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V273",
+      "dtype": "float64",
+      "missing_ratio": 0.779134,
+      "unique_non_null": 7177,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V274",
+      "dtype": "float64",
+      "missing_ratio": 0.779134,
+      "unique_non_null": 8315,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V275",
+      "dtype": "float64",
+      "missing_ratio": 0.779134,
+      "unique_non_null": 7776,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V276",
+      "dtype": "float64",
+      "missing_ratio": 0.779134,
+      "unique_non_null": 2263,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V277",
+      "dtype": "float64",
+      "missing_ratio": 0.779134,
+      "unique_non_null": 2540,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V278",
+      "dtype": "float64",
+      "missing_ratio": 0.779134,
+      "unique_non_null": 2398,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V322",
+      "dtype": "float64",
+      "missing_ratio": 0.86055,
+      "unique_non_null": 881,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V323",
+      "dtype": "float64",
+      "missing_ratio": 0.86055,
+      "unique_non_null": 1411,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V324",
+      "dtype": "float64",
+      "missing_ratio": 0.86055,
+      "unique_non_null": 976,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V325",
+      "dtype": "float64",
+      "missing_ratio": 0.86055,
+      "unique_non_null": 13,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V326",
+      "dtype": "float64",
+      "missing_ratio": 0.86055,
+      "unique_non_null": 45,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V327",
+      "dtype": "float64",
+      "missing_ratio": 0.86055,
+      "unique_non_null": 19,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V328",
+      "dtype": "float64",
+      "missing_ratio": 0.86055,
+      "unique_non_null": 16,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V329",
+      "dtype": "float64",
+      "missing_ratio": 0.86055,
+      "unique_non_null": 100,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V330",
+      "dtype": "float64",
+      "missing_ratio": 0.86055,
+      "unique_non_null": 56,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V331",
+      "dtype": "float64",
+      "missing_ratio": 0.86055,
+      "unique_non_null": 1758,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V332",
+      "dtype": "float64",
+      "missing_ratio": 0.86055,
+      "unique_non_null": 2453,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V333",
+      "dtype": "float64",
+      "missing_ratio": 0.86055,
+      "unique_non_null": 1971,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V334",
+      "dtype": "float64",
+      "missing_ratio": 0.86055,
+      "unique_non_null": 143,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V335",
+      "dtype": "float64",
+      "missing_ratio": 0.86055,
+      "unique_non_null": 672,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V336",
+      "dtype": "float64",
+      "missing_ratio": 0.86055,
+      "unique_non_null": 356,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V337",
+      "dtype": "float64",
+      "missing_ratio": 0.86055,
+      "unique_non_null": 254,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V338",
+      "dtype": "float64",
+      "missing_ratio": 0.86055,
+      "unique_non_null": 380,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "V339",
+      "dtype": "float64",
+      "missing_ratio": 0.86055,
+      "unique_non_null": 334,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "id_01",
+      "dtype": "float64",
+      "missing_ratio": 0.755761,
+      "unique_non_null": 77,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "id_02",
+      "dtype": "float64",
+      "missing_ratio": 0.761452,
+      "unique_non_null": 115655,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "id_03",
+      "dtype": "float64",
+      "missing_ratio": 0.887689,
+      "unique_non_null": 24,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "id_04",
+      "dtype": "float64",
+      "missing_ratio": 0.887689,
+      "unique_non_null": 15,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "id_05",
+      "dtype": "float64",
+      "missing_ratio": 0.768238,
+      "unique_non_null": 93,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "id_06",
+      "dtype": "float64",
+      "missing_ratio": 0.768238,
+      "unique_non_null": 101,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "id_07",
+      "dtype": "float64",
+      "missing_ratio": 0.991271,
+      "unique_non_null": 84,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "id_08",
+      "dtype": "float64",
+      "missing_ratio": 0.991271,
+      "unique_non_null": 94,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "id_09",
+      "dtype": "float64",
+      "missing_ratio": 0.873123,
+      "unique_non_null": 46,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "id_10",
+      "dtype": "float64",
+      "missing_ratio": 0.873123,
+      "unique_non_null": 62,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "id_11",
+      "dtype": "float64",
+      "missing_ratio": 0.761273,
+      "unique_non_null": 365,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "id_12",
+      "dtype": "object",
+      "missing_ratio": 0.755761,
+      "unique_non_null": 2,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "id_13",
+      "dtype": "float64",
+      "missing_ratio": 0.784401,
+      "unique_non_null": 54,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "id_14",
+      "dtype": "float64",
+      "missing_ratio": 0.864456,
+      "unique_non_null": 25,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "id_15",
+      "dtype": "object",
+      "missing_ratio": 0.761261,
+      "unique_non_null": 3,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "id_16",
+      "dtype": "object",
+      "missing_ratio": 0.78098,
+      "unique_non_null": 2,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "id_17",
+      "dtype": "float64",
+      "missing_ratio": 0.763997,
+      "unique_non_null": 104,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "id_18",
+      "dtype": "float64",
+      "missing_ratio": 0.923607,
+      "unique_non_null": 18,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "id_19",
+      "dtype": "float64",
+      "missing_ratio": 0.764084,
+      "unique_non_null": 522,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "id_20",
+      "dtype": "float64",
+      "missing_ratio": 0.76418,
+      "unique_non_null": 394,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "id_21",
+      "dtype": "float64",
+      "missing_ratio": 0.991264,
+      "unique_non_null": 490,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "id_22",
+      "dtype": "float64",
+      "missing_ratio": 0.991247,
+      "unique_non_null": 25,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "id_23",
+      "dtype": "object",
+      "missing_ratio": 0.991247,
+      "unique_non_null": 3,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "id_24",
+      "dtype": "float64",
+      "missing_ratio": 0.991962,
+      "unique_non_null": 12,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "id_25",
+      "dtype": "float64",
+      "missing_ratio": 0.99131,
+      "unique_non_null": 341,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "id_26",
+      "dtype": "float64",
+      "missing_ratio": 0.991257,
+      "unique_non_null": 95,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "id_27",
+      "dtype": "object",
+      "missing_ratio": 0.991247,
+      "unique_non_null": 2,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "id_28",
+      "dtype": "object",
+      "missing_ratio": 0.761273,
+      "unique_non_null": 2,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "id_29",
+      "dtype": "object",
+      "missing_ratio": 0.761273,
+      "unique_non_null": 2,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "id_30",
+      "dtype": "object",
+      "missing_ratio": 0.868654,
+      "unique_non_null": 75,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "id_31",
+      "dtype": "object",
+      "missing_ratio": 0.762451,
+      "unique_non_null": 130,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "id_32",
+      "dtype": "float64",
+      "missing_ratio": 0.868619,
+      "unique_non_null": 4,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "id_33",
+      "dtype": "object",
+      "missing_ratio": 0.875895,
+      "unique_non_null": 260,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "id_34",
+      "dtype": "object",
+      "missing_ratio": 0.868248,
+      "unique_non_null": 4,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "id_35",
+      "dtype": "object",
+      "missing_ratio": 0.761261,
+      "unique_non_null": 2,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "id_36",
+      "dtype": "object",
+      "missing_ratio": 0.761261,
+      "unique_non_null": 2,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "id_37",
+      "dtype": "object",
+      "missing_ratio": 0.761261,
+      "unique_non_null": 2,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "id_38",
+      "dtype": "object",
+      "missing_ratio": 0.761261,
+      "unique_non_null": 2,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "DeviceType",
+      "dtype": "object",
+      "missing_ratio": 0.761557,
+      "unique_non_null": 2,
+      "risk_reasons": [
+        "missing_ratio>0.60"
+      ]
+    },
+    {
+      "column": "DeviceInfo",
+      "dtype": "object",
+      "missing_ratio": 0.799055,
+      "unique_non_null": 1786,
+      "risk_reasons": [
+        "missing_ratio>0.60",
+        "high_cardinality>1000"
+      ]
+    }
+  ],
+  "eda_gate": {
+    "enabled": true,
+    "passed": true,
+    "failed_checks": [],
+    "checks": {
+      "join_row_counts": {
+        "passed": true,
+        "transaction_rows": 590540,
+        "identity_rows": 144233,
+        "merged_rows": 590540
+      },
+      "key_missingness": {
+        "passed": true,
+        "transaction_missing_ratio": 0.0,
+        "identity_missing_ratio": 0.0,
+        "merged_missing_ratio": 0.0
+      },
+      "target_prevalence": {
+        "passed": true,
+        "positive_rate": 0.03499000914417313,
+        "minimum_expected_positive_rate": 0.001
+      },
+      "high_cardinality_fields": {
+        "passed": true,
+        "count": 1,
+        "sample_fields": [
+          "DeviceInfo"
+        ],
+        "threshold": 1000
+      },
+      "timestamp_range_sanity": {
+        "passed": true,
+        "timestamp_column": "TransactionDT",
+        "min": 86400.0,
+        "max": 15811131.0
+      }
+    }
+  },
+  "top_n_cardinality_columns": {
+    "ProductCD": [
+      {
+        "value": "W",
+        "count": 439670
+      },
+      {
+        "value": "C",
+        "count": 68519
+      },
+      {
+        "value": "R",
+        "count": 37699
+      },
+      {
+        "value": "H",
+        "count": 33024
+      },
+      {
+        "value": "S",
+        "count": 11628
+      }
+    ],
+    "card1": [
+      {
+        "value": "7919",
+        "count": 14932
+      },
+      {
+        "value": "9500",
+        "count": 14162
+      },
+      {
+        "value": "15885",
+        "count": 10361
+      },
+      {
+        "value": "17188",
+        "count": 10344
+      },
+      {
+        "value": "15066",
+        "count": 7945
+      },
+      {
+        "value": "12695",
+        "count": 7091
+      },
+      {
+        "value": "12544",
+        "count": 6773
+      },
+      {
+        "value": "6019",
+        "count": 6771
+      },
+      {
+        "value": "2803",
+        "count": 6141
+      },
+      {
+        "value": "7585",
+        "count": 5334
+      }
+    ],
+    "card2": [
+      {
+        "value": "321.0",
+        "count": 48935
+      },
+      {
+        "value": "111.0",
+        "count": 45191
+      },
+      {
+        "value": "555.0",
+        "count": 41995
+      },
+      {
+        "value": "490.0",
+        "count": 38145
+      },
+      {
+        "value": "583.0",
+        "count": 21803
+      },
+      {
+        "value": "170.0",
+        "count": 18214
+      },
+      {
+        "value": "194.0",
+        "count": 16938
+      },
+      {
+        "value": "545.0",
+        "count": 16355
+      },
+      {
+        "value": "360.0",
+        "count": 15190
+      },
+      {
+        "value": "514.0",
+        "count": 14541
+      }
+    ],
+    "card3": [
+      {
+        "value": "150.0",
+        "count": 521287
+      },
+      {
+        "value": "185.0",
+        "count": 56346
+      },
+      {
+        "value": "106.0",
+        "count": 1571
+      },
+      {
+        "value": "<NA>",
+        "count": 1565
+      },
+      {
+        "value": "146.0",
+        "count": 1252
+      },
+      {
+        "value": "144.0",
+        "count": 1252
+      },
+      {
+        "value": "117.0",
+        "count": 962
+      },
+      {
+        "value": "143.0",
+        "count": 899
+      },
+      {
+        "value": "119.0",
+        "count": 750
+      },
+      {
+        "value": "102.0",
+        "count": 460
+      }
+    ],
+    "card4": [
+      {
+        "value": "visa",
+        "count": 384767
+      },
+      {
+        "value": "mastercard",
+        "count": 189217
+      },
+      {
+        "value": "american express",
+        "count": 8328
+      },
+      {
+        "value": "discover",
+        "count": 6651
+      },
+      {
+        "value": "<NA>",
+        "count": 1577
+      }
+    ],
+    "card5": [
+      {
+        "value": "226.0",
+        "count": 296546
+      },
+      {
+        "value": "224.0",
+        "count": 81513
+      },
+      {
+        "value": "166.0",
+        "count": 57140
+      },
+      {
+        "value": "102.0",
+        "count": 29105
+      },
+      {
+        "value": "117.0",
+        "count": 25941
+      },
+      {
+        "value": "138.0",
+        "count": 19737
+      },
+      {
+        "value": "195.0",
+        "count": 16945
+      },
+      {
+        "value": "137.0",
+        "count": 11720
+      },
+      {
+        "value": "126.0",
+        "count": 10298
+      },
+      {
+        "value": "219.0",
+        "count": 9924
+      }
+    ],
+    "card6": [
+      {
+        "value": "debit",
+        "count": 439938
+      },
+      {
+        "value": "credit",
+        "count": 148986
+      },
+      {
+        "value": "<NA>",
+        "count": 1571
+      },
+      {
+        "value": "debit or credit",
+        "count": 30
+      },
+      {
+        "value": "charge card",
+        "count": 15
+      }
+    ],
+    "addr1": [
+      {
+        "value": "<NA>",
+        "count": 65706
+      },
+      {
+        "value": "299.0",
+        "count": 46335
+      },
+      {
+        "value": "325.0",
+        "count": 42751
+      },
+      {
+        "value": "204.0",
+        "count": 42020
+      },
+      {
+        "value": "264.0",
+        "count": 39870
+      },
+      {
+        "value": "330.0",
+        "count": 26287
+      },
+      {
+        "value": "315.0",
+        "count": 23078
+      },
+      {
+        "value": "441.0",
+        "count": 20827
+      },
+      {
+        "value": "272.0",
+        "count": 20141
+      },
+      {
+        "value": "123.0",
+        "count": 16105
+      }
+    ],
+    "addr2": [
+      {
+        "value": "87.0",
+        "count": 520481
+      },
+      {
+        "value": "<NA>",
+        "count": 65706
+      },
+      {
+        "value": "60.0",
+        "count": 3084
+      },
+      {
+        "value": "96.0",
+        "count": 638
+      },
+      {
+        "value": "32.0",
+        "count": 91
+      },
+      {
+        "value": "65.0",
+        "count": 82
+      },
+      {
+        "value": "16.0",
+        "count": 55
+      },
+      {
+        "value": "31.0",
+        "count": 47
+      },
+      {
+        "value": "19.0",
+        "count": 33
+      },
+      {
+        "value": "26.0",
+        "count": 25
+      }
+    ],
+    "P_emaildomain": [
+      {
+        "value": "gmail.com",
+        "count": 228355
+      },
+      {
+        "value": "yahoo.com",
+        "count": 100934
+      },
+      {
+        "value": "<NA>",
+        "count": 94456
+      },
+      {
+        "value": "hotmail.com",
+        "count": 45250
+      },
+      {
+        "value": "anonymous.com",
+        "count": 36998
+      },
+      {
+        "value": "aol.com",
+        "count": 28289
+      },
+      {
+        "value": "comcast.net",
+        "count": 7888
+      },
+      {
+        "value": "icloud.com",
+        "count": 6267
+      },
+      {
+        "value": "outlook.com",
+        "count": 5096
+      },
+      {
+        "value": "msn.com",
+        "count": 4092
+      }
+    ],
+    "R_emaildomain": [
+      {
+        "value": "<NA>",
+        "count": 453249
+      },
+      {
+        "value": "gmail.com",
+        "count": 57147
+      },
+      {
+        "value": "hotmail.com",
+        "count": 27509
+      },
+      {
+        "value": "anonymous.com",
+        "count": 20529
+      },
+      {
+        "value": "yahoo.com",
+        "count": 11842
+      },
+      {
+        "value": "aol.com",
+        "count": 3701
+      },
+      {
+        "value": "outlook.com",
+        "count": 2507
+      },
+      {
+        "value": "comcast.net",
+        "count": 1812
+      },
+      {
+        "value": "yahoo.com.mx",
+        "count": 1508
+      },
+      {
+        "value": "icloud.com",
+        "count": 1398
+      }
+    ],
+    "M1": [
+      {
+        "value": "T",
+        "count": 319415
+      },
+      {
+        "value": "<NA>",
+        "count": 271100
+      },
+      {
+        "value": "F",
+        "count": 25
+      }
+    ],
+    "M2": [
+      {
+        "value": "T",
+        "count": 285468
+      },
+      {
+        "value": "<NA>",
+        "count": 271100
+      },
+      {
+        "value": "F",
+        "count": 33972
+      }
+    ],
+    "M3": [
+      {
+        "value": "<NA>",
+        "count": 271100
+      },
+      {
+        "value": "T",
+        "count": 251731
+      },
+      {
+        "value": "F",
+        "count": 67709
+      }
+    ],
+    "M4": [
+      {
+        "value": "<NA>",
+        "count": 281444
+      },
+      {
+        "value": "M0",
+        "count": 196405
+      },
+      {
+        "value": "M2",
+        "count": 59865
+      },
+      {
+        "value": "M1",
+        "count": 52826
+      }
+    ],
+    "M5": [
+      {
+        "value": "<NA>",
+        "count": 350482
+      },
+      {
+        "value": "F",
+        "count": 132491
+      },
+      {
+        "value": "T",
+        "count": 107567
+      }
+    ],
+    "M6": [
+      {
+        "value": "F",
+        "count": 227856
+      },
+      {
+        "value": "T",
+        "count": 193324
+      },
+      {
+        "value": "<NA>",
+        "count": 169360
+      }
+    ],
+    "M7": [
+      {
+        "value": "<NA>",
+        "count": 346265
+      },
+      {
+        "value": "F",
+        "count": 211374
+      },
+      {
+        "value": "T",
+        "count": 32901
+      }
+    ],
+    "M8": [
+      {
+        "value": "<NA>",
+        "count": 346252
+      },
+      {
+        "value": "F",
+        "count": 155251
+      },
+      {
+        "value": "T",
+        "count": 89037
+      }
+    ],
+    "M9": [
+      {
+        "value": "<NA>",
+        "count": 346252
+      },
+      {
+        "value": "T",
+        "count": 205656
+      },
+      {
+        "value": "F",
+        "count": 38632
+      }
+    ],
+    "id_01": [
+      {
+        "value": "<NA>",
+        "count": 446307
+      },
+      {
+        "value": "-5.0",
+        "count": 82170
+      },
+      {
+        "value": "0.0",
+        "count": 19555
+      },
+      {
+        "value": "-10.0",
+        "count": 11257
+      },
+      {
+        "value": "-20.0",
+        "count": 11211
+      },
+      {
+        "value": "-15.0",
+        "count": 5674
+      },
+      {
+        "value": "-25.0",
+        "count": 4623
+      },
+      {
+        "value": "-45.0",
+        "count": 2143
+      },
+      {
+        "value": "-35.0",
+        "count": 1622
+      },
+      {
+        "value": "-40.0",
+        "count": 1385
+      }
+    ],
+    "id_02": [
+      {
+        "value": "<NA>",
+        "count": 449668
+      },
+      {
+        "value": "1102.0",
+        "count": 11
+      },
+      {
+        "value": "696.0",
+        "count": 10
+      },
+      {
+        "value": "1141.0",
+        "count": 9
+      },
+      {
+        "value": "1083.0",
+        "count": 9
+      },
+      {
+        "value": "1117.0",
+        "count": 9
+      },
+      {
+        "value": "1120.0",
+        "count": 9
+      },
+      {
+        "value": "1116.0",
+        "count": 9
+      },
+      {
+        "value": "1127.0",
+        "count": 8
+      },
+      {
+        "value": "1089.0",
+        "count": 7
+      }
+    ],
+    "id_03": [
+      {
+        "value": "<NA>",
+        "count": 524216
+      },
+      {
+        "value": "0.0",
+        "count": 63903
+      },
+      {
+        "value": "1.0",
+        "count": 863
+      },
+      {
+        "value": "3.0",
+        "count": 668
+      },
+      {
+        "value": "2.0",
+        "count": 421
+      },
+      {
+        "value": "5.0",
+        "count": 109
+      },
+      {
+        "value": "4.0",
+        "count": 100
+      },
+      {
+        "value": "6.0",
+        "count": 64
+      },
+      {
+        "value": "-5.0",
+        "count": 33
+      },
+      {
+        "value": "-6.0",
+        "count": 31
+      }
+    ],
+    "id_04": [
+      {
+        "value": "<NA>",
+        "count": 524216
+      },
+      {
+        "value": "0.0",
+        "count": 65739
+      },
+      {
+        "value": "-5.0",
+        "count": 132
+      },
+      {
+        "value": "-6.0",
+        "count": 98
+      },
+      {
+        "value": "-8.0",
+        "count": 64
+      },
+      {
+        "value": "-4.0",
+        "count": 51
+      },
+      {
+        "value": "-1.0",
+        "count": 43
+      },
+      {
+        "value": "-11.0",
+        "count": 35
+      },
+      {
+        "value": "-12.0",
+        "count": 34
+      },
+      {
+        "value": "-10.0",
+        "count": 30
+      }
+    ],
+    "id_05": [
+      {
+        "value": "<NA>",
+        "count": 453675
+      },
+      {
+        "value": "0.0",
+        "count": 92743
+      },
+      {
+        "value": "1.0",
+        "count": 8293
+      },
+      {
+        "value": "2.0",
+        "count": 4937
+      },
+      {
+        "value": "3.0",
+        "count": 3854
+      },
+      {
+        "value": "4.0",
+        "count": 2941
+      },
+      {
+        "value": "6.0",
+        "count": 2338
+      },
+      {
+        "value": "5.0",
+        "count": 2312
+      },
+      {
+        "value": "7.0",
+        "count": 1475
+      },
+      {
+        "value": "8.0",
+        "count": 1266
+      }
+    ],
+    "id_06": [
+      {
+        "value": "<NA>",
+        "count": 453675
+      },
+      {
+        "value": "0.0",
+        "count": 91325
+      },
+      {
+        "value": "-1.0",
+        "count": 4687
+      },
+      {
+        "value": "-5.0",
+        "count": 3849
+      },
+      {
+        "value": "-6.0",
+        "count": 3257
+      },
+      {
+        "value": "-9.0",
+        "count": 2634
+      },
+      {
+        "value": "-100.0",
+        "count": 2431
+      },
+      {
+        "value": "-8.0",
+        "count": 1994
+      },
+      {
+        "value": "-10.0",
+        "count": 1964
+      },
+      {
+        "value": "-11.0",
+        "count": 1832
+      }
+    ],
+    "id_07": [
+      {
+        "value": "<NA>",
+        "count": 585385
+      },
+      {
+        "value": "0.0",
+        "count": 409
+      },
+      {
+        "value": "16.0",
+        "count": 245
+      },
+      {
+        "value": "14.0",
+        "count": 228
+      },
+      {
+        "value": "12.0",
+        "count": 208
+      },
+      {
+        "value": "15.0",
+        "count": 186
+      },
+      {
+        "value": "17.0",
+        "count": 180
+      },
+      {
+        "value": "4.0",
+        "count": 178
+      },
+      {
+        "value": "13.0",
+        "count": 175
+      },
+      {
+        "value": "5.0",
+        "count": 154
+      }
+    ],
+    "id_08": [
+      {
+        "value": "<NA>",
+        "count": 585385
+      },
+      {
+        "value": "-100.0",
+        "count": 500
+      },
+      {
+        "value": "0.0",
+        "count": 261
+      },
+      {
+        "value": "-34.0",
+        "count": 257
+      },
+      {
+        "value": "-33.0",
+        "count": 209
+      },
+      {
+        "value": "-32.0",
+        "count": 185
+      },
+      {
+        "value": "-35.0",
+        "count": 184
+      },
+      {
+        "value": "-25.0",
+        "count": 126
+      },
+      {
+        "value": "-31.0",
+        "count": 117
+      },
+      {
+        "value": "-30.0",
+        "count": 116
+      }
+    ],
+    "id_09": [
+      {
+        "value": "<NA>",
+        "count": 515614
+      },
+      {
+        "value": "0.0",
+        "count": 70378
+      },
+      {
+        "value": "1.0",
+        "count": 1616
+      },
+      {
+        "value": "3.0",
+        "count": 966
+      },
+      {
+        "value": "2.0",
+        "count": 773
+      },
+      {
+        "value": "4.0",
+        "count": 270
+      },
+      {
+        "value": "5.0",
+        "count": 207
+      },
+      {
+        "value": "6.0",
+        "count": 145
+      },
+      {
+        "value": "-6.0",
+        "count": 66
+      },
+      {
+        "value": "-5.0",
+        "count": 60
+      }
+    ],
+    "id_10": [
+      {
+        "value": "<NA>",
+        "count": 515614
+      },
+      {
+        "value": "0.0",
+        "count": 72879
+      },
+      {
+        "value": "-6.0",
+        "count": 295
+      },
+      {
+        "value": "-5.0",
+        "count": 247
+      },
+      {
+        "value": "-1.0",
+        "count": 200
+      },
+      {
+        "value": "-8.0",
+        "count": 147
+      },
+      {
+        "value": "-11.0",
+        "count": 127
+      },
+      {
+        "value": "-9.0",
+        "count": 118
+      },
+      {
+        "value": "-12.0",
+        "count": 118
+      },
+      {
+        "value": "-10.0",
+        "count": 115
+      }
+    ],
+    "id_11": [
+      {
+        "value": "<NA>",
+        "count": 449562
+      },
+      {
+        "value": "100.0",
+        "count": 133162
+      },
+      {
+        "value": "95.08000183105467",
+        "count": 1231
+      },
+      {
+        "value": "95.16000366210938",
+        "count": 754
+      },
+      {
+        "value": "97.12000274658205",
+        "count": 440
+      },
+      {
+        "value": "96.66999816894533",
+        "count": 333
+      },
+      {
+        "value": "95.6500015258789",
+        "count": 286
+      },
+      {
+        "value": "96.19000244140624",
+        "count": 241
+      },
+      {
+        "value": "94.29000091552734",
+        "count": 228
+      },
+      {
+        "value": "93.5500030517578",
+        "count": 204
+      }
+    ],
+    "id_12": [
+      {
+        "value": "<NA>",
+        "count": 446307
+      },
+      {
+        "value": "NotFound",
+        "count": 123025
+      },
+      {
+        "value": "Found",
+        "count": 21208
+      }
+    ],
+    "id_13": [
+      {
+        "value": "<NA>",
+        "count": 463220
+      },
+      {
+        "value": "52.0",
+        "count": 58099
+      },
+      {
+        "value": "49.0",
+        "count": 26365
+      },
+      {
+        "value": "64.0",
+        "count": 14429
+      },
+      {
+        "value": "33.0",
+        "count": 10048
+      },
+      {
+        "value": "27.0",
+        "count": 3666
+      },
+      {
+        "value": "20.0",
+        "count": 2878
+      },
+      {
+        "value": "14.0",
+        "count": 2499
+      },
+      {
+        "value": "63.0",
+        "count": 1468
+      },
+      {
+        "value": "19.0",
+        "count": 1147
+      }
+    ],
+    "id_14": [
+      {
+        "value": "<NA>",
+        "count": 510496
+      },
+      {
+        "value": "-300.0",
+        "count": 44121
+      },
+      {
+        "value": "-360.0",
+        "count": 16661
+      },
+      {
+        "value": "-480.0",
+        "count": 12891
+      },
+      {
+        "value": "-420.0",
+        "count": 4542
+      },
+      {
+        "value": "-600.0",
+        "count": 498
+      },
+      {
+        "value": "60.0",
+        "count": 369
+      },
+      {
+        "value": "0.0",
+        "count": 192
+      },
+      {
+        "value": "-240.0",
+        "count": 159
+      },
+      {
+        "value": "-180.0",
+        "count": 126
+      }
+    ],
+    "id_15": [
+      {
+        "value": "<NA>",
+        "count": 449555
+      },
+      {
+        "value": "Found",
+        "count": 67728
+      },
+      {
+        "value": "New",
+        "count": 61612
+      },
+      {
+        "value": "Unknown",
+        "count": 11645
+      }
+    ],
+    "id_16": [
+      {
+        "value": "<NA>",
+        "count": 461200
+      },
+      {
+        "value": "Found",
+        "count": 66324
+      },
+      {
+        "value": "NotFound",
+        "count": 63016
+      }
+    ],
+    "id_17": [
+      {
+        "value": "<NA>",
+        "count": 451171
+      },
+      {
+        "value": "166.0",
+        "count": 78631
+      },
+      {
+        "value": "225.0",
+        "count": 56968
+      },
+      {
+        "value": "102.0",
+        "count": 689
+      },
+      {
+        "value": "159.0",
+        "count": 352
+      },
+      {
+        "value": "100.0",
+        "count": 336
+      },
+      {
+        "value": "121.0",
+        "count": 279
+      },
+      {
+        "value": "148.0",
+        "count": 229
+      },
+      {
+        "value": "150.0",
+        "count": 126
+      },
+      {
+        "value": "191.0",
+        "count": 123
+      }
+    ],
+    "id_18": [
+      {
+        "value": "<NA>",
+        "count": 545427
+      },
+      {
+        "value": "15.0",
+        "count": 25489
+      },
+      {
+        "value": "13.0",
+        "count": 13439
+      },
+      {
+        "value": "12.0",
+        "count": 4656
+      },
+      {
+        "value": "18.0",
+        "count": 650
+      },
+      {
+        "value": "20.0",
+        "count": 339
+      },
+      {
+        "value": "17.0",
+        "count": 233
+      },
+      {
+        "value": "26.0",
+        "count": 89
+      },
+      {
+        "value": "21.0",
+        "count": 78
+      },
+      {
+        "value": "24.0",
+        "count": 52
+      }
+    ],
+    "id_19": [
+      {
+        "value": "<NA>",
+        "count": 451222
+      },
+      {
+        "value": "266.0",
+        "count": 19849
+      },
+      {
+        "value": "410.0",
+        "count": 11318
+      },
+      {
+        "value": "427.0",
+        "count": 8808
+      },
+      {
+        "value": "529.0",
+        "count": 8122
+      },
+      {
+        "value": "312.0",
+        "count": 6227
+      },
+      {
+        "value": "100.0",
+        "count": 5262
+      },
+      {
+        "value": "542.0",
+        "count": 5116
+      },
+      {
+        "value": "215.0",
+        "count": 4728
+      },
+      {
+        "value": "153.0",
+        "count": 4384
+      }
+    ],
+    "id_20": [
+      {
+        "value": "<NA>",
+        "count": 451279
+      },
+      {
+        "value": "507.0",
+        "count": 22311
+      },
+      {
+        "value": "222.0",
+        "count": 11065
+      },
+      {
+        "value": "325.0",
+        "count": 8133
+      },
+      {
+        "value": "533.0",
+        "count": 6611
+      },
+      {
+        "value": "214.0",
+        "count": 5664
+      },
+      {
+        "value": "549.0",
+        "count": 5643
+      },
+      {
+        "value": "600.0",
+        "count": 5563
+      },
+      {
+        "value": "563.0",
+        "count": 4711
+      },
+      {
+        "value": "333.0",
+        "count": 3691
+      }
+    ],
+    "id_21": [
+      {
+        "value": "<NA>",
+        "count": 585381
+      },
+      {
+        "value": "252.0",
+        "count": 2542
+      },
+      {
+        "value": "228.0",
+        "count": 239
+      },
+      {
+        "value": "255.0",
+        "count": 109
+      },
+      {
+        "value": "596.0",
+        "count": 103
+      },
+      {
+        "value": "576.0",
+        "count": 101
+      },
+      {
+        "value": "849.0",
+        "count": 88
+      },
+      {
+        "value": "277.0",
+        "count": 86
+      },
+      {
+        "value": "755.0",
+        "count": 65
+      },
+      {
+        "value": "848.0",
+        "count": 58
+      }
+    ],
+    "id_22": [
+      {
+        "value": "<NA>",
+        "count": 585371
+      },
+      {
+        "value": "14.0",
+        "count": 4736
+      },
+      {
+        "value": "41.0",
+        "count": 321
+      },
+      {
+        "value": "33.0",
+        "count": 38
+      },
+      {
+        "value": "21.0",
+        "count": 7
+      },
+      {
+        "value": "17.0",
+        "count": 7
+      },
+      {
+        "value": "39.0",
+        "count": 6
+      },
+      {
+        "value": "31.0",
+        "count": 5
+      },
+      {
+        "value": "12.0",
+        "count": 5
+      },
+      {
+        "value": "35.0",
+        "count": 5
+      }
+    ],
+    "id_23": [
+      {
+        "value": "<NA>",
+        "count": 585371
+      },
+      {
+        "value": "IP_PROXY:TRANSPARENT",
+        "count": 3489
+      },
+      {
+        "value": "IP_PROXY:ANONYMOUS",
+        "count": 1071
+      },
+      {
+        "value": "IP_PROXY:HIDDEN",
+        "count": 609
+      }
+    ],
+    "id_24": [
+      {
+        "value": "<NA>",
+        "count": 585793
+      },
+      {
+        "value": "11.0",
+        "count": 2817
+      },
+      {
+        "value": "15.0",
+        "count": 1594
+      },
+      {
+        "value": "16.0",
+        "count": 220
+      },
+      {
+        "value": "18.0",
+        "count": 37
+      },
+      {
+        "value": "21.0",
+        "count": 33
+      },
+      {
+        "value": "24.0",
+        "count": 12
+      },
+      {
+        "value": "17.0",
+        "count": 9
+      },
+      {
+        "value": "26.0",
+        "count": 8
+      },
+      {
+        "value": "25.0",
+        "count": 7
+      }
+    ],
+    "id_25": [
+      {
+        "value": "<NA>",
+        "count": 585408
+      },
+      {
+        "value": "321.0",
+        "count": 2494
+      },
+      {
+        "value": "205.0",
+        "count": 301
+      },
+      {
+        "value": "426.0",
+        "count": 236
+      },
+      {
+        "value": "501.0",
+        "count": 103
+      },
+      {
+        "value": "371.0",
+        "count": 83
+      },
+      {
+        "value": "524.0",
+        "count": 78
+      },
+      {
+        "value": "442.0",
+        "count": 77
+      },
+      {
+        "value": "509.0",
+        "count": 65
+      },
+      {
+        "value": "123.0",
+        "count": 53
+      }
+    ],
+    "id_26": [
+      {
+        "value": "<NA>",
+        "count": 585377
+      },
+      {
+        "value": "161.0",
+        "count": 824
+      },
+      {
+        "value": "184.0",
+        "count": 582
+      },
+      {
+        "value": "142.0",
+        "count": 528
+      },
+      {
+        "value": "102.0",
+        "count": 451
+      },
+      {
+        "value": "100.0",
+        "count": 433
+      },
+      {
+        "value": "119.0",
+        "count": 375
+      },
+      {
+        "value": "169.0",
+        "count": 365
+      },
+      {
+        "value": "147.0",
+        "count": 233
+      },
+      {
+        "value": "215.0",
+        "count": 142
+      }
+    ],
+    "id_27": [
+      {
+        "value": "<NA>",
+        "count": 585371
+      },
+      {
+        "value": "Found",
+        "count": 5155
+      },
+      {
+        "value": "NotFound",
+        "count": 14
+      }
+    ],
+    "id_28": [
+      {
+        "value": "<NA>",
+        "count": 449562
+      },
+      {
+        "value": "Found",
+        "count": 76232
+      },
+      {
+        "value": "New",
+        "count": 64746
+      }
+    ],
+    "id_29": [
+      {
+        "value": "<NA>",
+        "count": 449562
+      },
+      {
+        "value": "Found",
+        "count": 74926
+      },
+      {
+        "value": "NotFound",
+        "count": 66052
+      }
+    ],
+    "id_30": [
+      {
+        "value": "<NA>",
+        "count": 512975
+      },
+      {
+        "value": "Windows 10",
+        "count": 21155
+      },
+      {
+        "value": "Windows 7",
+        "count": 13110
+      },
+      {
+        "value": "iOS 11.2.1",
+        "count": 3722
+      },
+      {
+        "value": "iOS 11.1.2",
+        "count": 3699
+      },
+      {
+        "value": "Android 7.0",
+        "count": 2871
+      },
+      {
+        "value": "Mac OS X 10_12_6",
+        "count": 2559
+      },
+      {
+        "value": "Mac OS X 10_11_6",
+        "count": 2348
+      },
+      {
+        "value": "iOS 11.3.0",
+        "count": 2016
+      },
+      {
+        "value": "Windows 8.1",
+        "count": 1914
+      }
+    ],
+    "id_31": [
+      {
+        "value": "<NA>",
+        "count": 450258
+      },
+      {
+        "value": "chrome 63.0",
+        "count": 22000
+      },
+      {
+        "value": "mobile safari 11.0",
+        "count": 13423
+      },
+      {
+        "value": "mobile safari generic",
+        "count": 11474
+      },
+      {
+        "value": "ie 11.0 for desktop",
+        "count": 9030
+      },
+      {
+        "value": "safari generic",
+        "count": 8195
+      },
+      {
+        "value": "chrome 62.0",
+        "count": 7182
+      },
+      {
+        "value": "chrome 65.0",
+        "count": 6871
+      },
+      {
+        "value": "chrome 64.0",
+        "count": 6711
+      },
+      {
+        "value": "chrome 63.0 for android",
+        "count": 5806
+      }
+    ],
+    "id_32": [
+      {
+        "value": "<NA>",
+        "count": 512954
+      },
+      {
+        "value": "24.0",
+        "count": 53071
+      },
+      {
+        "value": "32.0",
+        "count": 24428
+      },
+      {
+        "value": "16.0",
+        "count": 81
+      },
+      {
+        "value": "0.0",
+        "count": 6
+      }
+    ],
+    "id_33": [
+      {
+        "value": "<NA>",
+        "count": 517251
+      },
+      {
+        "value": "1920x1080",
+        "count": 16874
+      },
+      {
+        "value": "1366x768",
+        "count": 8605
+      },
+      {
+        "value": "1334x750",
+        "count": 6447
+      },
+      {
+        "value": "2208x1242",
+        "count": 4900
+      },
+      {
+        "value": "1440x900",
+        "count": 4384
+      },
+      {
+        "value": "1600x900",
+        "count": 3510
+      },
+      {
+        "value": "2048x1536",
+        "count": 3482
+      },
+      {
+        "value": "1280x800",
+        "count": 2149
+      },
+      {
+        "value": "2560x1600",
+        "count": 2093
+      }
+    ],
+    "id_34": [
+      {
+        "value": "<NA>",
+        "count": 512735
+      },
+      {
+        "value": "match_status:2",
+        "count": 60011
+      },
+      {
+        "value": "match_status:1",
+        "count": 17376
+      },
+      {
+        "value": "match_status:0",
+        "count": 415
+      },
+      {
+        "value": "match_status:-1",
+        "count": 3
+      }
+    ],
+    "id_35": [
+      {
+        "value": "<NA>",
+        "count": 449555
+      },
+      {
+        "value": "T",
+        "count": 77814
+      },
+      {
+        "value": "F",
+        "count": 63171
+      }
+    ],
+    "id_36": [
+      {
+        "value": "<NA>",
+        "count": 449555
+      },
+      {
+        "value": "F",
+        "count": 134066
+      },
+      {
+        "value": "T",
+        "count": 6919
+      }
+    ],
+    "id_37": [
+      {
+        "value": "<NA>",
+        "count": 449555
+      },
+      {
+        "value": "T",
+        "count": 110452
+      },
+      {
+        "value": "F",
+        "count": 30533
+      }
+    ],
+    "id_38": [
+      {
+        "value": "<NA>",
+        "count": 449555
+      },
+      {
+        "value": "F",
+        "count": 73922
+      },
+      {
+        "value": "T",
+        "count": 67063
+      }
+    ],
+    "DeviceType": [
+      {
+        "value": "<NA>",
+        "count": 449730
+      },
+      {
+        "value": "desktop",
+        "count": 85165
+      },
+      {
+        "value": "mobile",
+        "count": 55645
+      }
+    ],
+    "DeviceInfo": [
+      {
+        "value": "<NA>",
+        "count": 471874
+      },
+      {
+        "value": "Windows",
+        "count": 47722
+      },
+      {
+        "value": "iOS Device",
+        "count": 19782
+      },
+      {
+        "value": "MacOS",
+        "count": 12573
+      },
+      {
+        "value": "Trident/7.0",
+        "count": 7440
+      },
+      {
+        "value": "rv:11.0",
+        "count": 1901
+      },
+      {
+        "value": "rv:57.0",
+        "count": 962
+      },
+      {
+        "value": "SM-J700M Build/MMB29K",
+        "count": 549
+      },
+      {
+        "value": "SM-G610M Build/MMB29K",
+        "count": 461
+      },
+      {
+        "value": "SM-G531H Build/LMY48B",
+        "count": 410
+      }
+    ]
+  },
+  "high_risk_thresholds": {
+    "missing_ratio_gt": 0.6,
+    "ultra_high_cardinality_gt": 1000,
+    "single_value_unique_non_null_lte": 1,
+    "top_n_values": 10
+  }
+}

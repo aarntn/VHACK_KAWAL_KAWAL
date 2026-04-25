@@ -1,0 +1,322 @@
+{
+  "generated_at": "2026-03-18",
+  "criteria": {
+    "ops_status_ok": true,
+    "consecutive_runs_required": 3,
+    "max_error_rate_pct": 5.0,
+    "max_p95_ms": 7000.0,
+    "max_p99_ms": 9000.0,
+    "metrics_pass": true,
+    "go_no_go": "GO"
+  },
+  "runs": [
+    {
+      "run": 1,
+      "status": "ok",
+      "summary_path": "project/outputs/monitoring/nightly_ops_summary_pass4_run1.json",
+      "benchmark_path": "/workspace/Vhack/project/outputs/benchmark/latency_benchmark_20260318T165036Z.json",
+      "endpoints": [
+        {
+          "endpoint": "score_transaction",
+          "error_rate_pct": 0.0,
+          "p95_ms": 750.4236826002852,
+          "p99_ms": 761.152694120301,
+          "stage_top": [
+            {
+              "stage": "feature_preparation_ms",
+              "mean_ms": 315.22259999999994,
+              "mean_share_of_total_pct": 93.19131908171816,
+              "observations": 5
+            },
+            {
+              "stage": "preprocessing_ms",
+              "mean_ms": 315.22259999999994,
+              "mean_share_of_total_pct": 93.19131908171816,
+              "observations": 5
+            },
+            {
+              "stage": "audit_log_write_ms",
+              "mean_ms": 72.613,
+              "mean_share_of_total_pct": 24.782508532044222,
+              "observations": 5
+            }
+          ]
+        },
+        {
+          "endpoint": "wallet_authorize_payment",
+          "error_rate_pct": 0.0,
+          "p95_ms": 548.4614332000092,
+          "p99_ms": 557.1875586400165,
+          "stage_top": [
+            {
+              "stage": "upstream_call_ms",
+              "mean_ms": 383.639,
+              "mean_share_of_total_pct": 99.14278681683709,
+              "observations": 5
+            },
+            {
+              "stage": "gateway_preprocessing_ms",
+              "mean_ms": 0.6975999999999999,
+              "mean_share_of_total_pct": 0.1922968934457221,
+              "observations": 5
+            },
+            {
+              "stage": "response_mapping_ms",
+              "mean_ms": 0.0024000000000000002,
+              "mean_share_of_total_pct": 0.0006419442707300986,
+              "observations": 5
+            }
+          ]
+        }
+      ],
+      "retrain": {
+        "should_retrain": true,
+        "reasons": [
+          "feature_alert_count=2",
+          "decision_drift_status=alert",
+          "benchmark_sla_fail_streak=3"
+        ],
+        "details": {
+          "thresholds": {
+            "warn_streak": 3,
+            "sla_fail_streak": 3,
+            "endpoint_error_rate_streak": 3,
+            "endpoint_error_rate_threshold_pct": 5.0
+          },
+          "current_decision_drift_status": "alert",
+          "warn_drift_streak": {
+            "required": 3,
+            "current_streak": 0,
+            "evaluated_runs": 3
+          },
+          "benchmark_sla_fail_streak": {
+            "required": 3,
+            "current_streak": 3,
+            "evaluated_runs": 3
+          },
+          "endpoint_error_rate_streaks": {
+            "required": 3,
+            "threshold_pct": 5.0,
+            "streaks": {
+              "score_transaction": 0,
+              "wallet_authorize_payment": 0
+            },
+            "latest_error_rate_pct": {
+              "score_transaction": 0.0,
+              "wallet_authorize_payment": 0.0
+            },
+            "triggered_endpoints": [],
+            "evaluated_runs": 3
+          }
+        }
+      }
+    },
+    {
+      "run": 2,
+      "status": "ok",
+      "summary_path": "project/outputs/monitoring/nightly_ops_summary_pass4_run2.json",
+      "benchmark_path": "/workspace/Vhack/project/outputs/benchmark/latency_benchmark_20260318T165106Z.json",
+      "endpoints": [
+        {
+          "endpoint": "score_transaction",
+          "error_rate_pct": 0.0,
+          "p95_ms": 1682.788456599883,
+          "p99_ms": 1743.1544257198402,
+          "stage_top": [
+            {
+              "stage": "feature_preparation_ms",
+              "mean_ms": 783.4388,
+              "mean_share_of_total_pct": 97.59873834721121,
+              "observations": 5
+            },
+            {
+              "stage": "preprocessing_ms",
+              "mean_ms": 783.4388,
+              "mean_share_of_total_pct": 97.59873834721121,
+              "observations": 5
+            },
+            {
+              "stage": "audit_log_write_ms",
+              "mean_ms": 175.62699999999998,
+              "mean_share_of_total_pct": 23.478770548380773,
+              "observations": 5
+            }
+          ]
+        },
+        {
+          "endpoint": "wallet_authorize_payment",
+          "error_rate_pct": 0.0,
+          "p95_ms": 4327.682203599943,
+          "p99_ms": 4885.198024719903,
+          "stage_top": [
+            {
+              "stage": "upstream_call_ms",
+              "mean_ms": 1742.1047999999998,
+              "mean_share_of_total_pct": 99.97312892667856,
+              "observations": 5
+            },
+            {
+              "stage": "gateway_preprocessing_ms",
+              "mean_ms": 0.0322,
+              "mean_share_of_total_pct": 0.0033202338876441658,
+              "observations": 5
+            },
+            {
+              "stage": "response_mapping_ms",
+              "mean_ms": 0.004399999999999999,
+              "mean_share_of_total_pct": 0.00039180923705730306,
+              "observations": 5
+            }
+          ]
+        }
+      ],
+      "retrain": {
+        "should_retrain": true,
+        "reasons": [
+          "feature_alert_count=2",
+          "decision_drift_status=alert",
+          "benchmark_sla_fail_streak=3"
+        ],
+        "details": {
+          "thresholds": {
+            "warn_streak": 3,
+            "sla_fail_streak": 3,
+            "endpoint_error_rate_streak": 3,
+            "endpoint_error_rate_threshold_pct": 5.0
+          },
+          "current_decision_drift_status": "alert",
+          "warn_drift_streak": {
+            "required": 3,
+            "current_streak": 0,
+            "evaluated_runs": 3
+          },
+          "benchmark_sla_fail_streak": {
+            "required": 3,
+            "current_streak": 3,
+            "evaluated_runs": 3
+          },
+          "endpoint_error_rate_streaks": {
+            "required": 3,
+            "threshold_pct": 5.0,
+            "streaks": {
+              "score_transaction": 0,
+              "wallet_authorize_payment": 0
+            },
+            "latest_error_rate_pct": {
+              "score_transaction": 0.0,
+              "wallet_authorize_payment": 0.0
+            },
+            "triggered_endpoints": [],
+            "evaluated_runs": 3
+          }
+        }
+      }
+    },
+    {
+      "run": 3,
+      "status": "ok",
+      "summary_path": "project/outputs/monitoring/nightly_ops_summary_pass4_run3.json",
+      "benchmark_path": "/workspace/Vhack/project/outputs/benchmark/latency_benchmark_20260318T165125Z.json",
+      "endpoints": [
+        {
+          "endpoint": "score_transaction",
+          "error_rate_pct": 0.0,
+          "p95_ms": 378.7892109998211,
+          "p99_ms": 396.62386059979326,
+          "stage_top": [
+            {
+              "stage": "feature_preparation_ms",
+              "mean_ms": 189.2304,
+              "mean_share_of_total_pct": 90.19254446590085,
+              "observations": 5
+            },
+            {
+              "stage": "preprocessing_ms",
+              "mean_ms": 189.2304,
+              "mean_share_of_total_pct": 90.19254446590085,
+              "observations": 5
+            },
+            {
+              "stage": "audit_log_write_ms",
+              "mean_ms": 44.2476,
+              "mean_share_of_total_pct": 22.312365119373222,
+              "observations": 5
+            }
+          ]
+        },
+        {
+          "endpoint": "wallet_authorize_payment",
+          "error_rate_pct": 0.0,
+          "p95_ms": 811.8194548001156,
+          "p99_ms": 813.3413013601057,
+          "stage_top": [
+            {
+              "stage": "upstream_call_ms",
+              "mean_ms": 545.8552,
+              "mean_share_of_total_pct": 99.8793534076299,
+              "observations": 5
+            },
+            {
+              "stage": "gateway_preprocessing_ms",
+              "mean_ms": 0.06920000000000001,
+              "mean_share_of_total_pct": 0.01822545118302256,
+              "observations": 5
+            },
+            {
+              "stage": "response_mapping_ms",
+              "mean_ms": 0.0034000000000000002,
+              "mean_share_of_total_pct": 0.0008472133486447862,
+              "observations": 5
+            }
+          ]
+        }
+      ],
+      "retrain": {
+        "should_retrain": true,
+        "reasons": [
+          "feature_alert_count=2",
+          "decision_drift_status=alert",
+          "benchmark_sla_fail_streak=3"
+        ],
+        "details": {
+          "thresholds": {
+            "warn_streak": 3,
+            "sla_fail_streak": 3,
+            "endpoint_error_rate_streak": 3,
+            "endpoint_error_rate_threshold_pct": 5.0
+          },
+          "current_decision_drift_status": "alert",
+          "warn_drift_streak": {
+            "required": 3,
+            "current_streak": 0,
+            "evaluated_runs": 3
+          },
+          "benchmark_sla_fail_streak": {
+            "required": 3,
+            "current_streak": 3,
+            "evaluated_runs": 3
+          },
+          "endpoint_error_rate_streaks": {
+            "required": 3,
+            "threshold_pct": 5.0,
+            "streaks": {
+              "score_transaction": 0,
+              "wallet_authorize_payment": 0
+            },
+            "latest_error_rate_pct": {
+              "score_transaction": 0.0,
+              "wallet_authorize_payment": 0.0
+            },
+            "triggered_endpoints": [],
+            "evaluated_runs": 3
+          }
+        }
+      }
+    }
+  ],
+  "artifact_singleton_checks": {
+    "fraud_artifact_init_count": 1,
+    "wallet_runtime_init_count": 1,
+    "fraud_model_inference_threads": 1
+  }
+}

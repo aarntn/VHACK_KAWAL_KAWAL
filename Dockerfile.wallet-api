@@ -1,0 +1,26 @@
+FROM python:3.11-slim
+
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1
+
+WORKDIR /app
+
+RUN apt-get update && apt-get install -y --no-install-recommends curl && rm -rf /var/lib/apt/lists/*
+
+COPY requirements.api.txt /app/requirements.api.txt
+RUN pip install --no-cache-dir -r /app/requirements.api.txt
+
+COPY project /app/project
+
+ENV PORT=8001 \
+    FRAUD_ENGINE_URL=http://fraud-api:8000/score_transaction \
+    FRAUD_ENGINE_HEALTH_URL=http://fraud-api:8000/health \
+    UPSTREAM_TIMEOUT_SECONDS=2.0 \
+    UPSTREAM_MAX_RETRIES=2 \
+    UPSTREAM_BACKOFF_MS=40 \
+    UPSTREAM_BACKOFF_MAX_MS=400 \
+    MAX_INFLIGHT_REQUESTS=400
+
+EXPOSE 8001
+
+CMD ["gunicorn", "-c", "project/deploy/gunicorn_conf.py", "project.app.wallet_gateway_api:app"]

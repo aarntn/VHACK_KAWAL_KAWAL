@@ -1,0 +1,29 @@
+{
+  "run_id": "20260316T203805Z",
+  "run_dir": "project\\outputs\\ops_runs\\20260316T203805Z",
+  "copied": {
+    "drift_json": "project\\outputs\\ops_runs\\20260316T203805Z\\drift_report.json",
+    "drift_csv": "project\\outputs\\ops_runs\\20260316T203805Z\\drift_feature_psi.csv",
+    "ops_summary_json": "project\\outputs\\ops_runs\\20260316T203805Z\\nightly_ops_summary.json",
+    "calibration_json": "project\\outputs\\ops_runs\\20260316T203805Z\\context_calibration.json",
+    "calibration_csv": "project\\outputs\\ops_runs\\20260316T203805Z\\context_calibration_trials.csv",
+    "thresholds_output": "project\\outputs\\ops_runs\\20260316T203805Z\\decision_thresholds.pkl",
+    "cohort_kpi_json": "project\\outputs\\ops_runs\\20260316T203805Z\\cohort_kpi_report.json",
+    "latency_trend_json": "project\\outputs\\ops_runs\\20260316T203805Z\\latency_trend_report.json",
+    "profile_health_json": "project\\outputs\\ops_runs\\20260316T203805Z\\behavior_profile_health.json"
+  },
+  "missing": {
+    "promotion_record_json": "D:\\Vhack\\project\\outputs\\threshold_governance\\latest_promotion_record.json"
+  },
+  "sha256": {
+    "drift_json": "088204b31f989b5876cca5a1334ad25f5f9f8ec62921d494139f4fcdec10ba2d",
+    "drift_csv": "9c791ad156a59d961f97b70b3fad784c1e31877b1b56e6f942e37f50c8653e17",
+    "ops_summary_json": "ec44a6d17989f917c9b277450e0daeeb7942049aea5210737a6324d580c3f105",
+    "calibration_json": "c9be926b8cb241a7ad232161b69a1c86a14cf510cff40880c5174c175527aecc",
+    "calibration_csv": "151d75c16afbd131bbc325e380bf60a908f5f2f18abbf49c8a08fc102c827664",
+    "thresholds_output": "89ec1967da40807a27a735a3911d9f346a2627cf015363d4fb341405f4b0d20a",
+    "cohort_kpi_json": "70f561f93c096256783bdb09fbf96e7265789409bf3b9e47358f3e4a14e63055",
+    "latency_trend_json": "edcd1f097f217705ff276dbdc96838f0494fc18e91d08fa16a343a1353732c16",
+    "profile_health_json": "0b29e1c1fb178e45e8cfb613ea43e6a381164260b138ac5a960472523df7833f"
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "dataset_source": "creditcard",
+  "label_policy": "transaction",
+  "label_policy_diagnostics": {
+    "label_policy": "transaction",
+    "rows_changed": 0,
+    "positive_before": 492,
+    "positive_after": 492
+  },
+  "seed": 42,
+  "thresholds": {
+    "min_train_auc": 0.6,
+    "min_validation_auc": 0.53,
+    "max_auc_drop": 0.1,
+    "inversion_validation_auc_max": 0.5
+  },
+  "windowing": {
+    "train_fraction": 0.6,
+    "validation_fraction": 0.2,
+    "train_rows": 170884,
+    "validation_rows": 56962
+  },
+  "summary": {
+    "candidate_count": 32,
+    "kept_count": 14,
+    "dropped_count": 18,
+    "adversarial_dropped_features": [
+      "Time",
+      "amount_std_24h",
+      "avg_amount_24h",
+      "tx_count_1h",
+      "tx_count_24h",
+      "uid_amount_std_7d",
+      "uid_avg_amount_7d",
+      "uid_tx_count_7d"
+    ],
+    "kept_single_features": [
+      "V2",
+      "V3",
+      "V4",
+      "V6",
+      "V9",
+      "V10",
+      "V11",
+      "V12",
+      "V14",
+      "V17",
+      "V24",
+      "V27",
+      "time_since_last_tx",
+      "uid_time_since_last_tx"
+    ],
+    "kept_feature_groups": []
+  },
+  "outputs": {
+    "scores_csv": "D:\\Vhack\\project\\outputs\\monitoring\\time_consistency_feature_scores.csv"
+  }
+}

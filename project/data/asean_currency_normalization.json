@@ -1,0 +1,31 @@
+{
+  "artifact_version": "asean_currency_normalization_v1",
+  "normalization_basis": "static_demo_reference_snapshot_2026q2",
+  "reference_amount_currency": "USD_EQUIVALENT",
+  "currencies": {
+    "SGD": {
+      "reference_amount_multiplier": 0.74,
+      "display_name": "Singapore dollar"
+    },
+    "MYR": {
+      "reference_amount_multiplier": 0.22,
+      "display_name": "Malaysian ringgit"
+    },
+    "IDR": {
+      "reference_amount_multiplier": 0.000062,
+      "display_name": "Indonesian rupiah"
+    },
+    "THB": {
+      "reference_amount_multiplier": 0.028,
+      "display_name": "Thai baht"
+    },
+    "PHP": {
+      "reference_amount_multiplier": 0.018,
+      "display_name": "Philippine peso"
+    },
+    "VND": {
+      "reference_amount_multiplier": 0.000039,
+      "display_name": "Vietnamese dong"
+    }
+  }
+}

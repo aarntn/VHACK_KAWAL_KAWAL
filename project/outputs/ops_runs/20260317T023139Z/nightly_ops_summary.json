@@ -1,0 +1,202 @@
+{
+  "generated_at_utc": "2026-03-16T23:40:47.008144+00:00",
+  "status": "ok",
+  "drift_monitor": {
+    "command": [
+      "C:\\Users\\ranie\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+      "project/scripts/drift_monitor.py",
+      "--baseline-dataset",
+      "creditcardfraud\\creditcard.csv",
+      "--audit-log",
+      "project\\outputs\\audit\\fraud_audit_log.jsonl",
+      "--output-json",
+      "D:\\Vhack\\project\\outputs\\monitoring\\drift_report.json",
+      "--output-csv",
+      "D:\\Vhack\\project\\outputs\\monitoring\\drift_feature_psi.csv",
+      "--psi-warn",
+      "0.1",
+      "--psi-alert",
+      "0.25",
+      "--decision-drift-warn",
+      "0.1",
+      "--decision-drift-alert",
+      "0.2"
+    ],
+    "started_at_utc": "2026-03-16T23:39:23.296151+00:00",
+    "returncode": 0,
+    "stdout": "Drift monitoring complete\n{\n  \"baseline_row_count\": 284807,\n  \"audit_baseline_row_count\": 972,\n  \"current_row_count\": 972,\n  \"feature_count_evaluated\": 7,\n  \"feature_alert_count\": 0,\n  \"feature_warn_count\": 0\n}\nSaved drift report JSON: D:\\Vhack\\project\\outputs\\monitoring\\drift_report.json\nSaved feature PSI table: D:\\Vhack\\project\\outputs\\monitoring\\drift_feature_psi.csv\n",
+    "stderr": "",
+    "ok": true
+  },
+  "drift_report_summary": {
+    "baseline_row_count": 284807,
+    "audit_baseline_row_count": 972,
+    "current_row_count": 972,
+    "feature_count_evaluated": 7,
+    "feature_alert_count": 0,
+    "feature_warn_count": 0
+  },
+  "drift_recalibration_recommendation": {
+    "should_recalibrate": false,
+    "priority": "low",
+    "reasons": [
+      "No material drift detected"
+    ]
+  },
+  "calibration": null,
+  "threshold_promotion": null,
+  "benchmark": {
+    "command": [
+      "C:\\Users\\ranie\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+      "project/scripts/benchmark_latency.py",
+      "--requests",
+      "200",
+      "--concurrency",
+      "20"
+    ],
+    "started_at_utc": "2026-03-16T23:39:25.807867+00:00",
+    "returncode": 0,
+    "stdout": "{\n  \"outputs\": {\n    \"json\": \"D:\\\\Vhack\\\\project\\\\outputs\\\\benchmark\\\\latency_benchmark_20260316T234027Z.json\",\n    \"csv\": \"D:\\\\Vhack\\\\project\\\\outputs\\\\benchmark\\\\latency_benchmark_20260316T234027Z.csv\"\n  },\n  \"sla_evaluation\": {\n    \"score_transaction\": {\n      \"target_sla\": {\n        \"p95_latency_ms_max\": 250.0,\n        \"p99_latency_ms_max\": 500.0,\n        \"error_rate_pct_max\": 1.0\n      },\n      \"checks\": {\n        \"p95_latency_ms\": {\n          \"actual\": 2059.3451050044678,\n          \"target_max\": 250.0,\n          \"pass\": false\n        },\n        \"p99_latency_ms\": {\n          \"actual\": 2062.7757509962976,\n          \"target_max\": 500.0,\n          \"pass\": false\n        },\n        \"error_rate_pct\": {\n          \"actual\": 100.0,\n          \"target_max\": 1.0,\n          \"pass\": false\n        }\n      },\n      \"real_time_viability\": \"FAIL\"\n    },\n    \"wallet_authorize_payment\": {\n      \"target_sla\": {\n        \"p95_latency_ms_max\": 250.0,\n        \"p99_latency_ms_max\": 500.0,\n        \"error_rate_pct_max\": 1.0\n      },\n      \"checks\": {\n        \"p95_latency_ms\": {\n          \"actual\": 2051.3925199960795,\n          \"target_max\": 250.0,\n          \"pass\": false\n        },\n        \"p99_latency_ms\": {\n          \"actual\": 2056.886531998098,\n          \"target_max\": 500.0,\n          \"pass\": false\n        },\n        \"error_rate_pct\": {\n          \"actual\": 100.0,\n          \"target_max\": 1.0,\n          \"pass\": false\n        }\n      },\n      \"real_time_viability\": \"FAIL\"\n    }\n  }\n}\n",
+    "stderr": "",
+    "ok": true
+  },
+  "latency_trend": {
+    "command": [
+      "C:\\Users\\ranie\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+      "project/scripts/benchmark_trend_report.py",
+      "--history-limit",
+      "20",
+      "--output-json",
+      "D:\\Vhack\\project\\outputs\\monitoring\\latency_trend_report.json",
+      "--output-csv",
+      "D:\\Vhack\\project\\outputs\\monitoring\\latency_trend_report.csv"
+    ],
+    "started_at_utc": "2026-03-16T23:40:27.266859+00:00",
+    "returncode": 0,
+    "stdout": "Latency trend report complete\n{\n  \"history_points\": 32,\n  \"endpoints\": 2\n}\nSaved trend JSON: D:\\Vhack\\project\\outputs\\monitoring\\latency_trend_report.json\nSaved trend CSV: D:\\Vhack\\project\\outputs\\monitoring\\latency_trend_report.csv\n",
+    "stderr": "",
+    "ok": true
+  },
+  "cohort_kpi": {
+    "command": [
+      "C:\\Users\\ranie\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+      "project/scripts/cohort_kpi_report.py",
+      "--dataset-path",
+      "creditcardfraud\\creditcard.csv",
+      "--output-json",
+      "D:\\Vhack\\project\\outputs\\monitoring\\cohort_kpi_report.json",
+      "--output-csv",
+      "D:\\Vhack\\project\\outputs\\monitoring\\cohort_kpi_report.csv"
+    ],
+    "started_at_utc": "2026-03-16T23:40:27.826330+00:00",
+    "returncode": 0,
+    "stdout": "Cohort KPI report complete\n{\n  \"rows\": 5,\n  \"sample_size\": 25000,\n  \"low_support_warnings\": 2\n}\nSaved report JSON: D:\\Vhack\\project\\outputs\\monitoring\\cohort_kpi_report.json\nSaved report CSV: D:\\Vhack\\project\\outputs\\monitoring\\cohort_kpi_report.csv\n",
+    "stderr": "C:\\Users\\ranie\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\xgboost\\core.py:158: UserWarning: [02:40:29] WARNING: C:\\buildkite-agent\\builds\\buildkite-windows-cpu-autoscaling-group-i-0c55ff5f71b100e98-1\\xgboost\\xgboost-ci-windows\\src\\data\\../common/error_msg.h:80: If you are loading a serialized model (like pickle in Python, RDS in R) or\nconfiguration generated by an older version of XGBoost, please export the model by calling\n`Booster.save_model` from that version first, then load it back in current version. See:\n\n    https://xgboost.readthedocs.io/en/stable/tutorials/saving_model.html\n\nfor more details about differences between saving model and serializing.\n\n  warnings.warn(smsg, UserWarning)\n",
+    "ok": true
+  },
+  "profile_replay": {
+    "command": [
+      "C:\\Users\\ranie\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+      "project/scripts/replay_behavior_profiles.py",
+      "--dataset-path",
+      "creditcardfraud\\creditcard.csv",
+      "--sqlite-path",
+      "D:\\Vhack\\project\\outputs\\behavior_profiles.sqlite3",
+      "--output-json",
+      "D:\\Vhack\\project\\outputs\\monitoring\\profile_replay_summary.json",
+      "--user-count",
+      "200",
+      "--transactions-per-user",
+      "12"
+    ],
+    "started_at_utc": "2026-03-16T23:40:30.419829+00:00",
+    "returncode": 0,
+    "stdout": "Behavior profile replay complete\n{\n  \"generated_at_utc\": \"2026-03-16T23:40:46.866682+00:00\",\n  \"dataset_path\": \"creditcardfraud\\\\creditcard.csv\",\n  \"sqlite_path\": \"D:\\\\Vhack\\\\project\\\\outputs\\\\behavior_profiles.sqlite3\",\n  \"users_written\": 200,\n  \"transactions_replayed\": 2400,\n  \"transactions_per_user\": 12,\n  \"ttl_seconds\": 2592000,\n  \"history_limit\": 100\n}\n",
+    "stderr": "",
+    "ok": true
+  },
+  "profile_health": {
+    "command": [
+      "C:\\Users\\ranie\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+      "project/scripts/behavior_profile_health.py",
+      "--store-backend",
+      "sqlite",
+      "--sqlite-path",
+      "D:\\Vhack\\project\\outputs\\behavior_profiles.sqlite3",
+      "--output-json",
+      "D:\\Vhack\\project\\outputs\\monitoring\\behavior_profile_health.json",
+      "--min-history",
+      "5",
+      "--stale-seconds",
+      "604800"
+    ],
+    "started_at_utc": "2026-03-16T23:40:46.914773+00:00",
+    "returncode": 0,
+    "stdout": "Behavior profile health check complete\n{\n  \"total_profiles\": 200,\n  \"active_profiles\": 200,\n  \"expired_profiles\": 0,\n  \"low_history_ratio\": 0.0,\n  \"stale_ratio\": 0.0,\n  \"avg_history_count\": 84.0\n}\nSaved health report JSON: D:\\Vhack\\project\\outputs\\monitoring\\behavior_profile_health.json\n",
+    "stderr": "",
+    "ok": true
+  },
+  "profile_health_summary": {
+    "total_profiles": 200,
+    "active_profiles": 200,
+    "expired_profiles": 0,
+    "low_history_ratio": 0.0,
+    "stale_ratio": 0.0,
+    "avg_history_count": 84.0
+  },
+  "profile_health_status": "ok",
+  "data_checks": {
+    "started_at_utc": "2026-03-16T23:39:24.907143+00:00",
+    "ok": true,
+    "dataset_path": "creditcardfraud\\creditcard.csv",
+    "row_count": 284807,
+    "column_count": 31,
+    "invalid_label_count": 0,
+    "global_null_ratio": 0.0
+  },
+  "threshold_policy_guardrails": {
+    "started_at_utc": "2026-03-16T23:39:25.806866+00:00",
+    "ok": true,
+    "thresholds_path": "D:\\Vhack\\project\\models\\decision_thresholds.pkl",
+    "approve_threshold": 0.21663971423879455,
+    "block_threshold": 0.8056064754152743
+  },
+  "retrain_trigger": {
+    "should_retrain": false,
+    "reasons": [
+      "none"
+    ]
+  },
+  "archive": {
+    "run_id": "20260316T234047Z",
+    "run_dir": "project\\outputs\\ops_runs\\20260316T234047Z",
+    "copied": {
+      "drift_json": "project\\outputs\\ops_runs\\20260316T234047Z\\drift_report.json",
+      "drift_csv": "project\\outputs\\ops_runs\\20260316T234047Z\\drift_feature_psi.csv",
+      "calibration_json": "project\\outputs\\ops_runs\\20260316T234047Z\\context_calibration.json",
+      "calibration_csv": "project\\outputs\\ops_runs\\20260316T234047Z\\context_calibration_trials.csv",
+      "thresholds_output": "project\\outputs\\ops_runs\\20260316T234047Z\\decision_thresholds.pkl",
+      "cohort_kpi_json": "project\\outputs\\ops_runs\\20260316T234047Z\\cohort_kpi_report.json",
+      "latency_trend_json": "project\\outputs\\ops_runs\\20260316T234047Z\\latency_trend_report.json",
+      "profile_health_json": "project\\outputs\\ops_runs\\20260316T234047Z\\behavior_profile_health.json"
+    },
+    "missing": {
+      "ops_summary_json": "project\\outputs\\monitoring\\nightly_ops_summary.json",
+      "promotion_record_json": "D:\\Vhack\\project\\outputs\\threshold_governance\\latest_promotion_record.json"
+    },
+    "sha256": {
+      "drift_json": "ae15cccad8a06f8f1438abdc8cc18d1b60413de79077df83f2c1d294964eedae",
+      "drift_csv": "986dcee7bcb1bf75048a4ab433fe01e32bd5a319e5b884b44623d173b6ca751d",
+      "calibration_json": "c9be926b8cb241a7ad232161b69a1c86a14cf510cff40880c5174c175527aecc",
+      "calibration_csv": "151d75c16afbd131bbc325e380bf60a908f5f2f18abbf49c8a08fc102c827664",
+      "thresholds_output": "89ec1967da40807a27a735a3911d9f346a2627cf015363d4fb341405f4b0d20a",
+      "cohort_kpi_json": "072683875d04e62669aefba6b11bc79c55d3c556411eb5fa1cdd209b53875152",
+      "latency_trend_json": "abfad879df69a77b10b2c21b9809b9de4457914de8d7d89d015e901e13c8e58b",
+      "profile_health_json": "f4d11631e2fdf242f70712ae6f4fd60fff1cb0de9d0408d997f5180e5ae1b5de"
+    }
+  },
+  "alert": {
+    "sent": false,
+    "reason": "not_required"
+  }
+}

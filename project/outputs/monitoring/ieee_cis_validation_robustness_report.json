@@ -1,0 +1,220 @@
+{
+  "dataset_source": "ieee_cis",
+  "label_policy": "transaction",
+  "label_policy_diagnostics": {
+    "label_policy": "transaction",
+    "rows_changed": 0,
+    "positive_before": 20663,
+    "positive_after": 20663
+  },
+  "eda_gate": {
+    "enabled": true,
+    "passed": true,
+    "failed_checks": [],
+    "checks": {
+      "join_row_counts": {
+        "passed": true,
+        "transaction_rows": 590540,
+        "identity_rows": 144233,
+        "merged_rows": 590540
+      },
+      "key_missingness": {
+        "passed": true,
+        "transaction_missing_ratio": 0.0,
+        "identity_missing_ratio": 0.0,
+        "merged_missing_ratio": 0.0
+      },
+      "target_prevalence": {
+        "passed": true,
+        "positive_rate": 0.03499000914417313,
+        "minimum_expected_positive_rate": 0.001
+      },
+      "high_cardinality_fields": {
+        "passed": true,
+        "count": 1,
+        "sample_fields": [
+          "DeviceInfo"
+        ],
+        "threshold": 1000
+      },
+      "timestamp_range_sanity": {
+        "passed": true,
+        "timestamp_column": "TransactionDT",
+        "min": 86400.0,
+        "max": 15811131.0
+      }
+    }
+  },
+  "eda_gate_status": "passed",
+  "split_mode": "groupkfold_uid",
+  "test_size": 0.2,
+  "seed": 42,
+  "threshold": 0.5,
+  "optuna_trials": 20,
+  "window_configs": [
+    "4:1:1",
+    "3:1:1"
+  ],
+  "month_group_count": 8,
+  "window_count": 11,
+  "xgboost_tuned_best_params": {
+    "n_estimators": 331,
+    "max_depth": 7,
+    "learning_rate": 0.1466902234469763,
+    "subsample": 0.7297630872258614,
+    "colsample_bytree": 0.840926541224103,
+    "min_child_weight": 4.644577881520101,
+    "reg_lambda": 0.01395485776592112,
+    "reg_alpha": 0.014761741357946707
+  },
+  "notes": [
+    "logistic_regression baseline disabled by default (use --include-logistic-baseline to enable).",
+    "lightgbm not installed; skipping",
+    "catboost not installed; skipping"
+  ],
+  "candidate_count": 2,
+  "best_candidate": {
+    "candidate": "xgboost_tuned",
+    "dataset_source": "ieee_cis",
+    "split_mode": "groupkfold_uid",
+    "precision": 0.9213822894168466,
+    "recall": 0.5248523622047244,
+    "f1": 0.668756858441762,
+    "false_positive_rate": 0.0015958752762091823,
+    "pr_auc": 0.7463453434231673,
+    "roc_auc": 0.9506900845287783,
+    "tn": 113862,
+    "fp": 182,
+    "fn": 1931,
+    "tp": 2133
+  },
+  "ensemble_best_candidate": null,
+  "overall_best_candidate": {
+    "candidate": "xgboost_tuned",
+    "dataset_source": "ieee_cis",
+    "split_mode": "groupkfold_uid",
+    "precision": 0.9213822894168466,
+    "recall": 0.5248523622047244,
+    "f1": 0.668756858441762,
+    "false_positive_rate": 0.0015958752762091823,
+    "pr_auc": 0.7463453434231673,
+    "roc_auc": 0.9506900845287783,
+    "tn": 113862,
+    "fp": 182,
+    "fn": 1931,
+    "tp": 2133,
+    "candidate_origin": "single_model"
+  },
+  "robustness_by_candidate": {
+    "xgboost_default": {
+      "window_count": 11,
+      "validation_modes": [
+        "month_group_fold",
+        "temporal_holdout"
+      ],
+      "metrics": {
+        "precision": {
+          "mean": 0.8228751728681488,
+          "std": 0.05445718352364181,
+          "worst": 0.7318045862412762
+        },
+        "recall": {
+          "mean": 0.32697921501431443,
+          "std": 0.03099200644293596,
+          "worst": 0.2773722627737226
+        },
+        "false_positive_rate": {
+          "mean": 0.002696640863381435,
+          "std": 0.0006866640457769636,
+          "worst": 0.0011722501553584543
+        },
+        "pr_auc": {
+          "mean": 0.521651395785938,
+          "std": 0.04530986479488951,
+          "worst": 0.4699572877501593
+        },
+        "f1": {
+          "mean": 0.4671983778467791,
+          "std": 0.03636687336597486,
+          "worst": 0.4231767079850101
+        }
+      }
+    },
+    "xgboost_tuned": {
+      "window_count": 11,
+      "validation_modes": [
+        "month_group_fold",
+        "temporal_holdout"
+      ],
+      "metrics": {
+        "precision": {
+          "mean": 0.791867275590197,
+          "std": 0.05523001930907229,
+          "worst": 0.6888701517706577
+        },
+        "recall": {
+          "mean": 0.3398975905805164,
+          "std": 0.03606085025107124,
+          "worst": 0.26277372262773724
+        },
+        "false_positive_rate": {
+          "mean": 0.003480776241914398,
+          "std": 0.0009404803174366006,
+          "worst": 0.0013982260889215299
+        },
+        "pr_auc": {
+          "mean": 0.5106349465063388,
+          "std": 0.043179407943574444,
+          "worst": 0.464874839562437
+        },
+        "f1": {
+          "mean": 0.4739370533271035,
+          "std": 0.03783673574040384,
+          "worst": 0.4056338028169014
+        }
+      }
+    }
+  },
+  "best_candidate_robustness": {
+    "window_count": 11,
+    "validation_modes": [
+      "month_group_fold",
+      "temporal_holdout"
+    ],
+    "metrics": {
+      "precision": {
+        "mean": 0.791867275590197,
+        "std": 0.05523001930907229,
+        "worst": 0.6888701517706577
+      },
+      "recall": {
+        "mean": 0.3398975905805164,
+        "std": 0.03606085025107124,
+        "worst": 0.26277372262773724
+      },
+      "false_positive_rate": {
+        "mean": 0.003480776241914398,
+        "std": 0.0009404803174366006,
+        "worst": 0.0013982260889215299
+      },
+      "pr_auc": {
+        "mean": 0.5106349465063388,
+        "std": 0.043179407943574444,
+        "worst": 0.464874839562437
+      },
+      "f1": {
+        "mean": 0.4739370533271035,
+        "std": 0.03783673574040384,
+        "worst": 0.4056338028169014
+      }
+    }
+  },
+  "robustness_gate": {
+    "required": true,
+    "passed": true,
+    "reason": "ok"
+  },
+  "results_csv": "D:\\Vhack\\project\\outputs\\monitoring\\ieee_cis_model_candidate_benchmark.csv",
+  "validation_windows_csv": "D:\\Vhack\\project\\outputs\\monitoring\\ieee_cis_validation_windows.csv",
+  "ensemble_report_json": null
+}

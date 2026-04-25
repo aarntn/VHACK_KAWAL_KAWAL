@@ -1,0 +1,4 @@
+case,status,baseline_decision,samples,decision_consistency,reason_jaccard_mean,same_decision_samples
+approve_case,ok,FLAG,25,1.0,1.0,25
+flag_case,ok,FLAG,25,1.0,0.9138461538461539,25
+block_case,ok,FLAG,25,1.0,0.9854545454545455,25

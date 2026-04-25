@@ -1,0 +1,27 @@
+{
+  "run_id": "20260318T122653Z",
+  "run_dir": "D:\\Vhack\\project\\outputs\\ops_runs\\20260318T122653Z",
+  "copied": {
+    "drift_json": "D:\\Vhack\\project\\outputs\\ops_runs\\20260318T122653Z\\drift_report.json",
+    "drift_csv": "D:\\Vhack\\project\\outputs\\ops_runs\\20260318T122653Z\\drift_feature_psi.csv",
+    "ops_summary_json": "D:\\Vhack\\project\\outputs\\ops_runs\\20260318T122653Z\\nightly_ops_summary.json",
+    "artifact_validation_json": "D:\\Vhack\\project\\outputs\\ops_runs\\20260318T122653Z\\artifact_validation_report.json",
+    "cohort_kpi_json": "D:\\Vhack\\project\\outputs\\ops_runs\\20260318T122653Z\\cohort_kpi_report.json",
+    "latency_trend_json": "D:\\Vhack\\project\\outputs\\ops_runs\\20260318T122653Z\\latency_trend_report.json",
+    "latency_stage_analysis_json": "D:\\Vhack\\project\\outputs\\ops_runs\\20260318T122653Z\\latency_stage_analysis.json",
+    "latency_stage_analysis_csv": "D:\\Vhack\\project\\outputs\\ops_runs\\20260318T122653Z\\latency_stage_analysis.csv",
+    "profile_health_json": "D:\\Vhack\\project\\outputs\\ops_runs\\20260318T122653Z\\behavior_profile_health.json"
+  },
+  "missing": {},
+  "sha256": {
+    "drift_json": "35c80bdd62ea4673fca1bc190123a303975817f5ae56f259e20af32260771efb",
+    "drift_csv": "1eaeb47fb3bbcf06d3bf45dd62daeb71a93e16c61ab2b5cf6ba92873c8880388",
+    "ops_summary_json": "b0216c8caeee0a8a948d579ff1cf3ec0f4a6461597982ac7cc068a24339cd4f7",
+    "artifact_validation_json": "a25e5ea07a64d0622c6a9ab8ee43b4144dec095833280f8616c4fda838b82575",
+    "cohort_kpi_json": "2f9c4bf4b028703e05fb3b3f554430c4644168ca9b60108106e0f1b7fb64f65b",
+    "latency_trend_json": "9fe0d02755f2f1d85e549f40abb28cd03a7ce61d9af36d843ead46982437f48c",
+    "latency_stage_analysis_json": "33e82ef31ef56aaa2c4f881b75ea0969722ad43bfe075cc69601342b718570b1",
+    "latency_stage_analysis_csv": "38684bd68d90c5b8c4eb8bb0d50a142734f85457ccbcbdb3de9defe114697326",
+    "profile_health_json": "680279c8f413c83f47834a2e6526ef2884fc52d471f714a40a9be097e0faa89e"
+  }
+}

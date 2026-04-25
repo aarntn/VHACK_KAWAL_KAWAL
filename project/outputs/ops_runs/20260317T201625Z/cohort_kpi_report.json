@@ -1,0 +1,95 @@
+{
+  "generated_at_utc": "2026-03-17T20:16:08.802580+00:00",
+  "dataset_path": "creditcardfraud\\creditcard.csv",
+  "thresholds": {
+    "approve_threshold": 0.21663971423879455,
+    "block_threshold": 0.8056064754152743,
+    "context_adjustment_max": 0.3,
+    "min_positive_support": 5
+  },
+  "sample_size": 25000,
+  "cohorts": [
+    {
+      "cohort": "all_users",
+      "sample_count": 25000,
+      "fraud_positive_count": 42,
+      "nonfraud_count": 24958,
+      "metric_reliability": "reliable",
+      "fraud_rate": 0.00168,
+      "precision": 1.0,
+      "recall": 0.952381,
+      "false_positive_rate": 0.0,
+      "flag_rate": 0.00012,
+      "block_rate": 0.0016
+    },
+    {
+      "cohort": "new_users",
+      "sample_count": 1291,
+      "fraud_positive_count": 0,
+      "nonfraud_count": 1291,
+      "metric_reliability": "low_support",
+      "fraud_rate": 0.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "false_positive_rate": 0.0,
+      "flag_rate": 0.0,
+      "block_rate": 0.0
+    },
+    {
+      "cohort": "rural_merchants_proxy",
+      "sample_count": 4500,
+      "fraud_positive_count": 7,
+      "nonfraud_count": 4493,
+      "metric_reliability": "reliable",
+      "fraud_rate": 0.001556,
+      "precision": 1.0,
+      "recall": 1.0,
+      "false_positive_rate": 0.0,
+      "flag_rate": 0.0,
+      "block_rate": 0.001556
+    },
+    {
+      "cohort": "gig_workers_proxy",
+      "sample_count": 3985,
+      "fraud_positive_count": 3,
+      "nonfraud_count": 3982,
+      "metric_reliability": "low_support",
+      "fraud_rate": 0.000753,
+      "precision": 1.0,
+      "recall": 1.0,
+      "false_positive_rate": 0.0,
+      "flag_rate": 0.0,
+      "block_rate": 0.000753
+    },
+    {
+      "cohort": "low_history_proxy",
+      "sample_count": 5991,
+      "fraud_positive_count": 10,
+      "nonfraud_count": 5981,
+      "metric_reliability": "reliable",
+      "fraud_rate": 0.001669,
+      "precision": 1.0,
+      "recall": 1.0,
+      "false_positive_rate": 0.0,
+      "flag_rate": 0.0,
+      "block_rate": 0.001669
+    }
+  ],
+  "warnings": {
+    "low_support_cohorts": [
+      {
+        "cohort": "new_users",
+        "fraud_positive_count": 0,
+        "min_positive_support": 5,
+        "message": "Precision/recall may be unstable due to low fraud-positive support."
+      },
+      {
+        "cohort": "gig_workers_proxy",
+        "fraud_positive_count": 3,
+        "min_positive_support": 5,
+        "message": "Precision/recall may be unstable due to low fraud-positive support."
+      }
+    ],
+    "count": 2
+  }
+}

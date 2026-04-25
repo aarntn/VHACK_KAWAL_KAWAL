@@ -1,0 +1,124 @@
+{
+  "generated_at_utc": "2026-04-23T10:02:04.854352+00:00",
+  "audit_log": "project/outputs/audit/fraud_audit_log.jsonl",
+  "records_analyzed": 4626,
+  "has_stage_data": true,
+  "dominant_stage_by_p95": {
+    "stage": "total_pipeline_ms",
+    "count": 1361,
+    "mean_ms": 195.87963335782513,
+    "p50_ms": 150.892,
+    "p95_ms": 511.466,
+    "p99_ms": 745.2386000000017,
+    "mean_share_of_total_pct": NaN
+  },
+  "dominant_stage_frequency": [
+    {
+      "stage": "preprocessing_ms",
+      "records_where_dominant": 4582,
+      "share_pct": 99.0488543017726
+    },
+    {
+      "stage": "model_predict_ms",
+      "records_where_dominant": 41,
+      "share_pct": 0.8862948551664505
+    },
+    {
+      "stage": "decision_and_reasoning_ms",
+      "records_where_dominant": 3,
+      "share_pct": 0.06485084306095978
+    }
+  ],
+  "stages": [
+    {
+      "stage": "total_pipeline_ms",
+      "count": 1361,
+      "mean_ms": 195.87963335782513,
+      "p50_ms": 150.892,
+      "p95_ms": 511.466,
+      "p99_ms": 745.2386000000017,
+      "mean_share_of_total_pct": NaN
+    },
+    {
+      "stage": "preprocessing_ms",
+      "count": 4626,
+      "mean_ms": 97.23545957630783,
+      "p50_ms": 57.33,
+      "p95_ms": 334.24,
+      "p99_ms": 534.45925,
+      "mean_share_of_total_pct": 96.67405659898776
+    },
+    {
+      "stage": "model_predict_ms",
+      "count": 4626,
+      "mean_ms": 33.669087116299174,
+      "p50_ms": 3.7125000000000004,
+      "p95_ms": 236.5415,
+      "p99_ms": 422.28375000000005,
+      "mean_share_of_total_pct": 42.45379464028328
+    },
+    {
+      "stage": "aggregate_event_queued",
+      "count": 4626,
+      "mean_ms": 1.0,
+      "p50_ms": 1.0,
+      "p95_ms": 1.0,
+      "p99_ms": 1.0,
+      "mean_share_of_total_pct": 1.2244358118697638
+    },
+    {
+      "stage": "decision_and_reasoning_ms",
+      "count": 4626,
+      "mean_ms": 0.4666872027669693,
+      "p50_ms": 0.035,
+      "p95_ms": 0.155,
+      "p99_ms": 0.231,
+      "mean_share_of_total_pct": 0.4730471907835079
+    },
+    {
+      "stage": "audit_logging_ms",
+      "count": 1361,
+      "mean_ms": 0.11244085231447466,
+      "p50_ms": 0.086,
+      "p95_ms": 0.149,
+      "p99_ms": 0.2234000000000001,
+      "mean_share_of_total_pct": 0.09749917979381194
+    },
+    {
+      "stage": "context_adjustment_ms",
+      "count": 4626,
+      "mean_ms": 0.0540458279290964,
+      "p50_ms": 0.042,
+      "p95_ms": 0.104,
+      "p99_ms": 0.14475,
+      "mean_share_of_total_pct": 0.08631521420407771
+    },
+    {
+      "stage": "behavior_scoring_ms",
+      "count": 4626,
+      "mean_ms": 0.25688629485516645,
+      "p50_ms": 0.026,
+      "p95_ms": 0.061,
+      "p99_ms": 4.658,
+      "mean_share_of_total_pct": 0.3556110868736144
+    },
+    {
+      "stage": "aggregate_enqueue_ms",
+      "count": 4626,
+      "mean_ms": 0.023705577172503243,
+      "p50_ms": 0.017,
+      "p95_ms": 0.051,
+      "p99_ms": 0.093,
+      "mean_share_of_total_pct": 0.03811090858105716
+    },
+    {
+      "stage": "entity_smoothing_ms",
+      "count": 4626,
+      "mean_ms": 0.002466926070038911,
+      "p50_ms": 0.002,
+      "p95_ms": 0.003,
+      "p99_ms": 0.004,
+      "mean_share_of_total_pct": 0.0030706869540479843
+    }
+  ]
+}

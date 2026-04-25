@@ -1,0 +1,24 @@
+FROM python:3.11-slim
+
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1
+
+WORKDIR /app
+
+RUN apt-get update && apt-get install -y --no-install-recommends curl && rm -rf /var/lib/apt/lists/*
+
+COPY requirements.api.txt /app/requirements.api.txt
+RUN pip install --no-cache-dir -r /app/requirements.api.txt
+
+COPY project /app/project
+
+ENV PORT=8000 \
+    PROMOTED_ARTIFACT_MANIFEST_FILE=/app/project/models/promoted_artifact_manifest.json \
+    FRAUD_AUDIT_DIR=/app/project/outputs/audit \
+    FRAUD_AUDIT_FILE=fraud_audit_log.jsonl
+
+RUN mkdir -p /app/project/outputs/audit /app/project/models
+
+EXPOSE 8000
+
+CMD ["sh", "-c", "python project/deploy/download_artifacts.py && gunicorn -c project/deploy/gunicorn_conf.py project.app.hybrid_fraud_api:app"]

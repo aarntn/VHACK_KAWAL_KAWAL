@@ -1,0 +1,83 @@
+{
+  "generated_at_utc": "2026-03-18T12:19:49.972286+00:00",
+  "audit_log": "D:\\Vhack\\project\\outputs\\audit\\fraud_audit_log.jsonl",
+  "records_analyzed": 2572,
+  "dominant_stage_by_p95": {
+    "stage": "preprocessing_ms",
+    "count": 2572,
+    "mean_ms": 17.922987169517885,
+    "p50_ms": 1.278,
+    "p95_ms": 115.10424999999994,
+    "p99_ms": 171.99790999999993
+  },
+  "dominant_stage_frequency": [
+    {
+      "stage": "model_predict_ms",
+      "records_where_dominant": 1979,
+      "share_pct": 76.94401244167963
+    },
+    {
+      "stage": "preprocessing_ms",
+      "records_where_dominant": 593,
+      "share_pct": 23.055987558320375
+    }
+  ],
+  "stages": [
+    {
+      "stage": "preprocessing_ms",
+      "count": 2572,
+      "mean_ms": 17.922987169517885,
+      "p50_ms": 1.278,
+      "p95_ms": 115.10424999999994,
+      "p99_ms": 171.99790999999993
+    },
+    {
+      "stage": "model_predict_ms",
+      "count": 2572,
+      "mean_ms": 9.102426516329704,
+      "p50_ms": 8.237,
+      "p95_ms": 24.116549999999993,
+      "p99_ms": 43.26709999999998
+    },
+    {
+      "stage": "behavior_scoring_ms",
+      "count": 2572,
+      "mean_ms": 0.15252371695178848,
+      "p50_ms": 0.165,
+      "p95_ms": 0.221,
+      "p99_ms": 0.241
+    },
+    {
+      "stage": "profile_update_ms",
+      "count": 2572,
+      "mean_ms": 0.041656687402799375,
+      "p50_ms": 0.042,
+      "p95_ms": 0.061,
+      "p99_ms": 0.07
+    },
+    {
+      "stage": "decision_and_reasoning_ms",
+      "count": 2572,
+      "mean_ms": 0.012294323483670294,
+      "p50_ms": 0.012,
+      "p95_ms": 0.017,
+      "p99_ms": 0.022
+    },
+    {
+      "stage": "context_adjustment_ms",
+      "count": 2572,
+      "mean_ms": 0.010118973561430792,
+      "p50_ms": 0.01,
+      "p95_ms": 0.015,
+      "p99_ms": 0.018
+    },
+    {
+      "stage": "entity_smoothing_ms",
+      "count": 644,
+      "mean_ms": 0.0014798136645962734,
+      "p50_ms": 0.001,
+      "p95_ms": 0.002,
+      "p99_ms": 0.003
+    }
+  ]
+}

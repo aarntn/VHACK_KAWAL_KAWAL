@@ -1,0 +1,26 @@
+{
+  "generated_at_utc": "2026-04-23T10:02:20.922425+00:00",
+  "benchmark_dir": "project/outputs/benchmark",
+  "history_limit": 20,
+  "history_points": 2,
+  "latest_by_endpoint": [
+    {
+      "endpoint_name": "score_transaction",
+      "latest_generated_at_utc": "2026-03-15T00:07:03.383298+00:00",
+      "latest_p50_ms": 3.8020085012249183,
+      "latest_p95_ms": 7.492638305120637,
+      "latest_p99_ms": 8.552918861678334,
+      "latest_error_rate_pct": 100.0,
+      "latest_viability": "FAIL"
+    },
+    {
+      "endpoint_name": "wallet_authorize_payment",
+      "latest_generated_at_utc": "2026-03-15T00:07:03.383298+00:00",
+      "latest_p50_ms": 4.775621000590036,
+      "latest_p95_ms": 8.384937602750142,
+      "latest_p99_ms": 9.000303522116154,
+      "latest_error_rate_pct": 100.0,
+      "latest_viability": "FAIL"
+    }
+  ]
+}

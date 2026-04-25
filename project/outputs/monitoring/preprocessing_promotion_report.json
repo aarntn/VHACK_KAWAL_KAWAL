@@ -1,0 +1,142 @@
+{
+  "dataset_source": "ieee_cis",
+  "selection_scope": "best",
+  "label_policy": "transaction",
+  "validation_robustness_report": "D:\\Vhack\\project\\outputs\\monitoring\\ieee_cis_validation_robustness_report.json",
+  "validation_robustness_gate": {
+    "required": true,
+    "passed": true,
+    "reason": "ok"
+  },
+  "preprocessing_metadata": "D:\\Vhack\\project\\outputs\\monitoring\\ieee_cis_preprocessing_threshold_metadata.json",
+  "label_policy_check": {
+    "passed": true,
+    "mismatches": [],
+    "policies": {
+      "expected": "transaction",
+      "robustness_report": "transaction",
+      "preprocessing_metadata": "transaction"
+    }
+  },
+  "selection_csv": "D:\\Vhack\\project\\outputs\\monitoring\\ieee_cis_preprocessing_threshold_best.csv",
+  "selection_metric": "f1",
+  "selection_policy": {
+    "max_fpr": 0.75,
+    "min_precision": 0.02
+  },
+  "selection_constraints_applied": {
+    "max_fpr": true,
+    "min_precision": true
+  },
+  "quality_gate": {
+    "passed": true,
+    "failed_metrics": [],
+    "checks": {
+      "f1": {
+        "required": 0.0,
+        "actual": 0.2610619469026549,
+        "passed": true
+      },
+      "pr_auc": {
+        "required": 0.0,
+        "actual": 0.1857702524642842,
+        "passed": true
+      },
+      "recall": {
+        "required": 0.0,
+        "actual": 0.3193897637795275,
+        "passed": true
+      },
+      "false_positive_rate": {
+        "required_max": 0.75,
+        "actual": 0.0401774753603872,
+        "passed": true
+      }
+    }
+  },
+  "policy_diagnostics": {
+    "candidate_count_before_policy": 2,
+    "false_positive_rate_range": {
+      "min": 0.0352407842587071,
+      "max": 0.0401774753603872
+    },
+    "precision_range": {
+      "min": 0.2139644044592216,
+      "max": 0.2207482993197279
+    },
+    "requested_policy": {
+      "max_fpr": 0.75,
+      "min_precision": 0.02
+    },
+    "candidate_count_after_policy": 2,
+    "policy_fallback_used": false
+  },
+  "selected_setting": "onehot_robust",
+  "selected_threshold": 0.7500000000000002,
+  "selected_objective": "f1",
+  "selected_row": {
+    "preprocessing_setting": "onehot_robust",
+    "split_mode": "time",
+    "threshold": 0.7500000000000002,
+    "precision": 0.2207482993197279,
+    "recall": 0.3193897637795275,
+    "f1": 0.2610619469026549,
+    "false_positive_rate": 0.0401774753603872,
+    "pr_auc": 0.1857702524642842,
+    "roc_auc": 0.8025148835702866,
+    "tn": 109462,
+    "fp": 4582,
+    "fn": 2766,
+    "tp": 1298,
+    "feature_whitelist_active": false,
+    "selected_feature_count": 443,
+    "label_policy": "transaction"
+  },
+  "selected_row_metadata": {
+    "preprocessing_setting": "onehot_robust",
+    "threshold": 0.7500000000000002,
+    "selection_metric": "f1",
+    "selection_metric_value": 0.2610619469026549
+  },
+  "next_actions": [
+    "Quality gate passed; proceed with promotion training or keep --dry-run for inspection."
+  ],
+  "resolved_encoding": "onehot",
+  "resolved_scaler": "robust",
+  "training_command": [
+    "C:\\Users\\ranie\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+    "D:\\Vhack\\project\\models\\final_xgboost_model.py",
+    "--dataset-source",
+    "ieee_cis",
+    "--use-preprocessing",
+    "--preprocessing-categorical-encoding",
+    "onehot",
+    "--preprocessing-scaler",
+    "robust",
+    "--model-output",
+    "D:\\Vhack\\project\\models\\final_xgboost_model_promoted_preproc.pkl",
+    "--features-output",
+    "D:\\Vhack\\project\\models\\feature_columns_promoted_preproc.pkl",
+    "--thresholds-output",
+    "D:\\Vhack\\project\\models\\decision_thresholds_promoted_preproc.pkl",
+    "--preprocessing-artifact-output",
+    "D:\\Vhack\\project\\models\\preprocessing_artifact_promoted.pkl",
+    "--ieee-transaction-path",
+    "D:\\Vhack\\ieee-fraud-detection\\train_transaction.csv",
+    "--ieee-identity-path",
+    "D:\\Vhack\\ieee-fraud-detection\\train_identity.csv"
+  ],
+  "entity_smoothing": {
+    "method": "none",
+    "min_history": 2,
+    "ema_alpha": 0.3,
+    "blend_alpha": 0.5,
+    "blend_cap": 0.25,
+    "selected_row_smoothed_metrics": {
+      "f1": null,
+      "pr_auc": null,
+      "recall": null
+    }
+  },
+  "dry_run": false
+}

@@ -1,0 +1,685 @@
+{
+  "generated_at": "2026-03-18T02:53:32.202787+00:00",
+  "dataset_source": "ieee_cis",
+  "dataset_path": "None",
+  "ieee_transaction_path": "ieee-fraud-detection\\train_transaction.csv",
+  "ieee_identity_path": "ieee-fraud-detection\\train_identity.csv",
+  "model_path": "project\\models\\final_xgboost_model_promoted_preproc.pkl",
+  "feature_path": "project\\models\\feature_columns_promoted_preproc.pkl",
+  "thresholds_path": "project\\models\\decision_thresholds_promoted_preproc.pkl",
+  "thresholds": {
+    "approve_threshold": 0.33225984837222255,
+    "block_threshold": 0.550425697388346
+  },
+  "overall_metrics": {
+    "precision": 0.1293884484711212,
+    "recall": 0.5111856823266219,
+    "false_positive_rate": 0.12756160292043475
+  },
+  "segment_policy": {
+    "max_fpr_gap": 0.08,
+    "max_recall_gap": 0.12,
+    "max_precision_gap": 0.12,
+    "min_segment_size": 200
+  },
+  "segment_disparity": {
+    "severe_count": 8,
+    "no_severe_disparity": false,
+    "severe_segments": [
+      {
+        "segment": "ieee:product_C",
+        "violations": [
+          "fpr_gap",
+          "fnr_gap"
+        ],
+        "severity_label": "severe",
+        "severity_score": 6.684888,
+        "row": {
+          "segment": "ieee:product_C",
+          "sample_count": 2974,
+          "fraud_positive_count": 347,
+          "precision": 0.13904,
+          "recall": 0.809798,
+          "false_positive_rate": 0.662352,
+          "false_negative_rate": 0.190202,
+          "fpr_gap_vs_overall": 0.534791,
+          "fnr_gap_vs_overall": -0.298613,
+          "recall_gap_vs_overall": 0.298613,
+          "precision_gap_vs_overall": 0.009652,
+          "is_low_support": false,
+          "severity_label": "severe",
+          "severity_score": 6.684888
+        }
+      },
+      {
+        "segment": "ieee:device_mobile",
+        "violations": [
+          "fpr_gap",
+          "fnr_gap"
+        ],
+        "severity_label": "severe",
+        "severity_score": 5.124825,
+        "row": {
+          "segment": "ieee:device_mobile",
+          "sample_count": 2344,
+          "fraud_positive_count": 240,
+          "precision": 0.152809,
+          "recall": 0.85,
+          "false_positive_rate": 0.537548,
+          "false_negative_rate": 0.15,
+          "fpr_gap_vs_overall": 0.409986,
+          "fnr_gap_vs_overall": -0.338814,
+          "recall_gap_vs_overall": 0.338814,
+          "precision_gap_vs_overall": 0.023421,
+          "is_low_support": false,
+          "severity_label": "severe",
+          "severity_score": 5.124825
+        }
+      },
+      {
+        "segment": "ieee:device_desktop",
+        "violations": [
+          "fpr_gap",
+          "fnr_gap"
+        ],
+        "severity_label": "severe",
+        "severity_score": 3.982012,
+        "row": {
+          "segment": "ieee:device_desktop",
+          "sample_count": 3707,
+          "fraud_positive_count": 264,
+          "precision": 0.119266,
+          "recall": 0.787879,
+          "false_positive_rate": 0.446123,
+          "false_negative_rate": 0.212121,
+          "fpr_gap_vs_overall": 0.318561,
+          "fnr_gap_vs_overall": -0.276693,
+          "recall_gap_vs_overall": 0.276693,
+          "precision_gap_vs_overall": -0.010122,
+          "is_low_support": false,
+          "severity_label": "severe",
+          "severity_score": 3.982012
+        }
+      },
+      {
+        "segment": "ieee:product_W",
+        "violations": [
+          "fpr_gap",
+          "fnr_gap"
+        ],
+        "severity_label": "severe",
+        "severity_score": 3.254517,
+        "row": {
+          "segment": "ieee:product_W",
+          "sample_count": 18510,
+          "fraud_positive_count": 373,
+          "precision": 0.100671,
+          "recall": 0.120643,
+          "false_positive_rate": 0.022165,
+          "false_negative_rate": 0.879357,
+          "fpr_gap_vs_overall": -0.105397,
+          "fnr_gap_vs_overall": 0.390542,
+          "recall_gap_vs_overall": -0.390542,
+          "precision_gap_vs_overall": -0.028717,
+          "is_low_support": false,
+          "severity_label": "severe",
+          "severity_score": 3.254517
+        }
+      },
+      {
+        "segment": "ieee:product_R",
+        "violations": [
+          "fpr_gap",
+          "fnr_gap"
+        ],
+        "severity_label": "severe",
+        "severity_score": 3.202808,
+        "row": {
+          "segment": "ieee:product_R",
+          "sample_count": 1573,
+          "fraud_positive_count": 67,
+          "precision": 0.103986,
+          "recall": 0.895522,
+          "false_positive_rate": 0.343293,
+          "false_negative_rate": 0.104478,
+          "fpr_gap_vs_overall": 0.215732,
+          "fnr_gap_vs_overall": -0.384337,
+          "recall_gap_vs_overall": 0.384337,
+          "precision_gap_vs_overall": -0.025402,
+          "is_low_support": false,
+          "severity_label": "severe",
+          "severity_score": 3.202808
+        }
+      },
+      {
+        "segment": "ieee:product_S",
+        "violations": [
+          "fpr_gap"
+        ],
+        "severity_label": "severe",
+        "severity_score": 2.253563,
+        "row": {
+          "segment": "ieee:product_S",
+          "sample_count": 528,
+          "fraud_positive_count": 31,
+          "precision": 0.1,
+          "recall": 0.548387,
+          "false_positive_rate": 0.307847,
+          "false_negative_rate": 0.451613,
+          "fpr_gap_vs_overall": 0.180285,
+          "fnr_gap_vs_overall": -0.037201,
+          "recall_gap_vs_overall": 0.037201,
+          "precision_gap_vs_overall": -0.029388,
+          "is_low_support": false,
+          "severity_label": "severe",
+          "severity_score": 2.253563
+        }
+      },
+      {
+        "segment": "ieee:product_H",
+        "violations": [
+          "fnr_gap"
+        ],
+        "severity_label": "severe",
+        "severity_score": 1.661175,
+        "row": {
+          "segment": "ieee:product_H",
+          "sample_count": 1415,
+          "fraud_positive_count": 76,
+          "precision": 0.170347,
+          "recall": 0.710526,
+          "false_positive_rate": 0.196415,
+          "false_negative_rate": 0.289474,
+          "fpr_gap_vs_overall": 0.068854,
+          "fnr_gap_vs_overall": -0.199341,
+          "recall_gap_vs_overall": 0.199341,
+          "precision_gap_vs_overall": 0.040959,
+          "is_low_support": false,
+          "severity_label": "severe",
+          "severity_score": 1.661175
+        }
+      },
+      {
+        "segment": "ieee:identity_high_confidence",
+        "violations": [
+          "fnr_gap"
+        ],
+        "severity_label": "severe",
+        "severity_score": 1.221683,
+        "row": {
+          "segment": "ieee:identity_high_confidence",
+          "sample_count": 18699,
+          "fraud_positive_count": 480,
+          "precision": 0.118483,
+          "recall": 0.364583,
+          "false_positive_rate": 0.071464,
+          "false_negative_rate": 0.635417,
+          "fpr_gap_vs_overall": -0.056098,
+          "fnr_gap_vs_overall": 0.146602,
+          "recall_gap_vs_overall": -0.146602,
+          "precision_gap_vs_overall": -0.010905,
+          "is_low_support": false,
+          "severity_label": "severe",
+          "severity_score": 1.221683
+        }
+      }
+    ],
+    "mitigation": [
+      "Review threshold-by-segment policy where compliance allows.",
+      "Rebalance training data for impacted segments and rerun Pass 1/2/4/5.",
+      "Enable drift alerts for segment FPR/recall gaps."
+    ]
+  },
+  "segments": [
+    {
+      "segment": "cohort:new_users",
+      "sample_count": 1252,
+      "fraud_positive_count": 40,
+      "precision": 0.12963,
+      "recall": 0.525,
+      "false_positive_rate": 0.116337,
+      "false_negative_rate": 0.475,
+      "fpr_gap_vs_overall": -0.011225,
+      "fnr_gap_vs_overall": -0.013814,
+      "recall_gap_vs_overall": 0.013814,
+      "precision_gap_vs_overall": 0.000241,
+      "is_low_support": false,
+      "severity_label": "ok",
+      "severity_score": 0.140313
+    },
+    {
+      "segment": "cohort:established_users",
+      "sample_count": 23748,
+      "fraud_positive_count": 854,
+      "precision": 0.129377,
+      "recall": 0.510539,
+      "false_positive_rate": 0.128156,
+      "false_negative_rate": 0.489461,
+      "fpr_gap_vs_overall": 0.000594,
+      "fnr_gap_vs_overall": 0.000647,
+      "recall_gap_vs_overall": -0.000647,
+      "precision_gap_vs_overall": -1.2e-05,
+      "is_low_support": false,
+      "severity_label": "ok",
+      "severity_score": 0.007425
+    },
+    {
+      "segment": "cohort:agent_small_ticket",
+      "sample_count": 4426,
+      "fraud_positive_count": 154,
+      "precision": 0.129688,
+      "recall": 0.538961,
+      "false_positive_rate": 0.130384,
+      "false_negative_rate": 0.461039,
+      "fpr_gap_vs_overall": 0.002822,
+      "fnr_gap_vs_overall": -0.027775,
+      "recall_gap_vs_overall": 0.027775,
+      "precision_gap_vs_overall": 0.000299,
+      "is_low_support": false,
+      "severity_label": "ok",
+      "severity_score": 0.231458
+    },
+    {
+      "segment": "device:mobile_app",
+      "sample_count": 20029,
+      "fraud_positive_count": 719,
+      "precision": 0.129332,
+      "recall": 0.503477,
+      "false_positive_rate": 0.126204,
+      "false_negative_rate": 0.496523,
+      "fpr_gap_vs_overall": -0.001358,
+      "fnr_gap_vs_overall": 0.007709,
+      "recall_gap_vs_overall": -0.007709,
+      "precision_gap_vs_overall": -5.7e-05,
+      "is_low_support": false,
+      "severity_label": "ok",
+      "severity_score": 0.064242
+    },
+    {
+      "segment": "device:agent",
+      "sample_count": 4971,
+      "fraud_positive_count": 175,
+      "precision": 0.129604,
+      "recall": 0.542857,
+      "false_positive_rate": 0.133028,
+      "false_negative_rate": 0.457143,
+      "fpr_gap_vs_overall": 0.005466,
+      "fnr_gap_vs_overall": -0.031671,
+      "recall_gap_vs_overall": 0.031671,
+      "precision_gap_vs_overall": 0.000216,
+      "is_low_support": false,
+      "severity_label": "ok",
+      "severity_score": 0.263925
+    },
+    {
+      "segment": "ieee:device_mobile",
+      "sample_count": 2344,
+      "fraud_positive_count": 240,
+      "precision": 0.152809,
+      "recall": 0.85,
+      "false_positive_rate": 0.537548,
+      "false_negative_rate": 0.15,
+      "fpr_gap_vs_overall": 0.409986,
+      "fnr_gap_vs_overall": -0.338814,
+      "recall_gap_vs_overall": 0.338814,
+      "precision_gap_vs_overall": 0.023421,
+      "is_low_support": false,
+      "severity_label": "severe",
+      "severity_score": 5.124825
+    },
+    {
+      "segment": "ieee:device_desktop",
+      "sample_count": 3707,
+      "fraud_positive_count": 264,
+      "precision": 0.119266,
+      "recall": 0.787879,
+      "false_positive_rate": 0.446123,
+      "false_negative_rate": 0.212121,
+      "fpr_gap_vs_overall": 0.318561,
+      "fnr_gap_vs_overall": -0.276693,
+      "recall_gap_vs_overall": 0.276693,
+      "precision_gap_vs_overall": -0.010122,
+      "is_low_support": false,
+      "severity_label": "severe",
+      "severity_score": 3.982012
+    },
+    {
+      "segment": "ieee:product_C",
+      "sample_count": 2974,
+      "fraud_positive_count": 347,
+      "precision": 0.13904,
+      "recall": 0.809798,
+      "false_positive_rate": 0.662352,
+      "false_negative_rate": 0.190202,
+      "fpr_gap_vs_overall": 0.534791,
+      "fnr_gap_vs_overall": -0.298613,
+      "recall_gap_vs_overall": 0.298613,
+      "precision_gap_vs_overall": 0.009652,
+      "is_low_support": false,
+      "severity_label": "severe",
+      "severity_score": 6.684888
+    },
+    {
+      "segment": "ieee:product_H",
+      "sample_count": 1415,
+      "fraud_positive_count": 76,
+      "precision": 0.170347,
+      "recall": 0.710526,
+      "false_positive_rate": 0.196415,
+      "false_negative_rate": 0.289474,
+      "fpr_gap_vs_overall": 0.068854,
+      "fnr_gap_vs_overall": -0.199341,
+      "recall_gap_vs_overall": 0.199341,
+      "precision_gap_vs_overall": 0.040959,
+      "is_low_support": false,
+      "severity_label": "severe",
+      "severity_score": 1.661175
+    },
+    {
+      "segment": "ieee:product_R",
+      "sample_count": 1573,
+      "fraud_positive_count": 67,
+      "precision": 0.103986,
+      "recall": 0.895522,
+      "false_positive_rate": 0.343293,
+      "false_negative_rate": 0.104478,
+      "fpr_gap_vs_overall": 0.215732,
+      "fnr_gap_vs_overall": -0.384337,
+      "recall_gap_vs_overall": 0.384337,
+      "precision_gap_vs_overall": -0.025402,
+      "is_low_support": false,
+      "severity_label": "severe",
+      "severity_score": 3.202808
+    },
+    {
+      "segment": "ieee:product_S",
+      "sample_count": 528,
+      "fraud_positive_count": 31,
+      "precision": 0.1,
+      "recall": 0.548387,
+      "false_positive_rate": 0.307847,
+      "false_negative_rate": 0.451613,
+      "fpr_gap_vs_overall": 0.180285,
+      "fnr_gap_vs_overall": -0.037201,
+      "recall_gap_vs_overall": 0.037201,
+      "precision_gap_vs_overall": -0.029388,
+      "is_low_support": false,
+      "severity_label": "severe",
+      "severity_score": 2.253563
+    },
+    {
+      "segment": "ieee:product_W",
+      "sample_count": 18510,
+      "fraud_positive_count": 373,
+      "precision": 0.100671,
+      "recall": 0.120643,
+      "false_positive_rate": 0.022165,
+      "false_negative_rate": 0.879357,
+      "fpr_gap_vs_overall": -0.105397,
+      "fnr_gap_vs_overall": 0.390542,
+      "recall_gap_vs_overall": -0.390542,
+      "precision_gap_vs_overall": -0.028717,
+      "is_low_support": false,
+      "severity_label": "severe",
+      "severity_score": 3.254517
+    },
+    {
+      "segment": "ieee:identity_high_confidence",
+      "sample_count": 18699,
+      "fraud_positive_count": 480,
+      "precision": 0.118483,
+      "recall": 0.364583,
+      "false_positive_rate": 0.071464,
+      "false_negative_rate": 0.635417,
+      "fpr_gap_vs_overall": -0.056098,
+      "fnr_gap_vs_overall": 0.146602,
+      "recall_gap_vs_overall": -0.146602,
+      "precision_gap_vs_overall": -0.010905,
+      "is_low_support": false,
+      "severity_label": "severe",
+      "severity_score": 1.221683
+    },
+    {
+      "segment": "ieee:identity_medium_confidence",
+      "sample_count": 24905,
+      "fraud_positive_count": 877,
+      "precision": 0.128419,
+      "recall": 0.508552,
+      "false_positive_rate": 0.125978,
+      "false_negative_rate": 0.491448,
+      "fpr_gap_vs_overall": -0.001584,
+      "fnr_gap_vs_overall": 0.002634,
+      "recall_gap_vs_overall": -0.002634,
+      "precision_gap_vs_overall": -0.000969,
+      "is_low_support": false,
+      "severity_label": "ok",
+      "severity_score": 0.02195
+    },
+    {
+      "segment": "ieee:identity_low_confidence",
+      "sample_count": 95,
+      "fraud_positive_count": 17,
+      "precision": 0.186441,
+      "recall": 0.647059,
+      "false_positive_rate": 0.615385,
+      "false_negative_rate": 0.352941,
+      "fpr_gap_vs_overall": 0.487823,
+      "fnr_gap_vs_overall": -0.135873,
+      "recall_gap_vs_overall": 0.135873,
+      "precision_gap_vs_overall": 0.057052,
+      "is_low_support": true,
+      "severity_label": "low_support",
+      "severity_score": 0.0
+    }
+  ],
+  "identity_bucket_metrics": {
+    "overall": {
+      "pr_auc": 0.180712,
+      "f1": 0.206507,
+      "precision": 0.129388,
+      "recall": 0.511186,
+      "false_positive_rate": 0.127562
+    },
+    "buckets": [
+      {
+        "bucket": "known_high_confidence_entity_id",
+        "sample_count": 9040,
+        "fraud_positive_count": 285,
+        "pr_auc": 0.152575,
+        "f1": 0.186083,
+        "precision": 0.119718,
+        "recall": 0.417544,
+        "false_positive_rate": 0.099943,
+        "pr_auc_gap_vs_overall": -0.028137,
+        "f1_gap_vs_overall": -0.020424,
+        "precision_gap_vs_overall": -0.00967,
+        "recall_gap_vs_overall": -0.093642,
+        "fpr_gap_vs_overall": -0.027619
+      },
+      {
+        "bucket": "uncertain_weakly_linked_entity_id",
+        "sample_count": 15960,
+        "fraud_positive_count": 609,
+        "pr_auc": 0.195853,
+        "f1": 0.214808,
+        "precision": 0.133176,
+        "recall": 0.555008,
+        "false_positive_rate": 0.143313,
+        "pr_auc_gap_vs_overall": 0.015142,
+        "f1_gap_vs_overall": 0.008301,
+        "precision_gap_vs_overall": 0.003787,
+        "recall_gap_vs_overall": 0.043823,
+        "fpr_gap_vs_overall": 0.015752
+      }
+    ],
+    "gap_summary": {
+      "pr_auc_max_gap": 0.043278,
+      "f1_max_gap": 0.028725,
+      "precision_max_gap": 0.013458,
+      "recall_max_gap": 0.137464,
+      "false_positive_rate_max_gap": 0.04337
+    }
+  },
+  "identity_bucket_diagnostics": {
+    "dataset_source": "ieee_cis",
+    "tiers": [
+      {
+        "tier": "ieee_card_addr_email_device",
+        "configured_columns": [
+          "card1",
+          "card2",
+          "card3",
+          "card5",
+          "addr1",
+          "addr2",
+          "P_emaildomain",
+          "R_emaildomain",
+          "DeviceType",
+          "DeviceInfo"
+        ],
+        "available_columns": [
+          "card1",
+          "card2",
+          "card3",
+          "card5",
+          "addr1",
+          "addr2",
+          "P_emaildomain",
+          "R_emaildomain",
+          "DeviceType",
+          "DeviceInfo"
+        ],
+        "assigned_rows": 25000,
+        "remaining_rows": 0
+      },
+      {
+        "tier": "ieee_card_addr_email",
+        "configured_columns": [
+          "card1",
+          "card2",
+          "card3",
+          "card5",
+          "addr1",
+          "addr2",
+          "P_emaildomain",
+          "R_emaildomain"
+        ],
+        "available_columns": [
+          "card1",
+          "card2",
+          "card3",
+          "card5",
+          "addr1",
+          "addr2",
+          "P_emaildomain",
+          "R_emaildomain"
+        ],
+        "assigned_rows": 0,
+        "remaining_rows": 0
+      },
+      {
+        "tier": "ieee_card_only",
+        "configured_columns": [
+          "card1",
+          "card2",
+          "card3",
+          "card5"
+        ],
+        "available_columns": [
+          "card1",
+          "card2",
+          "card3",
+          "card5"
+        ],
+        "assigned_rows": 0,
+        "remaining_rows": 0
+      }
+    ],
+    "rows_total": 25000,
+    "unique_entities": 15732,
+    "fallback_rows": 0,
+    "identity_bucket_counts": {
+      "uncertain_weakly_linked_entity_id": 15960,
+      "known_high_confidence_entity_id": 9040
+    },
+    "identity_bucket_rules": {
+      "known_high_confidence_entity_id": "non-fallback entity with >=3 occurrences and not weak-tier proxy",
+      "uncertain_weakly_linked_entity_id": "non-fallback entity with <3 occurrences or weak-tier key",
+      "unknown_no_entity": "fallback entity id (no usable identity key)"
+    }
+  },
+  "explainability": {
+    "method": "xgboost_pred_contribs",
+    "top_features": [
+      {
+        "feature": "numeric_canonical__device_signal_present",
+        "mean_abs_shap": 0.6081432700157166
+      },
+      {
+        "feature": "numeric_canonical__amount_raw",
+        "mean_abs_shap": 0.3579014837741852
+      },
+      {
+        "feature": "numeric_canonical__time_since_last_tx",
+        "mean_abs_shap": 0.23682668805122375
+      },
+      {
+        "feature": "numeric_canonical__event_time_raw",
+        "mean_abs_shap": 0.1919632852077484
+      },
+      {
+        "feature": "numeric_canonical__amount_over_user_avg",
+        "mean_abs_shap": 0.13480961322784424
+      },
+      {
+        "feature": "numeric_canonical__hour_of_day",
+        "mean_abs_shap": 0.12532828748226166
+      },
+      {
+        "feature": "numeric_canonical__avg_amount_24h",
+        "mean_abs_shap": 0.09551387280225754
+      },
+      {
+        "feature": "numeric_canonical__amount_log",
+        "mean_abs_shap": 0.0839976817369461
+      },
+      {
+        "feature": "numeric_canonical__tx_count_24h",
+        "mean_abs_shap": 0.07064852118492126
+      },
+      {
+        "feature": "numeric_canonical__day_of_week",
+        "mean_abs_shap": 0.04785481467843056
+      },
+      {
+        "feature": "numeric_canonical__amount_std_24h",
+        "mean_abs_shap": 0.040280070155858994
+      },
+      {
+        "feature": "numeric_canonical__uid_time_since_last_tx",
+        "mean_abs_shap": 0.016333082690835
+      },
+      {
+        "feature": "numeric_canonical__uid_avg_amount_7d",
+        "mean_abs_shap": 0.011840357445180416
+      },
+      {
+        "feature": "numeric_canonical__tx_count_1h",
+        "mean_abs_shap": 0.009830391965806484
+      },
+      {
+        "feature": "numeric_canonical__uid_tx_count_7d",
+        "mean_abs_shap": 0.006385368760675192
+      },
+      {
+        "feature": "numeric_canonical__uid_amount_std_7d",
+        "mean_abs_shap": 0.004713419824838638
+      },
+      {
+        "feature": "numeric_canonical__location_signal_present",
+        "mean_abs_shap": 0.00396305276080966
+      }
+    ],
+    "candidate_model_explainability_generated": true
+  }
+}

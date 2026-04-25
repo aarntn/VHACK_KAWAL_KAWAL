@@ -1,0 +1,3 @@
+endpoint_name,url,concurrency,requests_total,success_count,error_count,error_rate_pct,throughput_rps,p50_ms,p95_ms,p99_ms,viability
+score_transaction,http://127.0.0.1:8000/score_transaction,20,200,200,0,0.0000,74.36,268.92,331.40,342.90,FAIL
+wallet_authorize_payment,http://127.0.0.1:8001/wallet/authorize_payment,20,200,0,200,100.0000,9.76,2045.88,2056.08,2057.78,FAIL

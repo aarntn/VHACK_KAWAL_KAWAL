@@ -1,0 +1,19 @@
+{
+  "generated_at_utc": "2026-03-16T00:16:37.584953+00:00",
+  "bundle_dir": "D:\\Vhack\\project\\outputs\\evidence_bundles\\evidence_bundle_20260316T001637Z",
+  "copied_artifacts": {
+    "class_imbalance_metrics_csv": "D:\\Vhack\\project\\outputs\\evidence_bundles\\evidence_bundle_20260316T001637Z\\class_imbalance_experiment_metrics.csv",
+    "class_imbalance_metrics_md": "D:\\Vhack\\project\\outputs\\evidence_bundles\\evidence_bundle_20260316T001637Z\\class_imbalance_experiment_metrics.md",
+    "context_calibration_json": "D:\\Vhack\\project\\outputs\\evidence_bundles\\evidence_bundle_20260316T001637Z\\context_calibration.json",
+    "context_calibration_trials_csv": "D:\\Vhack\\project\\outputs\\evidence_bundles\\evidence_bundle_20260316T001637Z\\context_calibration_trials.csv",
+    "drift_report_json": "D:\\Vhack\\project\\outputs\\evidence_bundles\\evidence_bundle_20260316T001637Z\\drift_report.json",
+    "drift_feature_psi_csv": "D:\\Vhack\\project\\outputs\\evidence_bundles\\evidence_bundle_20260316T001637Z\\drift_feature_psi.csv",
+    "nightly_ops_summary_json": "D:\\Vhack\\project\\outputs\\evidence_bundles\\evidence_bundle_20260316T001637Z\\nightly_ops_summary.json",
+    "profile_health_json": "D:\\Vhack\\project\\outputs\\evidence_bundles\\evidence_bundle_20260316T001637Z\\behavior_profile_health.json",
+    "latest_benchmark_json": "D:\\Vhack\\project\\outputs\\evidence_bundles\\evidence_bundle_20260316T001637Z\\latency_benchmark_20260315T234416Z.json",
+    "latest_benchmark_csv": "D:\\Vhack\\project\\outputs\\evidence_bundles\\evidence_bundle_20260316T001637Z\\latency_benchmark_20260315T234416Z.csv"
+  },
+  "missing_artifacts": [
+    "full_test_run_log"
+  ]
+}

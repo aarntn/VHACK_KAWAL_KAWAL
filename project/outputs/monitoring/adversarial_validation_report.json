@@ -1,0 +1,367 @@
+{
+  "dataset_source": "creditcard",
+  "label_policy": "transaction",
+  "seed": 42,
+  "split": {
+    "split_source": "dataset_split",
+    "split_mode": "time",
+    "train_rows": 227845,
+    "test_rows": 56962,
+    "feature_count": 40,
+    "label_policy": "transaction",
+    "label_policy_diagnostics": {
+      "label_policy": "transaction",
+      "rows_changed": 0,
+      "positive_before": 492,
+      "positive_after": 492
+    }
+  },
+  "models": {
+    "logistic": {
+      "roc_auc": 1.0,
+      "pr_auc": 1.0
+    },
+    "tree": {
+      "roc_auc": 1.0,
+      "pr_auc": 1.0
+    }
+  },
+  "max_adversarial_importance": 0.02,
+  "drop_feature_count": 8,
+  "drop_features": [
+    "amount_std_24h",
+    "Time",
+    "uid_amount_std_7d",
+    "avg_amount_24h",
+    "uid_tx_count_7d",
+    "uid_avg_amount_7d",
+    "tx_count_1h",
+    "tx_count_24h"
+  ],
+  "ranked_features": [
+    {
+      "feature": "amount_std_24h",
+      "importance_combined": 0.1840891838496274,
+      "importance_logistic": 0.2992112002872165,
+      "importance_tree": 0.06896716741203834,
+      "rank": 1,
+      "label_policy": "transaction"
+    },
+    {
+      "feature": "Time",
+      "importance_combined": 0.16989722229032672,
+      "importance_logistic": 0.013139534743751182,
+      "importance_tree": 0.32665490983690226,
+      "rank": 2,
+      "label_policy": "transaction"
+    },
+    {
+      "feature": "uid_amount_std_7d",
+      "importance_combined": 0.15299577679665297,
+      "importance_logistic": 0.28787530789839777,
+      "importance_tree": 0.018116245694908172,
+      "rank": 3,
+      "label_policy": "transaction"
+    },
+    {
+      "feature": "avg_amount_24h",
+      "importance_combined": 0.1518757177832019,
+      "importance_logistic": 0.10720542428177253,
+      "importance_tree": 0.19654601128463128,
+      "rank": 4,
+      "label_policy": "transaction"
+    },
+    {
+      "feature": "uid_tx_count_7d",
+      "importance_combined": 0.07939266714261585,
+      "importance_logistic": 0.006923526690520688,
+      "importance_tree": 0.15186180759471102,
+      "rank": 5,
+      "label_policy": "transaction"
+    },
+    {
+      "feature": "uid_avg_amount_7d",
+      "importance_combined": 0.07792005769047047,
+      "importance_logistic": 0.09841085261270571,
+      "importance_tree": 0.05742926276823525,
+      "rank": 6,
+      "label_policy": "transaction"
+    },
+    {
+      "feature": "tx_count_1h",
+      "importance_combined": 0.07206146306315085,
+      "importance_logistic": 0.13003963651762365,
+      "importance_tree": 0.014083289608678048,
+      "rank": 7,
+      "label_policy": "transaction"
+    },
+    {
+      "feature": "tx_count_24h",
+      "importance_combined": 0.07002891164864601,
+      "importance_logistic": 0.008183508022497846,
+      "importance_tree": 0.13187431527479418,
+      "rank": 8,
+      "label_policy": "transaction"
+    },
+    {
+      "feature": "time_since_last_tx",
+      "importance_combined": 0.0072905600779519675,
+      "importance_logistic": 0.014542779534375844,
+      "importance_tree": 3.83406215280909e-05,
+      "rank": 9,
+      "label_policy": "transaction"
+    },
+    {
+      "feature": "uid_time_since_last_tx",
+      "importance_combined": 0.007272708173748033,
+      "importance_logistic": 0.014544792026544061,
+      "importance_tree": 6.243209520042143e-07,
+      "rank": 10,
+      "label_policy": "transaction"
+    },
+    {
+      "feature": "V3",
+      "importance_combined": 0.0066617544068897925,
+      "importance_logistic": 0.0018527774302342852,
+      "importance_tree": 0.0114707313835453,
+      "rank": 11,
+      "label_policy": "transaction"
+    },
+    {
+      "feature": "V1",
+      "importance_combined": 0.004778593465161559,
+      "importance_logistic": 0.00032914312093437975,
+      "importance_tree": 0.009228043809388738,
+      "rank": 12,
+      "label_policy": "transaction"
+    },
+    {
+      "feature": "V28",
+      "importance_combined": 0.001998617672099962,
+      "importance_logistic": 2.4819111051957005e-05,
+      "importance_tree": 0.0039724162331479665,
+      "rank": 13,
+      "label_policy": "transaction"
+    },
+    {
+      "feature": "V12",
+      "importance_combined": 0.0018744497321175107,
+      "importance_logistic": 0.0031939966526056515,
+      "importance_tree": 0.0005549028116293699,
+      "rank": 14,
+      "label_policy": "transaction"
+    },
+    {
+      "feature": "V11",
+      "importance_combined": 0.0017176207527771661,
+      "importance_logistic": 0.001833337218300391,
+      "importance_tree": 0.0016019042872539415,
+      "rank": 15,
+      "label_policy": "transaction"
+    },
+    {
+      "feature": "V25",
+      "importance_combined": 0.0013814060383748996,
+      "importance_logistic": 0.0003861748779511471,
+      "importance_tree": 0.002376637198798652,
+      "rank": 16,
+      "label_policy": "transaction"
+    },
+    {
+      "feature": "V13",
+      "importance_combined": 0.0010887588591760697,
+      "importance_logistic": 0.0019777043966475315,
+      "importance_tree": 0.00019981332170460812,
+      "rank": 17,
+      "label_policy": "transaction"
+    },
+    {
+      "feature": "V9",
+      "importance_combined": 0.0010138546177411133,
+      "importance_logistic": 0.0019190772728264632,
+      "importance_tree": 0.00010863196265576344,
+      "rank": 18,
+      "label_policy": "transaction"
+    },
+    {
+      "feature": "V14",
+      "importance_combined": 0.0010108205362150862,
+      "importance_logistic": 0.0016427693329332076,
+      "importance_tree": 0.0003788717394969646,
+      "rank": 19,
+      "label_policy": "transaction"
+    },
+    {
+      "feature": "V22",
+      "importance_combined": 0.000617238352909616,
+      "importance_logistic": 0.00037845354036798766,
+      "importance_tree": 0.0008560231654512444,
+      "rank": 20,
+      "label_policy": "transaction"
+    },
+    {
+      "feature": "V7",
+      "importance_combined": 0.0005968230658653004,
+      "importance_logistic": 0.0007541413506175037,
+      "importance_tree": 0.0004395047811130971,
+      "rank": 21,
+      "label_policy": "transaction"
+    },
+    {
+      "feature": "V15",
+      "importance_combined": 0.0005926113021326291,
+      "importance_logistic": 0.00019428358218296195,
+      "importance_tree": 0.0009909390220822962,
+      "rank": 22,
+      "label_policy": "transaction"
+    },
+    {
+      "feature": "V2",
+      "importance_combined": 0.0005760796414728112,
+      "importance_logistic": 0.0010180350567140111,
+      "importance_tree": 0.00013412422623161147,
+      "rank": 23,
+      "label_policy": "transaction"
+    },
+    {
+      "feature": "V5",
+      "importance_combined": 0.00046411516481727,
+      "importance_logistic": 0.0003100822617671143,
+      "importance_tree": 0.0006181480678674257,
+      "rank": 24,
+      "label_policy": "transaction"
+    },
+    {
+      "feature": "V17",
+      "importance_combined": 0.00044696678321750813,
+      "importance_logistic": 0.0008287299607999325,
+      "importance_tree": 6.52036056350837e-05,
+      "rank": 25,
+      "label_policy": "transaction"
+    },
+    {
+      "feature": "V10",
+      "importance_combined": 0.00036310125561216664,
+      "importance_logistic": 0.0007150543265155761,
+      "importance_tree": 1.1148184708757201e-05,
+      "rank": 26,
+      "label_policy": "transaction"
+    },
+    {
+      "feature": "V4",
+      "importance_combined": 0.00035369804599808376,
+      "importance_logistic": 0.0006542649313652642,
+      "importance_tree": 5.313116063090326e-05,
+      "rank": 27,
+      "label_policy": "transaction"
+    },
+    {
+      "feature": "amount_over_user_avg",
+      "importance_combined": 0.00032126985218407293,
+      "importance_logistic": 0.0005687102756624929,
+      "importance_tree": 7.382942870565298e-05,
+      "rank": 28,
+      "label_policy": "transaction"
+    },
+    {
+      "feature": "V23",
+      "importance_combined": 0.0002533688441311964,
+      "importance_logistic": 4.867597479350414e-05,
+      "importance_tree": 0.00045806171346888863,
+      "rank": 29,
+      "label_policy": "transaction"
+    },
+    {
+      "feature": "V21",
+      "importance_combined": 0.00019840281421981847,
+      "importance_logistic": 0.00023136429892447642,
+      "importance_tree": 0.00016544132951516052,
+      "rank": 30,
+      "label_policy": "transaction"
+    },
+    {
+      "feature": "V6",
+      "importance_combined": 0.0001938117128240513,
+      "importance_logistic": 0.00018993508841559845,
+      "importance_tree": 0.00019768833723250416,
+      "rank": 31,
+      "label_policy": "transaction"
+    },
+    {
+      "feature": "V8",
+      "importance_combined": 0.00011772803422846321,
+      "importance_logistic": 0.00013422433595338006,
+      "importance_tree": 0.00010123173250354635,
+      "rank": 32,
+      "label_policy": "transaction"
+    },
+    {
+      "feature": "Amount",
+      "importance_combined": 9.878185498411201e-05,
+      "importance_logistic": 8.209776715001767e-05,
+      "importance_tree": 0.00011546594281820633,
+      "rank": 33,
+      "label_policy": "transaction"
+    },
+    {
+      "feature": "V16",
+      "importance_combined": 9.757728789128146e-05,
+      "importance_logistic": 0.00019459216915487763,
+      "importance_tree": 5.624066276852896e-07,
+      "rank": 34,
+      "label_policy": "transaction"
+    },
+    {
+      "feature": "V26",
+      "importance_combined": 9.222123762845151e-05,
+      "importance_logistic": 0.00016761196704889695,
+      "importance_tree": 1.6830508208006084e-05,
+      "rank": 35,
+      "label_policy": "transaction"
+    },
+    {
+      "feature": "V27",
+      "importance_combined": 8.284651536480565e-05,
+      "importance_logistic": 5.5126490735578354e-05,
+      "importance_tree": 0.00011056653999403294,
+      "rank": 36,
+      "label_policy": "transaction"
+    },
+    {
+      "feature": "V19",
+      "importance_combined": 7.719345613953884e-05,
+      "importance_logistic": 0.0001524759632402558,
+      "importance_tree": 1.910949038821894e-06,
+      "rank": 37,
+      "label_policy": "transaction"
+    },
+    {
+      "feature": "V24",
+      "importance_combined": 5.0500515137969825e-05,
+      "importance_logistic": 3.8289449698826946e-06,
+      "importance_tree": 9.717208530605696e-05,
+      "rank": 38,
+      "label_policy": "transaction"
+    },
+    {
+      "feature": "V18",
+      "importance_combined": 4.073507457119894e-05,
+      "importance_logistic": 5.378892043582663e-05,
+      "importance_tree": 2.7681228706571258e-05,
+      "rank": 39,
+      "label_policy": "transaction"
+    },
+    {
+      "feature": "V20",
+      "importance_combined": 1.4784591724277132e-05,
+      "importance_logistic": 2.816076429400731e-05,
+      "importance_tree": 1.4084191545469564e-06,
+      "rank": 40,
+      "label_policy": "transaction"
+    }
+  ],
+  "outputs": {
+    "feature_importance_csv": "D:\\Vhack\\project\\outputs\\monitoring\\adversarial_validation_feature_importance.csv",
+    "drop_list_file": "D:\\Vhack\\project\\outputs\\monitoring\\adversarial_validation_drop_features.txt"
+  }
+}

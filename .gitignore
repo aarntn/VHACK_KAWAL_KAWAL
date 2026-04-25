@@ -1,0 +1,58 @@
+# Python virtual environments - NEVER commit venv/
+/.venv/
+venv/
+env/
+ENV/
+.env
+
+# Python cache and compiled files
+__pycache__/
+*.py[cod]
+*.pyc
+*$py.class
+*.so
+
+# IDE and editor files
+.vscode/
+.idea/
+.DS_Store
+*.swp
+*.swo
+*~
+
+# Project-specific
+creditcardfraud/
+outputs/
+project/outputs/benchmark/
+node_modules/
+project/frontend/node_modules/
+
+# IEEE Fraud Detection Dataset - too large for GitHub
+sample_submission.csv
+test_identity.csv
+test_transaction.csv
+train_identity.csv
+train_transaction.csv
+
+# generated artifacts
+project/outputs/
+# runtime databases and logs
+*.sqlite3
+*.log
+logs/
+
+# test and build artifacts
+.pytest_cache/
+.coverage
+*.egg-info/
+dist/
+build/
+
+# local agent/skill installs and tool state
+.agents/
+.claude/
+.gstack/
+.trae/
+skills-lock.json
+skills.md
+SKILL.md

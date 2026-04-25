@@ -1,0 +1,56 @@
+{
+  "summary": {
+    "base_model_roc_auc": 0.9835310922222462,
+    "objective": 0.873097678768334,
+    "precision": 0.9137931034482759,
+    "recall": 0.8617886178861789,
+    "f1": 0.8870292887029289,
+    "fpr": 0.00014068852966417648,
+    "dataset_path": "creditcardfraud\\creditcard.csv",
+    "trials": 500,
+    "fpr_penalty": 0.35,
+    "target_fpr": 0.005,
+    "target_precision": 0.85,
+    "seed": 42
+  },
+  "policy_checks": {
+    "fpr_le_target": {
+      "metric": "fpr",
+      "operator": "<=",
+      "actual": 0.00014068852966417648,
+      "target": 0.005,
+      "pass": true
+    },
+    "precision_ge_target": {
+      "metric": "precision",
+      "operator": ">=",
+      "actual": 0.9137931034482759,
+      "target": 0.85,
+      "pass": true
+    },
+    "overall_pass": true
+  },
+  "runtime_recommendation": {
+    "approve_threshold": 0.21663971423879455,
+    "block_threshold": 0.8056064754152743,
+    "context_adjustment_max": 0.15474176635186124,
+    "context_weights": {
+      "device_risk_weight": 0.07353260082933975,
+      "ip_risk_weight": 0.055470494671638365,
+      "location_risk_weight": 0.06501508998732314,
+      "amount_over_200": 0.02696963924049045,
+      "amount_over_1000": 0.06064253152454487,
+      "early_time_weight": 0.01346619544830054,
+      "shared_device_ge_3": 0.03673858814682473,
+      "shared_device_ge_5": 0.08400280500486036,
+      "sim_change_weight": 0.06165711645978088,
+      "new_account_lt_7d": 0.04133644405222456,
+      "new_account_lt_3d": 0.0909542572510847,
+      "cashout_over_300": 0.0500432081324076,
+      "agent_high_risk_weight": 0.03357425096221718,
+      "flow_velocity_ge_8": 0.05559924687200879,
+      "p2p_counterparties_ge_12": 0.0575249191119766,
+      "cross_border_weight": 0.04449897043358779
+    }
+  }
+}

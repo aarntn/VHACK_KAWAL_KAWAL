@@ -1,0 +1,117 @@
+{
+  "generated_at_utc": "2026-03-16T00:35:30.670294+00:00",
+  "hardware_profile": {
+    "platform": "Windows-10-10.0.26200-SP0",
+    "python_version": "3.11.0",
+    "processor": "AMD64 Family 25 Model 33 Stepping 2, AuthenticAMD",
+    "logical_cpu_count": 32
+  },
+  "benchmark_config": {
+    "requests_per_endpoint": 200,
+    "concurrency": 20,
+    "request_timeout_s": 5.0,
+    "warmup_requests": 5
+  },
+  "endpoints": [
+    {
+      "endpoint_name": "score_transaction",
+      "url": "http://127.0.0.1:8000/score_transaction",
+      "started_at_utc": "2026-03-16T00:35:27.464009+00:00",
+      "duration_s": 1.4490510000032373,
+      "concurrency": 20,
+      "requests_total": 200,
+      "success_count": 200,
+      "error_count": 0,
+      "error_rate_pct": 0.0,
+      "throughput_rps": 138.0213670875305,
+      "latency_ms": {
+        "min": 57.53209999966202,
+        "mean": 140.720426999942,
+        "max": 235.93480000272393,
+        "p50": 140.8336499989673,
+        "p95": 182.29802999921958,
+        "p99": 227.8233940010977
+      },
+      "status_histogram": {
+        "200": 200
+      },
+      "sample_errors": []
+    },
+    {
+      "endpoint_name": "wallet_authorize_payment",
+      "url": "http://127.0.0.1:8001/wallet/authorize_payment",
+      "started_at_utc": "2026-03-16T00:35:29.060362+00:00",
+      "duration_s": 1.6094100999980583,
+      "concurrency": 20,
+      "requests_total": 200,
+      "success_count": 200,
+      "error_count": 0,
+      "error_rate_pct": 0.0,
+      "throughput_rps": 124.26913438671802,
+      "latency_ms": {
+        "min": 33.85040000284789,
+        "mean": 154.9706334999064,
+        "max": 272.28480000485433,
+        "p50": 150.04235000378685,
+        "p95": 248.6978800010547,
+        "p99": 264.97926499971067
+      },
+      "status_histogram": {
+        "200": 200
+      },
+      "sample_errors": []
+    }
+  ],
+  "sla_evaluation": {
+    "score_transaction": {
+      "target_sla": {
+        "p95_latency_ms_max": 250.0,
+        "p99_latency_ms_max": 500.0,
+        "error_rate_pct_max": 1.0
+      },
+      "checks": {
+        "p95_latency_ms": {
+          "actual": 182.29802999921958,
+          "target_max": 250.0,
+          "pass": true
+        },
+        "p99_latency_ms": {
+          "actual": 227.8233940010977,
+          "target_max": 500.0,
+          "pass": true
+        },
+        "error_rate_pct": {
+          "actual": 0.0,
+          "target_max": 1.0,
+          "pass": true
+        }
+      },
+      "real_time_viability": "PASS"
+    },
+    "wallet_authorize_payment": {
+      "target_sla": {
+        "p95_latency_ms_max": 250.0,
+        "p99_latency_ms_max": 500.0,
+        "error_rate_pct_max": 1.0
+      },
+      "checks": {
+        "p95_latency_ms": {
+          "actual": 248.6978800010547,
+          "target_max": 250.0,
+          "pass": true
+        },
+        "p99_latency_ms": {
+          "actual": 264.97926499971067,
+          "target_max": 500.0,
+          "pass": true
+        },
+        "error_rate_pct": {
+          "actual": 0.0,
+          "target_max": 1.0,
+          "pass": true
+        }
+      },
+      "real_time_viability": "PASS"
+    }
+  }
+}

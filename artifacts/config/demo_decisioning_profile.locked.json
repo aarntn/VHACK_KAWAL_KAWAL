@@ -1,0 +1,9 @@
+{
+  "version": "2026-04-19",
+  "locked": true,
+  "profile": "balanced",
+  "approve_threshold": 0.279032,
+  "block_threshold": 0.744978,
+  "why_this_profile": "Balanced is frozen for demo because it preserves strong recall for safety while keeping FPR materially below aggressive mode, aligning with SDG trust objectives for inclusion and low-friction access.",
+  "linked_profiles_file": "artifacts/config/decisioning_profiles.locked.json"
+}

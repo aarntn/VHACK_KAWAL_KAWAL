@@ -1,0 +1,63 @@
+{
+  "dataset_source": "ieee_cis",
+  "split_mode": "time",
+  "test_size": 0.2,
+  "threshold_start": 0.1,
+  "threshold_stop": 0.9,
+  "threshold_step": 0.05,
+  "rows_train": 472432,
+  "rows_test": 118108,
+  "label_policy": "transaction",
+  "label_policy_diagnostics": {
+    "label_policy": "transaction",
+    "rows_changed": 0,
+    "positive_before": 20663,
+    "positive_after": 20663
+  },
+  "eda_gate": {
+    "enabled": true,
+    "passed": true,
+    "failed_checks": [],
+    "checks": {
+      "join_row_counts": {
+        "passed": true,
+        "transaction_rows": 590540,
+        "identity_rows": 144233,
+        "merged_rows": 590540
+      },
+      "key_missingness": {
+        "passed": true,
+        "transaction_missing_ratio": 0.0,
+        "identity_missing_ratio": 0.0,
+        "merged_missing_ratio": 0.0
+      },
+      "target_prevalence": {
+        "passed": true,
+        "positive_rate": 0.03499000914417313,
+        "minimum_expected_positive_rate": 0.001
+      },
+      "high_cardinality_fields": {
+        "passed": true,
+        "count": 1,
+        "sample_fields": [
+          "DeviceInfo"
+        ],
+        "threshold": 1000
+      },
+      "timestamp_range_sanity": {
+        "passed": true,
+        "timestamp_column": "TransactionDT",
+        "min": 86400.0,
+        "max": 15811131.0
+      }
+    }
+  },
+  "eda_gate_status": "passed",
+  "feature_whitelist_active": false,
+  "feature_whitelist_source": null,
+  "selected_feature_count": 443,
+  "feature_whitelist_hash": null,
+  "full_csv": "D:\\Vhack\\project\\outputs\\monitoring\\ieee_cis_preprocessing_threshold_comparison.csv",
+  "best_csv": "D:\\Vhack\\project\\outputs\\monitoring\\ieee_cis_preprocessing_threshold_best.csv",
+  "summary_markdown": "D:\\Vhack\\project\\outputs\\monitoring\\ieee_cis_preprocessing_threshold_summary.md"
+}

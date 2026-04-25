@@ -1,0 +1,26 @@
+{
+  "generated_at_utc": "2026-03-16T20:59:43.722424+00:00",
+  "benchmark_dir": "D:\\Vhack\\project\\outputs\\benchmark",
+  "history_limit": 20,
+  "history_points": 28,
+  "latest_by_endpoint": [
+    {
+      "endpoint_name": "score_transaction",
+      "latest_generated_at_utc": "2026-03-16T20:59:43.171664+00:00",
+      "latest_p50_ms": 2036.7752000001929,
+      "latest_p95_ms": 2046.59152500044,
+      "latest_p99_ms": 2047.5991250011793,
+      "latest_error_rate_pct": 100.0,
+      "latest_viability": "FAIL"
+    },
+    {
+      "endpoint_name": "wallet_authorize_payment",
+      "latest_generated_at_utc": "2026-03-16T20:59:43.171664+00:00",
+      "latest_p50_ms": 2033.853300001283,
+      "latest_p95_ms": 2051.5333150020524,
+      "latest_p99_ms": 2057.7698780014543,
+      "latest_error_rate_pct": 100.0,
+      "latest_viability": "FAIL"
+    }
+  ]
+}

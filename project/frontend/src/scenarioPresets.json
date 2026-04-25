@@ -1,0 +1,152 @@
+{
+  "everyday_purchase": {
+    "id": "everyday_purchase",
+    "ui": {
+      "icon": "ShoppingCart",
+      "amount": "185000",
+      "tx_type": "MERCHANT",
+      "user_id": "user_id_qr_local",
+      "wallet_id": "wallet_id_qr_local",
+      "currency": "IDR",
+      "merchant_name": "Warung Nusantara QR",
+      "is_cross_border": false,
+      "source_country": "ID",
+      "destination_country": "ID",
+      "is_agent_assisted": false,
+      "connectivity_mode": "online"
+    },
+    "risk": {
+      "schema_version": "ieee_fraud_tx_v1",
+      "device_risk_score": 0.04,
+      "ip_risk_score": 0.05,
+      "location_risk_score": 0.04,
+      "device_id": "device_id_qr_safe_01",
+      "device_shared_users_24h": 1,
+      "account_age_days": 420,
+      "sim_change_recent": false,
+      "channel": "QR",
+      "cash_flow_velocity_1h": 1,
+      "p2p_counterparties_24h": 0
+    }
+  },
+  "large_amount": {
+    "id": "large_amount",
+    "ui": {
+      "icon": "WalletCards",
+      "amount": "420.00",
+      "tx_type": "P2P",
+      "user_id": "user_sgph_new",
+      "wallet_id": "wallet_sgph_001",
+      "currency": "SGD",
+      "merchant_name": "Remittance Corridor Demo",
+      "is_cross_border": true,
+      "source_country": "SG",
+      "destination_country": "PH",
+      "is_agent_assisted": false,
+      "connectivity_mode": "online"
+    },
+    "risk": {
+      "schema_version": "ieee_fraud_tx_v1",
+      "device_risk_score": 0.46,
+      "ip_risk_score": 0.54,
+      "location_risk_score": 0.39,
+      "device_id": "device_sgph_new_01",
+      "device_shared_users_24h": 2,
+      "account_age_days": 14,
+      "sim_change_recent": false,
+      "channel": "APP",
+      "cash_flow_velocity_1h": 3,
+      "p2p_counterparties_24h": 1
+    }
+  },
+  "agent_cash_out": {
+    "id": "agent_cash_out",
+    "ui": {
+      "icon": "WalletCards",
+      "amount": "780.00",
+      "tx_type": "CASH_OUT",
+      "user_id": "user_agent_my",
+      "wallet_id": "wallet_agent_my",
+      "currency": "MYR",
+      "merchant_name": "Agent Tunai MY",
+      "is_cross_border": false,
+      "source_country": "MY",
+      "destination_country": "MY",
+      "is_agent_assisted": true,
+      "connectivity_mode": "intermittent"
+    },
+    "risk": {
+      "schema_version": "ieee_fraud_tx_v1",
+      "device_risk_score": 0.52,
+      "ip_risk_score": 0.44,
+      "location_risk_score": 0.31,
+      "device_id": "device_agent_cashout_01",
+      "device_shared_users_24h": 4,
+      "account_age_days": 45,
+      "sim_change_recent": false,
+      "channel": "AGENT",
+      "cash_flow_velocity_1h": 9,
+      "p2p_counterparties_24h": 4
+    }
+  },
+  "cross_border": {
+    "id": "cross_border",
+    "ui": {
+      "icon": "Globe",
+      "amount": "28000",
+      "tx_type": "P2P",
+      "user_id": "user_thvn_block",
+      "wallet_id": "wallet_thvn_001",
+      "currency": "THB",
+      "merchant_name": "Cross-Border Transfer Demo",
+      "is_cross_border": true,
+      "source_country": "TH",
+      "destination_country": "VN",
+      "is_agent_assisted": false,
+      "connectivity_mode": "online"
+    },
+    "risk": {
+      "schema_version": "ieee_fraud_tx_v1",
+      "device_risk_score": 0.94,
+      "ip_risk_score": 0.96,
+      "location_risk_score": 0.88,
+      "device_id": "new_device_thvn_999",
+      "device_shared_users_24h": 8,
+      "account_age_days": 2,
+      "sim_change_recent": true,
+      "channel": "WEB",
+      "cash_flow_velocity_1h": 14,
+      "p2p_counterparties_24h": 18
+    }
+  },
+  "custom": {
+    "id": "custom",
+    "ui": {
+      "icon": "Edit3",
+      "amount": "",
+      "tx_type": "MERCHANT",
+      "user_id": "",
+      "wallet_id": "",
+      "currency": "SGD",
+      "merchant_name": "",
+      "is_cross_border": false,
+      "source_country": "SG",
+      "destination_country": "SG",
+      "is_agent_assisted": false,
+      "connectivity_mode": "online"
+    },
+    "risk": {
+      "schema_version": "ieee_fraud_tx_v1",
+      "device_risk_score": 0.24,
+      "ip_risk_score": 0.22,
+      "location_risk_score": 0.19,
+      "device_id": "device_custom_01",
+      "device_shared_users_24h": 2,
+      "account_age_days": 90,
+      "sim_change_recent": false,
+      "channel": "APP",
+      "cash_flow_velocity_1h": 3,
+      "p2p_counterparties_24h": 4
+    }
+  }
+}

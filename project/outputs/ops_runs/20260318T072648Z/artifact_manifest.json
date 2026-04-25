@@ -1,0 +1,21 @@
+{
+  "run_id": "20260318T072648Z",
+  "run_dir": "D:\\Vhack\\project\\outputs\\ops_runs\\20260318T072648Z",
+  "copied": {
+    "drift_json": "D:\\Vhack\\project\\outputs\\ops_runs\\20260318T072648Z\\drift_report.json",
+    "drift_csv": "D:\\Vhack\\project\\outputs\\ops_runs\\20260318T072648Z\\drift_feature_psi.csv",
+    "ops_summary_json": "D:\\Vhack\\project\\outputs\\ops_runs\\20260318T072648Z\\nightly_ops_summary.json",
+    "artifact_validation_json": "D:\\Vhack\\project\\outputs\\ops_runs\\20260318T072648Z\\artifact_validation_report.json",
+    "cohort_kpi_json": "D:\\Vhack\\project\\outputs\\ops_runs\\20260318T072648Z\\cohort_kpi_report.json",
+    "profile_health_json": "D:\\Vhack\\project\\outputs\\ops_runs\\20260318T072648Z\\behavior_profile_health.json"
+  },
+  "missing": {},
+  "sha256": {
+    "drift_json": "6c17bcc3481032ff49884eecfaaf2e771e569a6b6245d456dc5d8850bea42939",
+    "drift_csv": "e3c98cdf23500017b5b5e6dcac1aa02911885002fa80748212faf212fbfe002c",
+    "ops_summary_json": "1ba654f256d95ed4e0e64b83a29ae49e319134bd3e57c998c41ab5fb941c9b0d",
+    "artifact_validation_json": "bc079acb65f829b1fc87404b4880d9462f174cd21c0bc34fa633e96cf1417d28",
+    "cohort_kpi_json": "51d096c211c96c794ace8e3acc87039094ec8fc234136f097593c955913b5c4f",
+    "profile_health_json": "0fb5fa830f72d266ba5b865bd94632eae7532c4e9d75a3375704ed474082312e"
+  }
+}

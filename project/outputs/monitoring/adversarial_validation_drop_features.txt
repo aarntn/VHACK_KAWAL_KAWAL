@@ -1,0 +1,8 @@
+amount_std_24h
+Time
+uid_amount_std_7d
+avg_amount_24h
+uid_tx_count_7d
+uid_avg_amount_7d
+tx_count_1h
+tx_count_24h

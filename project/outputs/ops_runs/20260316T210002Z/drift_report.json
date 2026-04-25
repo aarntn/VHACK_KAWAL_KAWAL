@@ -1,0 +1,92 @@
+{
+  "generated_at_utc": "2026-03-16T20:58:40.789437+00:00",
+  "inputs": {
+    "baseline_dataset": "creditcardfraud\\creditcard.csv",
+    "audit_log": "project\\outputs\\audit\\fraud_audit_log.jsonl",
+    "max_audit_records": 25000,
+    "audit_baseline_ratio": 0.5,
+    "feature_columns": [
+      "Amount",
+      "base_model_score",
+      "context_adjustment",
+      "behavior_adjustment",
+      "final_risk_score",
+      "context_scores.device_risk_score",
+      "context_scores.ip_risk_score",
+      "context_scores.location_risk_score"
+    ],
+    "bins": 10
+  },
+  "thresholds": {
+    "psi_warn": 0.1,
+    "psi_alert": 0.25,
+    "decision_drift_warn": 0.1,
+    "decision_drift_alert": 0.2
+  },
+  "summary": {
+    "baseline_row_count": 284807,
+    "audit_baseline_row_count": 897,
+    "current_row_count": 897,
+    "feature_count_evaluated": 7,
+    "feature_alert_count": 0,
+    "feature_warn_count": 3
+  },
+  "feature_drift": [
+    {
+      "feature": "context_adjustment",
+      "psi": 0.14456289,
+      "status": "warn"
+    },
+    {
+      "feature": "base_model_score",
+      "psi": 0.1304194,
+      "status": "warn"
+    },
+    {
+      "feature": "behavior_adjustment",
+      "psi": 0.10488479,
+      "status": "warn"
+    },
+    {
+      "feature": "context_scores.location_risk_score",
+      "psi": 0.08772662,
+      "status": "ok"
+    },
+    {
+      "feature": "context_scores.device_risk_score",
+      "psi": 0.07353791,
+      "status": "ok"
+    },
+    {
+      "feature": "final_risk_score",
+      "psi": 0.07125226,
+      "status": "ok"
+    },
+    {
+      "feature": "context_scores.ip_risk_score",
+      "psi": 0.06675294,
+      "status": "ok"
+    }
+  ],
+  "decision_drift": {
+    "score": 0.07580825,
+    "status": "ok",
+    "baseline_distribution": {
+      "APPROVE": 0.8361204013377926,
+      "FLAG": 0.08361204013377926,
+      "BLOCK": 0.0802675585284281
+    },
+    "current_distribution": {
+      "APPROVE": 0.9119286510590858,
+      "FLAG": 0.06131549609810479,
+      "BLOCK": 0.026755852842809364
+    }
+  },
+  "recalibration_recommendation": {
+    "should_recalibrate": false,
+    "priority": "medium",
+    "reasons": [
+      "Warning-level drift detected; monitor closely"
+    ]
+  }
+}
